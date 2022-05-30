@@ -5,5 +5,5 @@ public class Grego {
     
     private String nombre;
     
-
+       private String Lucas;
 }
