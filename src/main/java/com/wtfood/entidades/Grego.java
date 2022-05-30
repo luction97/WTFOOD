@@ -5,5 +5,4 @@ public class Grego {
     
     private String nombre;
     
-
 }
