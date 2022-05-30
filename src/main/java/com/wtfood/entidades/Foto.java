@@ -3,6 +3,7 @@ package com.wtfood.entidades;
 
 
 public class Foto {
+
     
     
    private String nombre; 
@@ -10,8 +11,7 @@ public class Foto {
     
     
     
-    
-    
-    
-    
+ 
+    private int numero;
+
 }
