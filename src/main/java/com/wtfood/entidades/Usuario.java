@@ -4,4 +4,5 @@ package com.wtfood.entidades;
 
 public class Usuario {
     
+    private String nombre;
 }
