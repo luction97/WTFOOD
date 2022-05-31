@@ -7,7 +7,5 @@ public class Foto {
    private String nombre;
    private int numero;
    private String memi;
-    
-
-
+    private String develop;
 }
