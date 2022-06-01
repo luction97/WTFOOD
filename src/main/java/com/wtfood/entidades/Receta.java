@@ -17,12 +17,12 @@ public class Receta {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @OneToMany
-    private List<Ingrediente> ingrediente;
     private Integer cantidadIngredientes;
     @OneToOne
     private Usuario usuario;
     @OneToOne
     private Foto foto;
+    @OneToMany
+    private List<Ingrediente> ingrediente;
 
 }
