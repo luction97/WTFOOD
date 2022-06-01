@@ -25,4 +25,5 @@ public class Receta {
     @OneToMany
     private List<Ingrediente> ingrediente;
 
+   
 }
