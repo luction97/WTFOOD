@@ -21,6 +21,8 @@ public class Receta {
     private List<Ingrediente> ingrediente;
     private Integer cantidadIngredientes;
     @OneToOne
+    private Usuario usuario;
+    @OneToOne
     private Foto foto;
 
 }
