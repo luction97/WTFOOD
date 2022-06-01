@@ -1,4 +1,3 @@
-
 package com.wtfood.entidades;
 
 import javax.persistence.Entity;
