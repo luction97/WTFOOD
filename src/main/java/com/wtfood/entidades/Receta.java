@@ -1,3 +1,4 @@
+
 package com.wtfood.entidades;
 
 import java.util.List;
@@ -12,12 +13,15 @@ import org.hibernate.annotations.GenericGenerator;
 @Data
 @Entity
 public class Receta {
-
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
+    private String nombre;
+    private Integer calificaciones;
     private Integer cantidadIngredientes;
+    @OneToMany
+    private List<Ingrediente> ingredientes;
     @OneToOne
     private Usuario usuario;
     @OneToOne
