@@ -44,7 +44,7 @@ main {
 /* Caja trasera grande */
 .caja__trasera {
 
-
+    border-radius: 20px;
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -60,6 +60,7 @@ main {
     margin: 100px 40px;
     color: white;
     transition: all 500ms;
+    
     
 }
 
