@@ -17,6 +17,7 @@ public class Receta {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
+    private Integer calificacion;
     private Integer cantidadIngredientes;
     @OneToOne
     private Usuario usuario;
