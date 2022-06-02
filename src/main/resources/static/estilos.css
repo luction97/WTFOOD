@@ -89,6 +89,7 @@ main {
     color: white;
     outline: none;
     transition: all 300ms;
+    border-radius: 20px;
 
 }
 
@@ -114,11 +115,11 @@ main {
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-/* Caja de registrarse e iniciar sesion */
+/* Caja delantera - registrarse e iniciar sesion */
 .contenedor__login-registro form {
     width: 100%;
     padding: 80px 20px;
-    background: rgb(34, 35, 36);
+    background: #011B28;
     position: absolute;
     border-radius: 20px;
     
@@ -154,10 +155,12 @@ main {
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #023047;
+    background: #219EBC;
     color: white;
     cursor: pointer;
     outline: none;
+    border-radius: 20px;
+    
 
 }
 
