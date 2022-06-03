@@ -15,7 +15,10 @@ public class PortalControlador {
         return "index.html";
     }
     
-   
+        @GetMapping("/loginRegistro")
+    public String loginRegistro() {
+        return "loginRegistro.html";
+    }
     
 }
 
