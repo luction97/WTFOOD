@@ -25,6 +25,6 @@ public class Receta {
     @OneToOne
     private Foto foto;
     @OneToMany
-    private List<Ingrediente> ingrediente;
+    private List<Ingrediente> ingredientes;
 
 }
