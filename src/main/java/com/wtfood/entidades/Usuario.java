@@ -30,4 +30,8 @@ public class Usuario{
     @OneToMany
     private List<Receta> receta; 
     
+
 }
+
+
+

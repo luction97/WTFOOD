@@ -20,13 +20,11 @@ public class Receta {
     private String nombre;
     private Integer calificaciones;
     private Integer cantidadIngredientes;
-    @OneToMany
-    private List<Ingrediente> ingredientes;
     @OneToOne
     private Usuario usuario;
     @OneToOne
     private Foto foto;
     @OneToMany
-    private List<Ingrediente> ingrediente;
+    private List<Ingrediente> ingredientes;
 
 }

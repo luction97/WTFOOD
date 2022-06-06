@@ -19,7 +19,7 @@ public class RecetaServicio {
     
     @Autowired
     private RecetaRepositorio recetaRepositorio;
-    
+      
     @Transactional
     public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto) throws ErrorServicio {
         
