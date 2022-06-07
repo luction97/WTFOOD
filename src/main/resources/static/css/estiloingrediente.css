@@ -89,7 +89,7 @@ padding-bottom:30px;
     outline-offset: 2px;
 /*    --tw-bg-opacity: 1;*/
     /* fondo de los contenedores de texto */
-    background-color: black;
+    background-color: rgba(248,246,242,var(--tw-bg-opacity));
     border-radius: 10px;
     padding: .5rem;
     box-sizing: content-box;
