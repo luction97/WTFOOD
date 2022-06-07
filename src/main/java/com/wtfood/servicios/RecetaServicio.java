@@ -10,9 +10,10 @@ import com.wtfood.repositorios.RecetaRepositorio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 
 @Service
 public class RecetaServicio {
@@ -20,7 +21,7 @@ public class RecetaServicio {
     @Autowired
     private RecetaRepositorio recetaRepositorio;
       
-    @Transactional
+    @Transactional(propagation = Propagation.NESTED)
     public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto) throws ErrorServicio {
         
         validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
@@ -37,7 +38,7 @@ public class RecetaServicio {
         
     }
     
-    @Transactional
+    @Transactional(propagation = Propagation.NESTED)
     public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto) throws ErrorServicio {
         
         validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
@@ -61,7 +62,7 @@ public class RecetaServicio {
         
     }
     
-    @Transactional
+    @Transactional(readOnly = true)
     public ArrayList<Receta>  listarRecetas() throws ErrorServicio {
         
         ArrayList<Receta> recetas = recetaRepositorio.listarRecetas();
@@ -73,7 +74,7 @@ public class RecetaServicio {
         
     }
     
-    @Transactional
+    @Transactional(readOnly = true)
     public Receta buscarRecetaPorId(String id) throws ErrorServicio {
         
         if (id == null) {
