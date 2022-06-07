@@ -5,7 +5,7 @@ padding:0;
 box-sizing:border-box;
 }
 body{
-    background:url("fondo-login2.png");
+    background:url("/img/fondo-login2.png");
 
     background-size: contain;
     background-size: cover;
@@ -30,26 +30,26 @@ padding-bottom:30px;
     font-size: 50px
 }
 .h2{
-    -webkit-text-size-adjust: 100%;
+/*    -webkit-text-size-adjust: 100%;*/
     tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --tw-text-opacity: 1;
+/*        --swiper-theme-color: #007aff;
+    --tw-text-opacity: 1;*/
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+/*    -webkit-font-smoothing: antialiased;*/
     font-feature-settings: "liga" on;
-    color: rgba(84,85,84,var(--tw-text-opacity));
+/*    color: rgba(84,85,84,var(--tw-text-opacity));*/
     font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
-    --tw-bg-opacity: 1;
+/*    --tw-bg-opacity: 1;*/
     border: 0 solid;
     box-sizing: border-box;
     border-color: currentColor;
-    --tw-shadow: 0 0 #0000;
-    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+/*    --tw-shadow: 0 0 #0000;
+    --tw-ring-inset: var(--tw-empty,! !);
     --tw-ring-offset-width: 0px;
     --tw-ring-offset-color: #fff;
     --tw-ring-color: rgba(59,130,246,0.5);
     --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;*/
     margin: 0;
     margin-bottom: .5rem;
     font-size: 1.5rem;
@@ -59,14 +59,14 @@ padding-bottom:30px;
 }
 
 .form1{
-    -webkit-text-size-adjust: 100%;
+/*    -webkit-text-size-adjust: 100%;*/
     tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --tw-text-opacity: 1;
+/*    --swiper-theme-color: #007aff;
+    --tw-text-opacity: 1;*/
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
+/*    -webkit-font-smoothing: antialiased;*/
     font-feature-settings: "liga" on;
-    color: rgba(74,74,74,var(--tw-text-opacity));
+/*    color: rgba(74,74,74,var(--tw-text-opacity));*/
     font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
     list-style: none;
     font-size: 1rem;
