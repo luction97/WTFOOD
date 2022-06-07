@@ -77,19 +77,19 @@ padding-bottom:30px;
     -webkit-line-break: after-white-space;
     border: 0 solid;
     border-color: currentColor;
-    --tw-shadow: 0 0 #0000;
-    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+/*    --tw-shadow: 0 0 #0000;
+    --tw-ring-inset: var(--tw-empty,! !);
     --tw-ring-offset-width: 0px;
     --tw-ring-offset-color: #fff;
     --tw-ring-color: rgba(59,130,246,0.5);
     --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;*/
     min-height: 1.2em;
     outline: 2px solid transparent;
     outline-offset: 2px;
-    --tw-bg-opacity: 1;
+/*    --tw-bg-opacity: 1;*/
     /* fondo de los contenedores de texto */
-    background-color: rgba(248,246,242,var(--tw-bg-opacity));
+    background-color: black;
     border-radius: 10px;
     padding: .5rem;
     box-sizing: content-box;
