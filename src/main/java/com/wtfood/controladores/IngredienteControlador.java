@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/ingrediente")
 public class IngredienteControlador {
 
-    @GetMapping("/")
+    @GetMapping("")
     public String ingrediente() {
         return "ingrediente";
     }
