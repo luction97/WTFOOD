@@ -78,7 +78,7 @@ section{
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "liga" on;
-    color: rgba(74,74,74,var(--tw-text-opacity));
+    color: rgba(74,74,74,var(--tw-text-opacity);
     font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
     border: 0 solid;
     box-sizing: border-box;
