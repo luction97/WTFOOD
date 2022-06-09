@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingredientes</title>
-    <link rel="stylesheet" href="/css/estiloingrediente.css">
+    <link rel="stylesheet" href="estilos.css">
 
 </head>
 <body>
@@ -18,49 +16,36 @@
                   <h1 class="form-title"> Llego la hora de cocinar!</h1>
              </div>
              <div>
-             <h2 class="h2">Coloca el nombre de tu receta</h2>
-             <input type="text"id="Nombre"class="form1"placeholder="Ej:La sopa de la abuela">
-             <br>
-             <br>
-             <br>
-             <section>
-             <label for="ingrediente"class="h2">Ingredientes:</label>
-             <br>
-             <br>
-             <br>
-             <input type="text"id="ingrediente"class="form1"placeholder="Escriba el ingrediente">
-             <br>
-             <br>
-             <br>
-             <input type="text"id="ingrediente"class="form1"placeholder="Escriba el ingrediente">
-             <br>
-             <br>
-             <br>
+             <h2 class="h2 ">Coloca el nombre de tu receta</h2>
+             <input type="text"id="Nombre"class="form1 marg"placeholder="Ej:La sopa de la abuela">
+          
+             <section class="marg">
+             <label for="ingrediente"class="h2" id="ingrediente">Ingredientes:</label>
+             <div class="container">
+              <input type="text"id="ingrediente"class="form1 " placeholder="Escriba el ingrediente">
+              <input type="submit"class="form1"value="Aceptar">
+            </div>
+             
+            <div class="container">
             <button class="form1">+ingrediente</button>
-             <input type="submit"class="form1"value="Aceptar">
+             
+            </div>
             </section>
-            <br>
-            <br>
+          
             
-            <section>
-                <label for="Pasos"class="h2">Pasos:</label>
-                
-             <br>
-             <br>
-             <br>
-             <ol>
-             <li><input type="text"id="Pasos"class="form1"placeholder="Escriba el paso"></li>
-             <br>
-             <br>
-             <br>
-             <li> <input type="text"id="Paso"class="form1"placeholder="Escriba el paso"></li>
-             </ol>
-             <br>
-             <br>
-             <br>
+            <section class="marg">
+            <label for="Pasos"class="h2">Pasos:</label>
+            <ol>
+            <div class="container">
+                <li><input type="text"id="Pasos"class="form1"placeholder="Escriba el paso"></li>
+                <input type="submit"class="form1"value="Aceptar">
+            </div>
+            
+            </ol>
+             <div class="container">
             <button class="form1">+Pasos</button>
-            <input type="submit"class="form1"value="Aceptar">
-           
+            
+             </div>
         </section>
             </div>
             
@@ -69,3 +54,4 @@
    
 </body>
 </html>
+
