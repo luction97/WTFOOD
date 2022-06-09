@@ -1,8 +1,11 @@
 package com.wtfood.entidades;
 
+import com.wtfood.enumeraciones.Rol;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -21,16 +24,27 @@ public class Usuario{
     @Column(nullable = false)
     private String nombre;
     @Column(nullable = false)
-    private String clave;
+    private String apellido;
     @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
+    private String nickname;
+    @Column(nullable = false)
+    private String clave;
+    
    @Column(nullable =false)
     private Boolean alta;
     
     @OneToMany
     private List<Receta> receta; 
     
-
+    @Enumerated(EnumType.STRING)
+    private Rol rol;
+    
+    @Override
+    public String toString(){
+        return"Usuario(" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido +  ", email=" + email + ", nickname=" + nickname + ", clave=" + clave + ", rol=" + rol;
+    }
 }
 
 
