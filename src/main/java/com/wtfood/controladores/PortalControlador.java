@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PortalControlador {
     
     
-//  Página principal:  Login-Registro
      @GetMapping("/")
     public String index() {
         return "index.html";
@@ -20,10 +19,7 @@ public class PortalControlador {
         return "loginRegistro.html";
     }
     
-       @GetMapping("/ingrediente")
-    public String ingrediente() {
-        return "ingrediente.html";
-    }
+     
     
 }
 
