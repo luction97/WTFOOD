@@ -58,7 +58,7 @@ public class RecetaControlador {
     }
     
     @PostMapping("/modificarReceta")
-    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto) throws Exception {
+    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam String usuario, @RequestParam String foto) throws Exception {
         
         try {
             recetaServicio.modificarReceta(id, nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);

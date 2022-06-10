@@ -6,7 +6,9 @@ import com.wtfood.entidades.Ingrediente;
 import com.wtfood.entidades.Receta;
 import com.wtfood.entidades.Usuario;
 import com.wtfood.errores.ErrorServicio;
+import com.wtfood.repositorios.FotoRepositorio;
 import com.wtfood.repositorios.RecetaRepositorio;
+import com.wtfood.repositorios.UsuarioRepositorio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +22,12 @@ public class RecetaServicio {
     
     @Autowired
     private RecetaRepositorio recetaRepositorio;
+    
+    @Autowired
+    private UsuarioRepositorio usuarioRepositorio;
+    
+    @Autowired
+    private FotoRepositorio fotoRepositorio;
       
     @Transactional(propagation = Propagation.NESTED)
     public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto) throws ErrorServicio {
@@ -39,7 +47,10 @@ public class RecetaServicio {
     }
     
     @Transactional(propagation = Propagation.NESTED)
-    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto) throws ErrorServicio {
+    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, String idUsuario, String idFoto) throws ErrorServicio {
+        
+        Usuario usuario = usuarioRepositorio.buscarPorId(idUsuario);
+        Foto foto = fotoRepositorio.buscarPorId(idFoto);
         
         validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
         
