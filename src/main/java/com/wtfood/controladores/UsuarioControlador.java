@@ -5,7 +5,6 @@
  */
 package com.wtfood.controladores;
 
-import com.wtfood.enumeraciones.Rol;
 import com.wtfood.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,9 +25,9 @@ public class UsuarioControlador {
     private UsuarioServicio usuarioServicio;
     
     @PostMapping("/registro")
-    private String guardar(ModelMap modelo, @RequestParam String nombre, @RequestParam String apellido, @RequestParam String email, @RequestParam String nickname, @RequestParam String clave, @RequestParam Rol rol){
+    private String guardar(ModelMap modelo, @RequestParam String nombre, @RequestParam String apellido, @RequestParam String email, @RequestParam String nickname, @RequestParam String clave){
         try{
-            usuarioServicio.guardar(nombre, apellido, email, nickname, clave, true, Rol.USUARIO);
+            usuarioServicio.guardar(nombre, apellido, email, nickname, clave, true);
             modelo.put("Exito", "Usuario guardado con éxito");
         }catch(Exception e){
             modelo.put("Error", "Error al registrarse");

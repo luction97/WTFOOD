@@ -29,7 +29,7 @@ public class UsuarioServicio implements UserDetailsService {
     private UsuarioRepositorio usuarioRepositorio;
 
     @Transactional(propagation = Propagation.NESTED)
-    public Usuario guardar(String nombre, String apellido, String email, String nickname, String clave, Boolean alta, Rol rol) throws Exception {
+    public Usuario guardar(String nombre, String apellido, String email, String nickname, String clave, Boolean alta) throws Exception {
         validacion(nombre, apellido, email, nickname, clave);
 
         Usuario usuario = new Usuario();

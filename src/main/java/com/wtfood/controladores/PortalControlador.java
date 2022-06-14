@@ -11,13 +11,13 @@ public class PortalControlador {
     
      @GetMapping("/")
     public String index() {
-        return "loginRegistro";
+        return "index";
     }
     
-//        @GetMapping("/loginRegistro")
-//    public String loginRegistro() {
-//        return "loginRegistro.html";
-//    }
+        @GetMapping("/loginRegistro")
+    public String loginRegistro() {
+        return "loginRegistro";
+    }
     
      
     

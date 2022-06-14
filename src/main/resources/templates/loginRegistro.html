@@ -43,23 +43,23 @@
             <div class="contenedor__login-registro">
 
                 <!-- Login -->
-                <form action="" class="formulario__login">
+                <form  method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__login">
 
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo electrónico">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" name="email" placeholder="Correo electrónico">
+                    <input type="password" name="clave" placeholder="Contraseña">
                     <button>Entrar</button>
 
                 </form>
                 <!-- Registro -->
-                <form action="" class="formulario__registro">
+                <form method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__registro">
 
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="text" placeholder="Correo electrónico">
-                    <input type="text" placeholder="NickName">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <input type="text" name="apellido" placeholder="Apellido">
+                    <input type="text" name="email" placeholder="Correo electrónico">
+                    <input type="text" name="nickname" placeholder="NickName">
+                    <input type="password" name="clave" placeholder="Contraseña">
                     <button>Registrarse</button>
 
 
