@@ -11,7 +11,7 @@
 <body>
     
     <div class="contenedor">
-        <form action="" class="form">
+        <form action="/ingrediente" class="form" method="POST" enctype="multipart/form-data">
              <div class="form-header">
                   <h1 class="form-title"> Llego la hora de cocinar!</h1>
              </div>
@@ -22,7 +22,7 @@
              <section class="marg">
              <label for="ingrediente"class="h2" id="ingrediente">Ingredientes:</label>
              <div class="container">
-              <input type="text"id="ingrediente"class="form1 " placeholder="Escriba el ingrediente">
+              <input type="text"id="ingrediente"class="form1" name="ingrediente" placeholder="Escriba el ingrediente">
               <input type="submit"class="form1"value="Aceptar">
             </div>
              
