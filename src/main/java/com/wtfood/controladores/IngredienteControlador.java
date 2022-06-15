@@ -24,10 +24,10 @@ public class IngredienteControlador {
     }
     
     @PostMapping("")
-    public String ingresar(ModelMap modelo, @RequestParam String ingrediente, String agregar){
+    public String ingresar(ModelMap modelo, @RequestParam String ingrediente, @RequestParam MultipartFile imagen, String agregar){
        
         try{
-            ingredienteServicio.ingresar(ingrediente);
+            ingredienteServicio.ingresar(imagen, ingrediente);
             
         }catch(Exception e){
             e.getMessage();

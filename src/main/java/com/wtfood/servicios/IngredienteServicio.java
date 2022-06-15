@@ -24,16 +24,15 @@ public class IngredienteServicio {
     
     
     @Transactional(propagation = Propagation.NESTED)
-//    public void ingresar(MultipartFile archivo, String nombre) throws ErrorServicio {
-        public void ingresar(String nombre) throws ErrorServicio{        
+    public void ingresar(MultipartFile archivo, String nombre) throws ErrorServicio {       
 
         validar(nombre);
 
         Ingrediente ingrediente = new Ingrediente();
         ingrediente.setNombre(nombre);
         
-//        Foto foto = fotoServicio.guardar(archivo);
-//        ingrediente.setFoto(foto);
+        Foto foto = fotoServicio.guardar(archivo);
+        ingrediente.setFoto(foto);
 
         ingredienteRepositorio.save(ingrediente);
     }
