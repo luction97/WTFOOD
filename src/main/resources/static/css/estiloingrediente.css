@@ -6,7 +6,7 @@ box-sizing:border-box;
 }
 
 body{
-    background:url("fondo-login2.png");
+    background:url("/img/fondo-login2.png");
 
     background-size: contain;
     background-size: cover;
