@@ -24,10 +24,10 @@ public class IngredienteControlador {
     }
     
     @PostMapping("")
-    public String ingresar(ModelMap modelo, @RequestParam String nombre, String agregar){
+    public String ingresar(ModelMap modelo, @RequestParam String ingrediente, String agregar){
        
         try{
-            ingredienteServicio.ingresar(nombre);
+            ingredienteServicio.ingresar(ingrediente);
             
         }catch(Exception e){
             e.getMessage();
