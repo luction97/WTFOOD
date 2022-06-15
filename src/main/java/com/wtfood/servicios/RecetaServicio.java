@@ -41,6 +41,7 @@ public class RecetaServicio {
         receta.setCantidadIngredientes(cantidadIngredientes);
         receta.setUsuario(usuario);
         receta.setFoto(foto);
+        receta.setIngredientes(ingredientes);
         
         recetaRepositorio.save(receta);
         
