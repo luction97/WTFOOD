@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingredientes</title>
-    <link rel="stylesheet" href="/css/estiloingrediente.css">
-
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Kalam&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -17,14 +17,14 @@
         <h2 class="h2 ">Coloca el nombre de tu receta</h2>
              <input type="text"id="Nombre"class="form1 marg"placeholder="Ej:La sopa de la abuela">
             </div>
-             <form action="/ingrediente" method="POST" enctype="multipart/form-data" class="form">
+            <form action="/ingrediente" method="POST" enctype="multipart/form-data" class="form">
              
                   
             <section class="marg">
              <label for="ingrediente"class="h2" id="ingrediente">Ingredientes:</label>
              <div class="container">
               <input type="text"id="ingrediente"class="form1" name="ingrediente" placeholder="Escriba el ingrediente">
-              <input class="form1" type="file"   name="imagen">
+             
               <input type="submit"class="form1"value="Aceptar">
             </div>
              
@@ -32,7 +32,7 @@
             
             <input class="form1" type="submit" name="agregar" value="+ingrediente ">
             
-            
+             <input class="form1" type="file"   name="imagen">
              
             </div>
             </section>
