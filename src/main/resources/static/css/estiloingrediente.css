@@ -5,7 +5,7 @@ padding:0;
 box-sizing:border-box;
 }
 body{
-    background:url("/img/fondo-login2.png");
+    background:url("fondo-login2.png");
 
     background-size: contain;
     background-size: cover;
@@ -14,6 +14,11 @@ body{
     background-attachment: fixed
 
 }
+
+.medio{
+    text-align: center;
+}
+
 .contenedor .form{
 background: rgba(0, 0,0, 0);
 width: 90%;
@@ -22,6 +27,7 @@ margin:auto;
 padding:5px 35px;
 margin-top:30px;
 padding-bottom:30px;
+
 
 }
 
