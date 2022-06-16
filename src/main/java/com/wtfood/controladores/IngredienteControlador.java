@@ -28,9 +28,10 @@ public class IngredienteControlador {
        
         try{
             ingredienteServicio.ingresar(imagen, ingrediente);
-            
+            modelo.put("exito", "Ingrediente agregado con exito!");
         }catch(Exception e){
             e.getMessage();
+            modelo.put("error", "El ingrediente no se pudo cargar.");
         }
         return "ingrediente";
     }
