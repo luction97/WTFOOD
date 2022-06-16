@@ -27,15 +27,27 @@
                     <label for="cantidadIngredientes">Cantidad de ingredientes</label>
                     <div class="invalid-feedback">La cantidad de ingredientes es obligatoria</div>
                 </div>
+                
+                <div class="form-floating mb-3 col-xl-6">
+                    <select aria-label="Elegir la foto a modificar" class="form-select" name="idFoto" required>
+                        <option selected value="">Elegir foto</option>
+                        <option th:each="foto : ${fotos}" th:text="${foto.getNombre}" th:value="${foto.getId}"></option>
+                    </select>
+                    <label for="idFoto">Receta</label>
+                    <div class="invalid-feedback">La foto es obligatoria</div>
+                </div>
 
                 <div class="form-floating mb-3 col-xl-6">
-                    <input class="form-control" placeholder="usuario" type="number" required name="usuario"/>
-                    <label for="usuario">Usuario</label>
-                    <div class="invalid-feedback">El Usuario es obligatorio</div>
+                    <select aria-label="Elegir el usuario a modificar" class="form-select" name="idUsuario" required>
+                        <option selected value="">Elegir receta</option>
+                        <option th:each="usuario : ${usuarios}" th:text="${usuario.getNombre}" th:value="${usuario.getId}"></option>
+                    </select>
+                    <label for="idUsuario">Usuario</label>
+                    <div class="invalid-feedback">El usuario es obligatoria</div>
                 </div>
                 
                 <div class="form-floating mb-3 col-xl-6">
-                    <select aria-label="Elegir Autor" class="form-select" name="idIngrediente" required>
+                    <select aria-label="Elegir Ingredientes" class="form-select" name="idIngrediente" required>
                         <option selected value="">Elegir ingredientes</option>
                         <option th:each="ingrediente : ${receta.getIngredientes}" th:text="${ingrediente.getNombre}" th:value="${ingrediente.getId}"></option>
                     </select>
