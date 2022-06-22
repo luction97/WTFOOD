@@ -68,18 +68,17 @@
 
 
                         <table class="table" action="mostrarIngredientes" method="GET">
-                            <a href="/ingrediente/mostrarAutores" type="button" class="btn btn-info">Lista de Ingredientes</a>
+                            <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-info">Lista de Ingredientes</a>
                             <a href="/ingrediente" type="button" class="btn btn-info">Cerrar lista</a>
 
                             <tr>
                                 <th th:text="${mensajenombre}"></th>
-                                <th th:text="${mensajeeditar}"></th>
-                                <th th:text="${mensajeeliminar}"></th>
+                                <th th:text="${mensajeseleccionar}"></th>
+
                             </tr>
                             <tr th:each="ingrediente : ${ingredientes}">
                                 <td th:text = "${ingrediente.getNombre}"></td>
-                                <td><a href="/ingrediente/editarIngrediente" type="button" class="btn btn-primary">Editar</td> 
-                                <td><a href="/ingrediente/eliminarIngrediente" type="button" class="btn btn-danger">Eliminar</td>
+                                <td><a href="/ingrediente/seleccionarIngrediente" type="button" class="btn btn-primary">Seleccionar</td> 
                             </tr>
 
                         </table>

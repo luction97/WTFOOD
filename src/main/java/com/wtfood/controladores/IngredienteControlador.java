@@ -37,12 +37,11 @@ public class IngredienteControlador {
         return "ingrediente";
     }
     
-    @GetMapping("/mostrarAutores")
-    public String mostrarAutores(ModelMap modelo) {
+    @GetMapping("/mostrarIngredientes")
+    public String mostrarIngredientes(ModelMap modelo) {
         
         modelo.put("mensajenombre", "Nombre");
-        modelo.put("mensajeeditar", "Editar");
-        modelo.put("mensajeeliminar", "Eliminar");
+        modelo.put("mensajeseleccionar", "Seleccionar");
         modelo.addAttribute("ingredientes", ingredienteServicio.consultarTodos());
 
         return "ingrediente";
