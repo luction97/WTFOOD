@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modificar usuario</title>
+
+
+        <link rel="stylesheet" href="/src/main/resources/static/css/estiloModificarUsuario.css">
+
+    </head>
+
+
+    <body>
+
+        <main>
+
+
+
+
+            <div class="caja_principal">
+                </form>
+                <!-- Modificar usuario -->
+                <form method="POST" action="/usuario/registro" enctype="multipart/form-data" class="modificar_usuario">
+
+
+                    <div class="image-upload">
+                        <label for="file-input">
+                            <img src="/src/main/resources/static/img/avatar.jpg" alt="Click aquí para subir tu foto"
+                                 title="Subir imagen">
+                        </label>
+                        <input id="file-input" name="foto" type="file" />
+                    </div>
+
+                    <div class="form">
+                        <label for="inputName" class="col-sm-2"> Nombre:</label>
+                        <input type="text" name="nombre" class="bordes-form">
+                    </div>
+                    <div class="form">
+                        <label for="inputName" class="col-sm-2"> Apellido:</label>
+                        <input type="text" name="apellido" class="bordes-form">
+
+                    </div>
+                    <div class="form">
+                        <label for="inputName" class="col-sm-2">Correo:</label>
+                        <input type="text" name="email" class="bordes-form">
+
+                    </div>
+                    <div class="form">
+                        <label for="inputName" class="col-sm-2"> NickName:</label>
+                        <input type="text" name="nickname" class="bordes-form">
+
+                    </div>
+                    <div class="form">
+                        <label for="inputName" class="col-sm-2"> Contraseña:</label>
+                        <input type="password" name="clave" class="password">
+                    </div>
+                    <div class="buttom_guardar">
+                        <button type="submit" class="custom-btn btn-1">Actualizar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+
+    </body>
+
+</html>
