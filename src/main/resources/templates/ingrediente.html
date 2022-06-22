@@ -16,14 +16,47 @@
             <div class="medio">
                 <h1 class="form-title"> Llego la hora de cocinar!</h1>
 
-                <h2 class="h2 ">Coloca el nombre de tu receta</h2>
-                <input type="text"id="Nombre"class="form1 marg"placeholder="Ej:La sopa de la abuela">
+                <h2 class="h2 ">Selecciona tus ingredientes</h2>
+                
             </div>
             <form action="/ingrediente" method="POST" enctype="multipart/form-data" class="form">
 
-
                 <section class="marg">
-                    <label for="ingrediente"class="h2" id="ingrediente">Ingredientes:</label>
+                    <label for="ingrediente"class="h2" id="ingrediente">Listado de Ingredientes:</label>
+                    <div class="container">
+
+                    </div>
+
+                    <div class="container">
+
+                        <input class="form1" type="submit" name="agregar" value="Ver tu receta" >
+                        <table class="table" action="mostrarIngredientes" method="GET">
+                          <div class="form2">
+                            <a href="/ingrediente/mostrarIngredientes" type="button" class="lista">Lista de Ingredientes</a>
+                            <a href="/ingrediente" type="button" class="lista2">Cerrar lista</a>
+                        </div>
+                            <tr>
+                                <th th:text="${mensajenombre}"></th>
+                                <th th:text="${mensajeseleccionar}"></th>
+
+                            </tr>
+                            
+                            <tr th:each="ingrediente : ${ingredientes}">
+                                <td th:text = "${ingrediente.getNombre}"></td>
+                               
+                                <td ><a href="/ingrediente/seleccionarIngrediente" type="button" class="seleccionar">Seleccionar</td> 
+                                
+                                </tr>
+                              
+                        </table>
+                      
+
+
+
+                    </div>
+                </section>
+                <section class="marg">
+                    <label for="ingrediente"class="h2" id="ingrediente">Agrega mas ingredientes:</label>
                     <div class="container">
                         <input type="text"id="ingrediente"class="form1" name="ingrediente" placeholder="Escriba el ingrediente">
 
@@ -42,52 +75,8 @@
 
                 </section>
 
-                <section class="marg">
-                    <label for="ingrediente"class="h2" id="ingrediente">Pasos:</label>
-                    <div class="container">
-                        <input type="text"id="ingrediente"class="form1" name="Pasos" placeholder="Indique el paso">
-
-                        <input type="submit"class="form1"value="Agregar otro paso">
-                    </div>
-
-                    <div class="container">
-
-                        <input class="form1" type="submit" name="agregar" value="Guardar ">
-
-
-
-                    </div>
-                </section>
-                <section class="marg">
-                    <label for="ingrediente"class="h2" id="ingrediente">Entonces tu receta quedaria asi!:</label>
-                    <div class="container">
-
-                    </div>
-
-                    <div class="container">
-
-
-                        <table class="table" action="mostrarIngredientes" method="GET">
-                            <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-info">Lista de Ingredientes</a>
-                            <a href="/ingrediente" type="button" class="btn btn-info">Cerrar lista</a>
-
-                            <tr>
-                                <th th:text="${mensajenombre}"></th>
-                                <th th:text="${mensajeseleccionar}"></th>
-
-                            </tr>
-                            <tr th:each="ingrediente : ${ingredientes}">
-                                <td th:text = "${ingrediente.getNombre}"></td>
-                                <td><a href="/ingrediente/seleccionarIngrediente" type="button" class="btn btn-primary">Seleccionar</td> 
-                            </tr>
-
-                        </table>
-                        <input class="form1" type="submit" name="agregar" value="Enviar todo y terminar" >
-
-
-
-                    </div>
-                </section>
+            
+               
 
             </form>
 
