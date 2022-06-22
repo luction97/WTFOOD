@@ -4,6 +4,7 @@ padding:0;
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 }
+
 body{
     background:url("/img/fondo-login2.png");
 
@@ -11,9 +12,15 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed
+    background-attachment: fixed;
+    
 
 }
+
+.medio{
+    text-align: center;
+}
+
 .contenedor .form{
 background: rgba(0, 0,0, 0);
 width: 90%;
@@ -23,11 +30,13 @@ padding:5px 35px;
 margin-top:30px;
 padding-bottom:30px;
 
+
 }
 
  h1{
     color:rgb(38, 140, 180);
-    font-size: 50px
+    font-size: 50px;
+    font-family: 'Kalam', cursive;
 }
 .h2{
     --tw-text-opacity: 1;
@@ -43,6 +52,7 @@ padding-bottom:30px;
     line-height: 2rem;
     font-weight: 600;
     padding-bottom:5px;
+    font-family: 'Kalam', cursive;
 }
 
 .form1{

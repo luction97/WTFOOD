@@ -36,7 +36,7 @@
                     <td th:text="${receta.getCantidadIngredientes}"></td>
                     <td th:text="${receta.getUsuario.getNombre}"></td>
                     <td th:text="${receta.getIngredientes}"></td>
-                    <td><a href="/modificarReceta">Editar</a></td>
+                    <td><a href="/receta/modificarReceta">Editar</a></td>
                     <td><button type="submit">ELiminar</button></td></tr>
                 </tr>
             </tbody>
@@ -50,7 +50,7 @@
         
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Foto</label><br/>
-            <input type="image" class="form-control" id="formGroupExampleInput" name="foto" placeholder="Foto" th:value="${foto}"><br/>
+            <input type="file" class="form-control" id="formGroupExampleInput" name="foto" placeholder="Foto" th:value="${foto}"><br/>
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Nombre</label><br/>

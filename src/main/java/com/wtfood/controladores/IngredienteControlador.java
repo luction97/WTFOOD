@@ -24,14 +24,27 @@ public class IngredienteControlador {
     }
     
     @PostMapping("")
+//    public String ingresar(ModelMap modelo, @RequestParam String ingrediente, @RequestParam MultipartFile imagen, String agregar){
     public String ingresar(ModelMap modelo, @RequestParam String ingrediente, String agregar){
        
         try{
             ingredienteServicio.ingresar(ingrediente);
-            
+            modelo.put("exito", "Ingrediente agregado con exito!");
         }catch(Exception e){
             e.getMessage();
+            modelo.put("error", "El ingrediente no se pudo cargar.");
         }
+        return "ingrediente";
+    }
+    
+    @GetMapping("/mostrarAutores")
+    public String mostrarAutores(ModelMap modelo) {
+        
+        modelo.put("mensajenombre", "Nombre");
+        modelo.put("mensajeeditar", "Editar");
+        modelo.put("mensajeeliminar", "Eliminar");
+        modelo.addAttribute("ingredientes", ingredienteServicio.consultarTodos());
+
         return "ingrediente";
     }
     

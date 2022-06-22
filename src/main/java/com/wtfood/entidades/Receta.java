@@ -24,6 +24,7 @@ public class Receta {
     private Usuario usuario;
     @OneToOne
     private Foto foto;
+    private List<String> pasoAPaso;
     @OneToMany
     private List<Ingrediente> ingredientes;
 

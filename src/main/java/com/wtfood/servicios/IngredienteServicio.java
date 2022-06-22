@@ -24,8 +24,8 @@ public class IngredienteServicio {
     
     
     @Transactional(propagation = Propagation.NESTED)
-//    public void ingresar(MultipartFile archivo, String nombre) throws ErrorServicio {
-        public void ingresar(String nombre) throws ErrorServicio{        
+//    public void ingresar(MultipartFile archivo, String nombre) throws ErrorServicio {       
+       public void ingresar(String nombre) throws ErrorServicio { 
 
         validar(nombre);
 
