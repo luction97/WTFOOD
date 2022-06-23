@@ -8,7 +8,7 @@ label {
 
 body {
 
-    background-image: url("/src/main/resources/static/img/fondo-login2.png");
+    background-image: url("/img/fondo-login2.png");
     background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
