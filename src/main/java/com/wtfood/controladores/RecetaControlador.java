@@ -26,15 +26,15 @@ public class RecetaControlador {
     @GetMapping("/receta")
     public String listarRecetas(ModelMap modelo) throws ErrorServicio {
         List<Receta> recetas = recetaServicio.listarRecetas();
-        if(recetas.isEmpty()) throw new ErrorServicio("No se ah encontrado ninguna receta.");
+        if(recetas.isEmpty()) throw new ErrorServicio("No se a encontrado ninguna receta.");
         modelo.addAttribute("recetas", recetas);
         return "receta";
     }
     
     @PostMapping("/receta")
-    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto) throws ErrorServicio {
+    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto, @RequestParam List<String> pasoAPaso) throws ErrorServicio {
         try {
-            recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
+            recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
@@ -43,6 +43,7 @@ public class RecetaControlador {
             modelo.addAttribute("ingredientes", ingredientes);
             modelo.put("usuario", usuario);
             modelo.put("foto", foto);
+            modelo.put("pasoAPaso", pasoAPaso);
             
             return "receta";
         }
@@ -58,10 +59,10 @@ public class RecetaControlador {
     }
     
     @PostMapping("/modificarReceta")
-    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam String usuario, @RequestParam String foto) throws Exception {
+    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam String usuario, @RequestParam String foto, @RequestParam List<String> pasoAPaso) throws Exception {
         
         try {
-            recetaServicio.modificarReceta(id, nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
+            recetaServicio.modificarReceta(id, nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
             modelo.put("exito", "Receta modificada con éxito");
         } catch (Exception e) {
             modelo.put("error", "Error al modificar la Receta");
