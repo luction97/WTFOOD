@@ -7,6 +7,7 @@ import com.wtfood.entidades.Receta;
 import com.wtfood.entidades.Usuario;
 import com.wtfood.errores.ErrorServicio;
 import com.wtfood.servicios.RecetaServicio;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,7 +33,7 @@ public class RecetaControlador {
     }
     
     @PostMapping("/receta")
-    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto, @RequestParam List<String> pasoAPaso) throws ErrorServicio {
+    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
             recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
         } catch (ErrorServicio ex) {
@@ -59,7 +60,7 @@ public class RecetaControlador {
     }
     
     @PostMapping("/modificarReceta")
-    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam String usuario, @RequestParam String foto, @RequestParam List<String> pasoAPaso) throws Exception {
+    public String modificarReceta(ModelMap modelo, @RequestParam String id, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam String usuario, @RequestParam String foto, @RequestParam ArrayList<String> pasoAPaso) throws Exception {
         
         try {
             recetaServicio.modificarReceta(id, nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);

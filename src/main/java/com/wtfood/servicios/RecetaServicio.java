@@ -30,7 +30,7 @@ public class RecetaServicio {
     private FotoRepositorio fotoRepositorio;
       
     @Transactional(propagation = Propagation.NESTED)
-    public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, List<String> pasoAPaso) throws ErrorServicio {
+    public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
         
         validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
         
@@ -49,7 +49,7 @@ public class RecetaServicio {
     }
     
     @Transactional(propagation = Propagation.NESTED)
-    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, String idUsuario, String idFoto, List<String> pasoAPaso) throws ErrorServicio {
+    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, String idUsuario, String idFoto, ArrayList<String> pasoAPaso) throws ErrorServicio {
         
         Usuario usuario = usuarioRepositorio.buscarPorId(idUsuario);
         Foto foto = fotoRepositorio.buscarPorId(idFoto);
@@ -108,7 +108,7 @@ public class RecetaServicio {
         
     }
     
-    private void validar(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, List<String> pasoAPaso) throws ErrorServicio {
+    private void validar(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
         
         if (nombre == null) {
             throw new ErrorServicio("El nombre de la receta no puede ser nulo.");
