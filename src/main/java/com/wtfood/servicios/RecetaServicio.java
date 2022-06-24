@@ -54,7 +54,7 @@ public class RecetaServicio {
         Usuario usuario = usuarioRepositorio.buscarPorId(idUsuario);
         Foto foto = fotoRepositorio.buscarPorId(idFoto);
         
-        validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto);
+        validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
         
         Optional<Receta> respuesta = recetaRepositorio.findById(id);
         if (respuesta.isPresent()) {
