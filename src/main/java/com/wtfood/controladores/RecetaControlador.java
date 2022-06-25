@@ -18,13 +18,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("receta")
+@RequestMapping("/receta")
 public class RecetaControlador {
     
     @Autowired
     private RecetaServicio recetaServicio;
     
-    @GetMapping("/receta")
+    @GetMapping("")
     public String listarRecetas(ModelMap modelo) throws ErrorServicio {
         List<Receta> recetas = recetaServicio.listarRecetas();
         if(recetas.isEmpty()) throw new ErrorServicio("No se a encontrado ninguna receta.");
@@ -32,7 +32,7 @@ public class RecetaControlador {
         return "receta";
     }
     
-    @PostMapping("/receta")
+    @PostMapping("")
     public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
             recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
