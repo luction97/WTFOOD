@@ -1,6 +1,7 @@
 
 package com.wtfood.entidades;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +25,9 @@ public class Receta {
     private Usuario usuario;
     @OneToOne
     private Foto foto;
-    private List<String> pasoAPaso;
+    
+    private ArrayList<String> pasoAPaso;
+    
     @OneToMany
     private List<Ingrediente> ingredientes;
 
