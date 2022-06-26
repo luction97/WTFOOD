@@ -10,7 +10,7 @@ import javax.persistence.OneToOne;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
-@Data
+/*@Data
 @Entity
 public class Receta {
     @Id
@@ -22,9 +22,13 @@ public class Receta {
     private Integer cantidadIngredientes;
     @OneToOne
     private Usuario usuario;
-    @OneToOne
+   /* @OneToOne
     private Foto foto;
-    @OneToMany
+/*<<<<<<< Updated upstream
+=======
+    private List<String> pasoapaso;*/
+
+    /*@OneToMany
     private List<Ingrediente> ingredientes;
 
-}
+}*/
