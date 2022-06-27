@@ -11,6 +11,20 @@
 </head>
 <body style="background-color: Lavender;">
     <h1>Administacion de Recetas</h1>
+    <nav id="navbar-example2" class="navbar bg-light px-3">
+        <a class="navbar-brand" href="#">Registar Receta</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="/receta/modificarReceta">Modificar Receta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ingrediente">Ingrediente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/modificarUsuario">Modificar Usuario</a>
+          </li>
+        </ul>
+    </nav>
     <h2>Listar Recetas:</h2>
     <div>
         <table class="table table-hover" action="/receta" method="GET">
@@ -48,22 +62,22 @@
         
             <p th:if="${error != null}" th:text="${error}" style="color: red;"></p>
         
-        <div class="mb-3">
+<!--        <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Foto</label><br/>
             <input type="file" class="form-control" id="formGroupExampleInput" name="foto" placeholder="Foto" th:value="${foto}"><br/>
-        </div>
+        </div>-->
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Nombre</label><br/>
             <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" placeholder="Nombre" th:value="${nombre}"><br/>
         </div>
-        <div class="mb-3">
+<!--        <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Cantidad de Ingredientes</label><br/>
             <input type="number" name="cantidadIngredientes" placeholder="Cantidad de ingredientes" th:value="${cantidadIngredientes}"><br/>
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Ingredientes</label><br/>
             <input type="text" class="form-control" id="formGroupExampleInput" name="ingredientes" placeholder="Ingredientes" th:value="${ingredientes}"><br/>
-        </div>
+        </div>-->
         <div>
             <button type="submit" class="btn btn-primary">Cargar</button>
         </div>
