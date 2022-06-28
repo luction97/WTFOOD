@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login y registro</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login y registro</title>
 
-    <link rel="stylesheet" href="/css/estiloLoginRegistro.css" type="text/css"/>
+        <link rel="stylesheet" href="/css/estiloLoginRegistro.css" type="text/css"/>
 
-</head>
-
-
-<body>
-    <main>
-        <div class="contenedor__todo">
-            <div class="caja__trasera">
-                <div class="caja__trasera-login">
-
-                    <h3>¿Ya tienes una cuenta?</h3>
-
-                    <p>Inicia sesión para entrar</p>
-
-                    <button id="btn__iniciar-sesion"> Iniciar Sesión</button>
+    </head>
 
 
+    <body>
+        <main>
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+
+                        <h3>¿Ya tienes una cuenta?</h3>
+
+                        <p>Inicia sesión para entrar</p>
+
+                        <button id="btn__iniciar-sesion"> Iniciar Sesión</button>
+
+
+                    </div>
+
+                    <div class="caja__trasera-registro">
+
+                        <h3>¿Aún no tienes cuenta?</h3>
+
+                        <p>Registrate para iniciar sesión</p>
+
+                        <button id="btn__registrarse"> Registrarse</button>
+
+                    </div>
                 </div>
 
-                <div class="caja__trasera-registro">
 
-                    <h3>¿Aún no tienes cuenta?</h3>
+                <!-- Formulario de Login y Registro -->
+                <div class="contenedor__login-registro">
 
-                    <p>Registrate para iniciar sesión</p>
+                    <!-- Login -->
+                    <form  method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__login">
 
-                    <button id="btn__registrarse"> Registrarse</button>
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" name="email" placeholder="Correo electrónico">
+                        <input type="password" name="clave" placeholder="Contraseña">
+                        <button>Entrar</button>
 
+                    </form>
+                    <!-- Registro -->
+                    <form method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__registro">
+
+                        <h2>Registrarse</h2>
+                        <input type="text" name="nombre" placeholder="Nombre">
+                        <input type="text" name="apellido" placeholder="Apellido">
+                        <input type="text" name="email" placeholder="Correo electrónico">
+                        <input type="text" name="nickname" placeholder="NickName">
+                        <input type="password" name="clave" placeholder="Contraseña">
+                        <button>Registrarse</button>
+                        <div th:if="${Error}!=null">
+                            <ul style="color:red">
+                                <li th:text = "${ Error }"></li>
+                            <ul/>
+                        </div>
+
+
+                    </form>
                 </div>
             </div>
+        </main>
 
-
-            <!-- Formulario de Login y Registro -->
-            <div class="contenedor__login-registro">
-
-                <!-- Login -->
-                <form  method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__login">
-
-                    <h2>Iniciar Sesión</h2>
-                    <input type="text" name="email" placeholder="Correo electrónico">
-                    <input type="password" name="clave" placeholder="Contraseña">
-                    <button>Entrar</button>
-
-                </form>
-                <!-- Registro -->
-                <form method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__registro">
-
-                    <h2>Registrarse</h2>
-                    <input type="text" name="nombre" placeholder="Nombre">
-                    <input type="text" name="apellido" placeholder="Apellido">
-                    <input type="text" name="email" placeholder="Correo electrónico">
-                    <input type="text" name="nickname" placeholder="NickName">
-                    <input type="password" name="clave" placeholder="Contraseña">
-                    <button>Registrarse</button>
-
-
-                </form>
-            </div>
-        </div>
-    </main>
-
-    <script src="/script.js"></script>
-</body>
+        <script src="/script.js"></script>
+    </body>
 
 </html>

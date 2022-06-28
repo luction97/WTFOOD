@@ -41,7 +41,7 @@ public class SeguridadConfiguracion extends WebSecurityConfigurerAdapter {
               .and()
               .formLogin()
                 .loginPage("/loginRegistro")
-                .loginProcessingUrl("/logincheck")
+                .loginProcessingUrl("/usuario/registro")
                 .usernameParameter("email")
                 .passwordParameter("clave")
                 .defaultSuccessUrl("/")
