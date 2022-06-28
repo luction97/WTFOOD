@@ -30,11 +30,19 @@ public class UsuarioControlador {
             usuarioServicio.guardar(nombre, apellido, email, nickname, clave, true);
             modelo.put("Exito", "Usuario guardado con éxito");
         }catch(Exception e){
-            modelo.put("Error", "Error al registrarse");
+            modelo.put("Error", e.getMessage());
         }
         return "loginRegistro";
     }
     
-    
+    @PostMapping("/inicioSesion")
+    private String iniciarSesion(ModelMap modelo, @RequestParam String email, @RequestParam String clave){
+        try{
+            usuarioServicio.credencialesValidas(email, clave);
+            return "index";
+        }catch(Exception e){
+            return "loginRegistro";
+        }
+    }    
     
 }

@@ -30,22 +30,32 @@ public class UsuarioServicio implements UserDetailsService {
 
     @Transactional(propagation = Propagation.NESTED)
     public Usuario guardar(String nombre, String apellido, String email, String nickname, String clave, Boolean alta) throws Exception {
-        validacion(nombre, apellido, email, nickname, clave);
+        try {
+            validacion(nombre, apellido, email, nickname, clave);
+            if(!validarEmail(email)){
+                throw new ErrorServicio("Ya existe el email");
+            }
+            if(!validarNickname(nickname)){
+                throw new ErrorServicio("Ya existe ese nickname");
+            }
 
-        Usuario usuario = new Usuario();
+            Usuario usuario = new Usuario();
 
-        usuario.setNombre(nombre);
-        usuario.setApellido(apellido);
-        usuario.setEmail(email);
-        usuario.setNickname(nickname);
-        usuario.setClave(clave);
-        usuario.setAlta(Boolean.TRUE);
-        usuario.setRol(Rol.USUARIO);
+            usuario.setNombre(nombre);
+            usuario.setApellido(apellido);
+            usuario.setEmail(email);
+            usuario.setNickname(nickname);
+            usuario.setClave(clave);
+            usuario.setAlta(Boolean.TRUE);
+            usuario.setRol(Rol.USUARIO);
 
-        String claveEncriptada = new BCryptPasswordEncoder().encode(clave);
-        usuario.setClave(claveEncriptada);
+            String claveEncriptada = new BCryptPasswordEncoder().encode(clave);
+            usuario.setClave(claveEncriptada);
 
-        return usuarioRepositorio.save(usuario);
+            return usuarioRepositorio.save(usuario);
+        } catch(Exception e){
+            throw new Exception(e.getMessage());
+        }
 
     }
 
@@ -107,6 +117,34 @@ public class UsuarioServicio implements UserDetailsService {
 
     }
 
+    private boolean validarNickname(String nickname) {
+        Usuario usuario = usuarioRepositorio.encontrarPorNickname(nickname);
+        if (usuario == null) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean validarEmail(String email) {
+        Usuario usuario = usuarioRepositorio.encontrarPorEmail(email);
+        if (usuario == null) {
+            return true;
+        }
+        return false;
+    }
+
+    public Usuario credencialesValidas(String email, String clave)  throws ErrorServicio{
+        try{
+            Usuario usuario = usuarioRepositorio.encontrarPorEmail(email);
+            if (usuario == null) {
+            throw new ErrorServicio("Email inválido");
+        }
+            return usuario;
+        }catch(Exception e){
+            throw new ErrorServicio(e.getMessage());
+        }
+    }
+    
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Usuario usuario = usuarioRepositorio.encontrarPorEmail(email);
@@ -116,11 +154,11 @@ public class UsuarioServicio implements UserDetailsService {
             ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
             HttpSession session = attr.getRequest().getSession(true);
             session.setAttribute("usuariosession", usuario);
-            
+
             User user = new User(usuario.getEmail(), usuario.getClave(), permisos);
             return user;
-            
-        }else{
+
+        } else {
             return null;
         }
     }
