@@ -26,7 +26,7 @@
         </ul>
     </nav>
     <h2>Listar Recetas:</h2>
-    <div>
+    <div th:if="${recetas} != null">
         <table class="table table-hover" action="/receta" method="GET">
             <thead>
                 <tr>

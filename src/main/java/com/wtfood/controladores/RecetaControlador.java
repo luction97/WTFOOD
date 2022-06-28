@@ -27,7 +27,7 @@ public class RecetaControlador {
     @GetMapping("")
     public String listarRecetas(ModelMap modelo) throws ErrorServicio {
         List<Receta> recetas = recetaServicio.listarRecetas();
-        if(recetas.isEmpty()) throw new ErrorServicio("No se ha encontrado ninguna receta.");
+       // if(recetas.isEmpty()) throw new ErrorServicio("No se ha encontrado ninguna receta.");
         modelo.addAttribute("recetas", recetas);
         return "receta";
     }
