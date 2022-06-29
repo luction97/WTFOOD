@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+body{
+    height: 100%;
+    overflow: hidden
+}
 .titulo_ppal{
   text-align: center;
   font-family: 'Outfit', sans-serif;

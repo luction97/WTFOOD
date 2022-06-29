@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/paginaPrincipal/css/estilos.css" media="screen">
     <title>WTFood - Nuestro equipo</title>
     <link rel="icon" type="image/x-icon" href="/paginaPrincipal/img/tallarines.png">
@@ -20,49 +20,57 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-warning-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/paginaPrincipal/img/logo wtfood BLANCO  transparente1.png" alt="" width="30" height="24">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar  navbar-expand-lg  navbar-light bg-light shadow">
+  <div class="container-fluid">
+    <div class="col-xl-2">
+    <a class="navbar-brand" href="#">
+      
+    </a>
+  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedConten <img src="img/logo wtfood BLANCO  transparente1.png" alt="" width="30" height="24">t" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<section class="col-xl-3">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar recetas" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+      </ul>
+      </div>
+      </section>
+     <!-- <div class="listas">-->
+      <div class="col-xl-7">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index">Ir a inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mis recetas</a>
+        </li>
 
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar recetas" aria-label="Search">
-                    <button class="btn btn-outline-warning" type="submit">Buscar</button>
-                </form>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index">Ir a inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mis recetas</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-expanded="false">
-                                Mi perfil
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Editar perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Mis recetas</a></li>
-                                <li><a class="dropdown-item" href="#">Recetas Favoritas</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Mi perfil
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="#">Mis recetas</a></li>
+            <li><a class="dropdown-item" href="#">Recetas Favoritas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    </div>
+</nav>
     </header>
     <title>Este es nuestro equipo</title>
     <section class="container px-2">
