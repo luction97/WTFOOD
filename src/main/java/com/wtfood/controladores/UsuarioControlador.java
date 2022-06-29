@@ -29,10 +29,12 @@ public class UsuarioControlador {
         try{
             usuarioServicio.guardar(nombre, apellido, email, nickname, clave, true);
             modelo.put("Exito", "Usuario guardado con éxito");
+            return "paginaPrincipal.html";
         }catch(Exception e){
             modelo.put("Error", e.getMessage());
+            return "loginRegistro.html";
         }
-        return "paginaPrincipal.html";
+        
     } 
     
 }
