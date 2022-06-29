@@ -1,168 +1,184 @@
 *{margin:0;
-padding:0;
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
-box-sizing:border-box;
-}
-
-body{
-    background:url("/img/fondo-login2.png");
-
-    background-size: contain;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    }
     
-
-}
-
-.medio{
-    text-align: center;
-}
-
-.contenedor .form{
-background: rgba(0, 0,0, 0);
-width: 90%;
-max-width: 650px;
-margin:auto;
-padding:5px 35px;
-margin-top:30px;
-padding-bottom:30px;
-
-
-}
-
- h1{
-    color:rgb(38, 140, 180);
-    font-size: 50px;
-    font-family: 'Kalam', cursive;
-}
-.h2{
-    --tw-text-opacity: 1;
-    font-feature-settings: "liga" on;
-    color: rgba(84,85,84,var(--tw-text-opacity));
-    font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
-     border: 0 solid;
-    box-sizing: border-box;
-    margin: 5px;
-    margin-bottom: .5rem;
-    font-size: 1.5rem;
-    letter-spacing: -.0125em;
-    line-height: 2rem;
-    font-weight: 600;
-    padding-bottom:5px;
-    font-family: 'Kalam', cursive;
-}
-
-.form1{
-    --tw-text-opacity: 1;
-   font-feature-settings: "liga" on;
-    color: rgba(74,74,74,var(--tw-text-opacity));
-    font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
-    list-style: none;
-    font-size: 1rem;
-    letter-spacing: -.025em;
-    line-height: 1.25;
-    border: 0 solid;
-    border-color: currentColor;
-    min-height: 1.2em;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    --tw-bg-opacity: 1;
-    /* fondo de los contenedores de texto */
-    background-color: rgba(248,246,242,var(--tw-bg-opacity));
-    border-radius: 10px;
-    padding: .5rem;
-    box-sizing: content-box;
-    padding-right: 1.5rem;
-margin-right: 30px;
-    cursor: pointer;
+    body{
+        background:url("/img/fondo-login2.png");
+    
+        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        
+    
+    }
+    
+    .medio{
+        text-align: center;
+    }
+    
+    .contenedor .form{
+    background: rgba(0, 0,0, 0);
+    width: 90%;
+    max-width: 650px;
+    margin:auto;
+    padding:5px 35px;
+    margin-top:30px;
+    padding-bottom:30px;
     
     
-
+    }
     
-}
-section{
-    --tw-text-opacity: 1;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    font-feature-settings: "liga" on;
-    color: rgba(74,74,74,var(--tw-text-opacity));
-    font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
-    border: 0 solid;
-    box-sizing: border-box;
-    border-color: currentColor;
-    margin-top: .5rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(236, 227, 198);
-    padding: 1rem;
-    border-radius: 20px;
-}
-
-.container {
-  background: rgb(236, 227, 198);
-  margin:5px;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  height: 50px;
-  margin-bottom: 10px;
-  display: flex;
-  /* align-items por defecto tiene el valor `stretch` */
-  align-items: start;
-}
-
-.marg{
-margin-bottom: 40px;
-}
-
-.form2 {
-position: relative;
-display: flex;
-bottom: 110px;
-right: 145px;
-
-}
-
-.seleccionar{
-position: relative;
-display: flex;
-bottom: 110px;
-right: 95px;
-text-align: center;
-background-color: rgba(248,246,242,var(--tw-bg-opacity));
-border-radius: 10px;
-padding: 15px 25px;
-
-text-decoration: none;
-margin-right: 30px;
-cursor: pointer;
-color:rgb(92, 92, 92);
-}
-.lista{
-
+     h1{
+        color:rgb(38, 140, 180);
+        font-size: 50px;
+        font-family: 'Kalam', cursive;
+    }
+    .h2{
+        --tw-text-opacity: 1;
+        font-feature-settings: "liga" on;
+        color: rgba(84,85,84,var(--tw-text-opacity));
+        font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
+         border: 0 solid;
+        box-sizing: border-box;
+        margin: 5px;
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+        letter-spacing: -.0125em;
+        line-height: 2rem;
+        font-weight: 600;
+        padding-bottom:5px;
+        font-family: 'Kalam', cursive;
+    }
+    
+    .form1{
+        --tw-text-opacity: 1;
+       font-feature-settings: "liga" on;
+        color: rgba(74,74,74,var(--tw-text-opacity));
+        font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
+        list-style: none;
+        font-size: 1rem;
+        letter-spacing: -.025em;
+        line-height: 1.25;
+        border: 0 solid;
+        border-color: currentColor;
+        min-height: 1.2em;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        --tw-bg-opacity: 1;
+        /* fondo de los contenedores de texto */
+        background-color: rgba(248,246,242,var(--tw-bg-opacity));
+        border-radius: 10px;
+        padding: .5rem;
+        box-sizing: content-box;
+        padding-right: 1.5rem;
+    margin-right: 30px;
+        cursor: pointer;
+        
+        
+    
+        
+    }
+    section{
+        --tw-text-opacity: 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-feature-settings: "liga" on;
+        color: rgba(74,74,74,var(--tw-text-opacity));
+        font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
+        border: 0 solid;
+        box-sizing: border-box;
+        border-color: currentColor;
+        margin-top: .5rem;
+        --tw-bg-opacity: 1;
+        background-color: rgb(236, 227, 198);
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    
+    .container {
+      background: rgb(236, 227, 198);
+      margin:5px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      /* height: 50px; */
+      margin-bottom: 10px;
+     
+      /* align-items por defecto tiene el valor `stretch` */
+      align-items: start;
+    }
+    
+    .marg{
+    margin-bottom: 40px;
+    }
+    
+    .form2 {
+    position: relative;
+   
+    bottom: 110px;
+    right: 145px;
+    
+    }
+    
+    .seleccionar{
+    position: relative;
+    
+   /*  bottom: 130px;
+    right: 95px; */
     text-align: center;
     background-color: rgba(248,246,242,var(--tw-bg-opacity));
     border-radius: 10px;
-  padding: 15px 25px;
-    box-sizing: content-box;
+    padding: 10px 20px;
+    
     text-decoration: none;
-margin-right: 30px;
+    margin-right: 30px;
     cursor: pointer;
     color:rgb(92, 92, 92);
+    }
+    .seleccionar2{
+        text-align: center;
+        background-color: rgba(248,246,242,var(--tw-bg-opacity));
+        border-radius: 10px;
+        padding: 10px 20px;
+        
+        text-decoration: none;
+        margin-right: 30px;
+        cursor: pointer;
+        color:rgb(92, 92, 92);
+        position: relative;
+        left: 450px;
+        top: 35px;
 
-}
-.lista2{
-    padding: 15px 30px;
+    }
+    .lista{
     
-    margin-left: 15px;
-    text-align: center;
-    background-color: rgba(248,246,242,var(--tw-bg-opacity));
-    border-radius: 10px;
-  
-    box-sizing: content-box;
-    text-decoration: none;
-margin-right: 30px;
-    cursor: pointer;
-    color:rgb(92, 92, 92);
-}
+        text-align: center;
+        background-color: rgba(248,246,242,var(--tw-bg-opacity));
+        border-radius: 10px;
+      padding: 15px 25px;
+        box-sizing: content-box;
+        text-decoration: none;
+    margin-right: 30px;
+        cursor: pointer;
+        color:rgb(92, 92, 92);
+    
+    }
+    .lista2{
+        padding: 15px 30px;
+        
+        margin-left: 15px;
+        text-align: center;
+        background-color: rgba(248,246,242,var(--tw-bg-opacity));
+        border-radius: 10px;
+      
+        box-sizing: content-box;
+        text-decoration: none;
+    margin-right: 30px;
+        cursor: pointer;
+        color:rgb(92, 92, 92);
+    }
+    
