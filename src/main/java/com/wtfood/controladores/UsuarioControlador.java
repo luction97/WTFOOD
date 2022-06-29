@@ -32,7 +32,7 @@ public class UsuarioControlador {
         }catch(Exception e){
             modelo.put("Error", e.getMessage());
         }
-        return "loginRegistro";
+        return "paginaPrincipal.html";
     } 
     
 }

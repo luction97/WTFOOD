@@ -2,12 +2,12 @@
 
 .titulo_ppal{
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
 }
 .recetas_favs{
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
 }
 
@@ -20,7 +20,7 @@
 nav{
   justify-content: space-between;
   margin: 0;
-
+ font-family: 'Outfit', sans-serif;
 }
 ​.team-cards{
   outline-color: aqua;
@@ -82,7 +82,7 @@ height: 15%;
     max-height: 100%;
 }
 .body {
-font-family: 'Poppins', sans-serif;
+font-family: 'Outfit', sans-serif;
 background-image: URL("fondo-login2.png");
 background-size: contain;
 background-size: cover;

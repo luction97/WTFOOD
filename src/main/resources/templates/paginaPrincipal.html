@@ -21,19 +21,19 @@
 <body>
 
   <!--Este es el navbar. Lo dejamos o no? Porque si ponemos el NavBar como fijo, quedaria bueno y este, le estuve buscando la vuelta y no queda tan lindo-->
-  <header>
+<header>
 
     <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
    
-<nav class="navbar navbar-expand-lg  bg-light-warning">
+<nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-light shadow">
   <div class="container-fluid">
     <div class="col-xl-2">
     <a class="navbar-brand" href="#">
-      <img src="/img/logo wtfood BLANCO  transparente1.png" alt="" width="30" height="24">
+      
     </a>
   </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red;">
+      aria-controls="navbarSupportedConten <img src="img/logo wtfood BLANCO  transparente1.png" alt="" width="30" height="24">t" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red;">
       <span class="navbar-toggler-icon"></span>
     </button>
 <section class="col-xl-3">
@@ -41,7 +41,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Buscar recetas" aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit">Buscar</button>
+          <button class="btn btn-outline-dark" type="submit">Buscar</button>
         </form>
       </ul>
       </div>
@@ -63,7 +63,7 @@
             Mi perfil
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
             <li><a class="dropdown-item" href="#">Mis recetas</a></li>
             <li><a class="dropdown-item" href="#">Recetas Favoritas</a></li>
             <li>
@@ -78,9 +78,10 @@
 </nav>
 </header>
 
-  <div class="recetas_favs">
+  <div class="recetas_favs" style="margin-top: 90px;">
     <h1>Tus recetas favoritas</h1>
   </div>
+
   <!--Este es el carousel donde aparecen las recetas favoritas -->
   <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
 
@@ -92,7 +93,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" class="card-img-top" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesas</h5>
               <p class="card-text">De Celsius.</p>
               <a href="#" class="btn btn-primary">Ir al Instagram</a>
@@ -102,7 +103,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Fugazzetta</h5>
               <p class="card-text">Pizza de la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Google Maps</a>
@@ -112,7 +113,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" class="card-img-top" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -122,7 +123,7 @@
             <div class="image-wrapper">
               <img class="card-img-top" src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -132,7 +133,7 @@
             <div class="image-wrapper">
               <img class="card-img-top" src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -147,7 +148,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -157,7 +158,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -167,7 +168,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -177,7 +178,7 @@
             <div class="image-wrapper">
               <img src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -187,7 +188,7 @@
             <div class="image-wrapper">
               <img src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -202,7 +203,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -212,7 +213,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -222,7 +223,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -232,7 +233,7 @@
             <div class="image-wrapper">
               <img src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -242,7 +243,7 @@
             <div class="image-wrapper">
               <img src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -257,7 +258,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -267,7 +268,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -277,7 +278,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -287,7 +288,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -297,7 +298,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -312,7 +313,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -322,7 +323,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -332,7 +333,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -342,7 +343,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -352,7 +353,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -361,16 +362,10 @@
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-  <h1>Recetas que compartiste con la comunidad</h1>
+  <div style="text-align: center; margin: 20px">
+  <h2>Recetas que compartiste con la comunidad</h2>
+  </div>
   <div id="carouselExampleControls" class="carousel slide d-none d-sm-block" data-ride="carousel">
 
     <!--Este es el item activo del carousel o primer item-->
@@ -381,7 +376,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesas</h5>
               <p class="card-text">De Celsius.</p>
               <a href="#" class="btn btn-primary">Ir al Instagram</a>
@@ -391,7 +386,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Fugazzetta</h5>
               <p class="card-text">Pizza de la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Google Maps</a>
@@ -401,7 +396,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -411,7 +406,7 @@
             <div class="image-wrapper">
               <img src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -421,7 +416,7 @@
             <div class="image-wrapper">
               <img src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -436,7 +431,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -446,7 +441,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -456,7 +451,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -466,7 +461,7 @@
             <div class="image-wrapper">
               <img src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -476,7 +471,7 @@
             <div class="image-wrapper">
               <img src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -491,7 +486,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -501,7 +496,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -511,7 +506,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -521,7 +516,7 @@
             <div class="image-wrapper">
               <img src="/img/img4.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -531,7 +526,7 @@
             <div class="image-wrapper">
               <img src="/img/img5.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -546,7 +541,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -556,7 +551,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -566,7 +561,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -576,7 +571,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -586,7 +581,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -601,7 +596,7 @@
             <div class="image-wrapper">
               <img src="/img/img3.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Pizza de fugazzetta</h5>
               <p class="card-text">De la Mezzetta</p>
               <a href="#" class="btn btn-primary">Ir a Maps</a>
@@ -611,7 +606,7 @@
             <div class="image-wrapper">
               <img src="/img/img2.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Hamburguesa</h5>
               <p class="card-text">De Celsius</p>
               <a href="#" class="btn btn-primary">Ir a instagram</a>
@@ -621,7 +616,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -631,7 +626,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -641,7 +636,7 @@
             <div class="image-wrapper">
               <img src="/img/img1.jpg" alt="...">
             </div>
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h5 class="card-title">Salteado de ternera</h5>
               <p class="card-text">De YouTube.</p>
               <a href="#" class="btn btn-primary">Ir a la receta</a>
@@ -650,15 +645,6 @@
         </div>
       </div>
     </div>
-
-    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
 </body>
