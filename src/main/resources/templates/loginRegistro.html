@@ -5,14 +5,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login y registro</title>
+        <title>Login y Registro</title>
 
         <link rel="stylesheet" href="/css/estiloLoginRegistro.css" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
 
     </head>
 
 
     <body>
+        <p th:if="${Error != null }" th:text="${Error}" style="color: red;"></p>
+        <p th:if="${Exito != null }" th:text="${Exito}" style="color: yellow;"></p>
         <main>
             <div class="contenedor__todo">
                 <div class="caja__trasera">
@@ -43,8 +46,10 @@
                 <div class="contenedor__login-registro">
 
                     <!-- Login -->
-                    <form  method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__login">
 
+
+
+                    <form  method="POST" action="/logincheck" enctype="multipart/form-data" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
                         <input type="text" name="email" placeholder="Correo electrónico">
                         <input type="password" name="clave" placeholder="Contraseña">
@@ -55,17 +60,13 @@
                     <form method="POST" action="/usuario/registro" enctype="multipart/form-data" class="formulario__registro">
 
                         <h2>Registrarse</h2>
+
                         <input type="text" name="nombre" placeholder="Nombre">
                         <input type="text" name="apellido" placeholder="Apellido">
                         <input type="text" name="email" placeholder="Correo electrónico">
                         <input type="text" name="nickname" placeholder="NickName">
                         <input type="password" name="clave" placeholder="Contraseña">
                         <button>Registrarse</button>
-                        <div th:if="${Error}!=null">
-                            <ul style="color:red">
-                                <li th:text = "${ Error }"></li>
-                            <ul/>
-                        </div>
 
 
                     </form>
