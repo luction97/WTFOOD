@@ -21,4 +21,12 @@ public class PortalControlador {
         return "modificarUsuario";
     }
 
+    @GetMapping("/paginaPrincipal")
+    public String paginaPrincipal() {
+        return "paginaPrincipal";
+    }
+@GetMapping("/team")
+    public String team() {
+        return "team";
+    }
 }
