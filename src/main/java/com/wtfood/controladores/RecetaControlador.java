@@ -9,6 +9,7 @@ import com.wtfood.errores.ErrorServicio;
 import com.wtfood.servicios.RecetaServicio;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -33,24 +34,27 @@ public class RecetaControlador {
     }
     
     @PostMapping("")
-    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones, @RequestParam Integer cantidadIngredientes, @RequestParam List<Ingrediente> ingredientes, @RequestParam Usuario usuario, @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
+    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones,
+            @RequestParam Integer cantidadIngredientes, HttpSession sesion, @RequestParam Usuario usuario,
+            @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
+            List<Ingrediente> ingredientes = (List<Ingrediente>) sesion.getAttribute("ingredientes");
             recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
             modelo.put("calificaciones", calificaciones);
             modelo.put("cantidadIngredientes", cantidadIngredientes);
-            modelo.addAttribute("ingredientes", ingredientes);
+//            modelo.addAttribute("ingredientes", ingredientes);
             modelo.put("usuario", usuario);
             modelo.put("foto", foto);
             modelo.put("pasoAPaso", pasoAPaso);
             
             return "receta";
         }
-        modelo.put("titulo", "Bienvenido a Gestion de Receta.");
-        modelo.put("descripcion", "La carga de datos fue hecha de manera satifactoria.");
-        return "exito";
+//        modelo.put("titulo", "Bienvenido a Gestion de Receta.");
+//        modelo.put("descripcion", "La carga de datos fue hecha de manera satifactoria.");
+        return "receta";
     }
     
     @GetMapping("/modificarReceta")
