@@ -32,8 +32,8 @@
                         <input class="form1" type="submit" name="agregar" value="Ver tu receta" >
                         <table class="table" action="mostrarIngredientes" method="GET">
                           <div class="form2">
-                            <a href="/ingrediente/mostrarIngredientes" type="button" class="lista">Lista de Ingredientes</a>
-                            <a href="/ingrediente" type="button" class="lista2">Cerrar lista</a>
+                            <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-outline-warning">Lista de Ingredientes</a>
+                            <a href="/ingrediente" type="button" class="btn btn-outline-warning">Cerrar lista</a>
                         </div>
                             <tr>
                                 <th th:text="${mensajenombre}"></th>
@@ -44,7 +44,7 @@
                             <tr th:each="ingrediente : ${ingredientes}">
                                 <td th:text = "${ingrediente.getNombre}"></td>
                                
-                                <td ><a href="/ingrediente/seleccionarIngrediente" type="button" class="seleccionar">Seleccionar</td> 
+                                <td><a th:href="@{'/ingrediente/seleccionarIngrediente/' + ${ingrediente.id}}" type="button" class="seleccionar">Seleccionar</a></td> 
                                 
                                 </tr>
                               
