@@ -80,12 +80,12 @@ public class RecetaServicio {
     public ArrayList<Receta>  listarRecetas() throws ErrorServicio {
         
         ArrayList<Receta> recetas = recetaRepositorio.listarRecetas();
-        if (!recetas.isEmpty()) {
-            return recetas;
-        } else {
-            throw new ErrorServicio("No se ha encontrado ninguna receta.");
-        }
-        
+//        if (!recetas.isEmpty()) {
+//            return recetas;
+//        } else {
+//            throw new ErrorServicio("No se ha encontrado ninguna receta.");
+//        }
+        return recetas;
     }
     
     @Transactional(readOnly = true)
