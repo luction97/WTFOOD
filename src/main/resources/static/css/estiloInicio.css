@@ -1,3 +1,7 @@
+body{
+    height: 100%;
+    overflow: hidden
+}
 navbar{
     background-color: #ffcc99;
 }
@@ -8,7 +12,7 @@ button:hover {
 
 }
 .mainContent-sec {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,37 +21,37 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-  }
-  
-  .mainContent-title {
-    font-size: 6rem;
+}
+
+.mainContent-title {
+    font-size: 5vw;
     font-weight: 800;
-  }
-  
-  .mainContent-exp {
+}
+
+.mainContent-exp {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-  }
-  
-  .mainContent-exp p {
-    font-size: 2.5rem;
+
+}
+
+.mainContent-exp p {
+    font-size: 2.4rem;
     font-weight: 100;
     padding: 26px;
     padding-bottom: 4px;
     padding-right: 9px;
     font-family: 'Outfit', sans-serif;
-  }
-  
-  .mainContent-exp span {
-    font-size: 2.8rem;
+}
+
+.mainContent-exp span {
+    font-size: 2.7rem;
     font-weight: 700;
-   font-family: 'Outfit', sans-serif;
-  }
-  
-  .navbar {
+    font-family: 'Outfit', sans-serif;
+}
+
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,20 +59,20 @@ button:hover {
     position: fixed;
     top: 0;
     z-index: 999;
-    width: 100%;
-    height: 70px;
-  }
-  
-  .navbar-group {
+    width: 100vw;
+    height: 3vw;
+}
+
+.navbar-group {
     display: flex;
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     list-style-type: none;
-  }
-  
-  .navbar-btn {
+}
+
+.navbar-btn {
     height: 100%;
     width: 60px;
     display: flex;
@@ -78,36 +82,36 @@ button:hover {
     right: 10px;
     cursor: pointer;
     display: none;
-  }
-  
-  .navbar-img {
+}
+
+.navbar-img {
     padding: 5px;
     display: none;
-  }
-  
-  .navbar-link {
+}
+
+.navbar-link {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .navbar-link a {
+}
+
+.navbar-link a {
     width: 100%;
     margin: 0 2rem;
     text-decoration: none;;
     font-weight: 700;
-    font-size: 1.5rem;
-  }
-  
-  .animLine::after {
-  display: block;
-  width: 0%;
-  height: 3px;
-  transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.animLine::after {
+    display: block;
+    width: 0%;
+    height: 3px;
+    transition: all 0.3s;
 }
 
 .animLine:hover::after {
-  width: 100%;
+    width: 100%;
 }
-  
+
