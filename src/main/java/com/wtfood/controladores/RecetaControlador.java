@@ -35,16 +35,15 @@ public class RecetaControlador {
     
     @PostMapping("")
     public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones,
-            @RequestParam Integer cantidadIngredientes, HttpSession sesion, @RequestParam Usuario usuario,
+            HttpSession sesion, @RequestParam Usuario usuario,
             @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
             List<Ingrediente> ingredientes = (List<Ingrediente>) sesion.getAttribute("ingredientes");
-            recetaServicio.registrarReceta(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
+            recetaServicio.registrarReceta(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
             modelo.put("calificaciones", calificaciones);
-            modelo.put("cantidadIngredientes", cantidadIngredientes);
 //            modelo.addAttribute("ingredientes", ingredientes);
             modelo.put("usuario", usuario);
             modelo.put("foto", foto);
