@@ -32,17 +32,7 @@ public class UsuarioControlador {
         }catch(Exception e){
             modelo.put("Error", e.getMessage());
         }
-        return "loginRegistro";
-    }
-    
-    @PostMapping("/inicioSesion")
-    private String iniciarSesion(ModelMap modelo, @RequestParam String email, @RequestParam String clave){
-        try{
-            usuarioServicio.credencialesValidas(email, clave);
-            return "index";
-        }catch(Exception e){
-            return "loginRegistro";
-        }
-    }    
+        return "paginaPrincipal.html";
+    } 
     
 }

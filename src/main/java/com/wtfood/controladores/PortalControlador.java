@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PortalControlador {
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index() {
         return "index";
     }
@@ -21,4 +21,12 @@ public class PortalControlador {
         return "modificarUsuario";
     }
 
+    @GetMapping("/paginaPrincipal")
+    public String paginaPrincipal() {
+        return "paginaPrincipal";
+    }
+@GetMapping("/team")
+    public String team() {
+        return "team";
+    }
 }

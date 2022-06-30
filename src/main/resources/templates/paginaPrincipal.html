@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--Script de saludo bienvenida-->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
+  <title>WTFood - Inicio</title>
+  <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
+
+
+</head>
+
+<body>
+
+  <!--Este es el navbar. Lo dejamos o no? Porque si ponemos el NavBar como fijo, quedaria bueno y este, le estuve buscando la vuelta y no queda tan lindo-->
+<header>
+
+    <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
+   
+<nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-light shadow">
+  <div class="container-fluid">
+    <div class="col-xl-2">
+    <a class="navbar-brand" href="#">
+      
+    </a>
+  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedConten <img src="img/logo wtfood BLANCO  transparente1.png" alt="" width="30" height="24">t" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<section class="col-xl-3">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar recetas" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+      </ul>
+      </div>
+      </section>
+     <!-- <div class="listas">-->
+      <div class="col-xl-7">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Ir a inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mis recetas</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-expanded="false">
+            Mi perfil
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+            <li><a class="dropdown-item" href="#">Mis recetas</a></li>
+            <li><a class="dropdown-item" href="#">Recetas Favoritas</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    </div>
+</nav>
+</header>
+
+  <div class="recetas_favs" style="margin-top: 90px;">
+    <h1>Tus recetas favoritas</h1>
+  </div>
+
+  <!--Este es el carousel donde aparecen las recetas favoritas -->
+  <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
+
+    <!--Este es el item activo del carousel o primer item-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesas</h5>
+              <p class="card-text">De Celsius.</p>
+              <a href="#" class="btn btn-primary">Ir al Instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Fugazzetta</h5>
+              <p class="card-text">Pizza de la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Google Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img class="card-img-top" src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img class="card-img-top" src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Segundo item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Tercer item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--4to item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--5to item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center; margin: 20px">
+  <h2>Recetas que compartiste con la comunidad</h2>
+  </div>
+  <div id="carouselExampleControls" class="carousel slide d-none d-sm-block" data-ride="carousel">
+
+    <!--Este es el item activo del carousel o primer item-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesas</h5>
+              <p class="card-text">De Celsius.</p>
+              <a href="#" class="btn btn-primary">Ir al Instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Fugazzetta</h5>
+              <p class="card-text">Pizza de la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Google Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Segundo item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Tercer item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img4.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img5.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--4to item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--5to item del carousel-->
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img3.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Pizza de fugazzetta</h5>
+              <p class="card-text">De la Mezzetta</p>
+              <a href="#" class="btn btn-primary">Ir a Maps</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img2.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Hamburguesa</h5>
+              <p class="card-text">De Celsius</p>
+              <a href="#" class="btn btn-primary">Ir a instagram</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+          <div class="card border-warning mb-3">
+            <div class="image-wrapper">
+              <img src="/img/img1.jpg" alt="...">
+            </div>
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Salteado de ternera</h5>
+              <p class="card-text">De YouTube.</p>
+              <a href="#" class="btn btn-primary">Ir a la receta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<footer>
+  <div class="container-fluid">
+    <div class="row p-5 bg-warning text-sucess">
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <p class="h3"> WTFood! </p>
+      </div>
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <p class="h5 mb-2"> Sobre nosotros </p>
+        <div class="mb-2">
+          <!--Aca armamos una paginita con nuestro perfil-->
+          <a class="text-decoration-none text-dark" href="/team.html">Conocé a nuestro equipo</a>
+        </div>
+      </div>
+      <!--Creamos unas recetas y las subimos a estas paginas? veo si llego-->
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <p class="h5 mb-3"> Nuestras redes </p>
+        <div class="mb-2">
+          <img src="/img/ig.png">
+          <img src="/img/fb.png">
+          <img src="/img/tw.png">
+        </div>
+      </div>
+      <!--Buscar algún copy & paste de politica de privacidad-->
+      <div class="col-xs-12 col-md-4 col-lg-3">
+        <p class="h5 mb-3"> Politica de privacidad </p>
+        <div class="mb-2">
+          <a class="text-decoration-none text-dark" href="/tyc.html">Terminos y condiciones</a>
+        </div>
+        <div class="mb-2">
+          <a class="text-decoration-none text-dark" href="#">Ayuda</a>
+        </div>
+      </div>
+    </div>
+</footer>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<!--Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+  integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</html>
