@@ -30,15 +30,15 @@ public class RecetaServicio {
     private FotoRepositorio fotoRepositorio;
       
     @Transactional(propagation = Propagation.NESTED)
-    public void registrarReceta(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
+    public void registrarReceta(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
         
-        validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
+        validar(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
         
         Receta receta = new Receta();
         
         receta.setNombre(nombre);
         receta.setCalificaciones(calificaciones);
-        receta.setCantidadIngredientes(cantidadIngredientes);
+        receta.setCantidadIngredientes(ingredientes.size());
         receta.setUsuario(usuario);
         receta.setFoto(foto);
         receta.setIngredientes(ingredientes);
@@ -54,7 +54,7 @@ public class RecetaServicio {
         Usuario usuario = usuarioRepositorio.buscarPorId(idUsuario);
         Foto foto = fotoRepositorio.buscarPorId(idFoto);
         
-        validar(nombre, calificaciones, cantidadIngredientes, ingredientes, usuario, foto, pasoAPaso);
+        validar(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
         
         Optional<Receta> respuesta = recetaRepositorio.findById(id);
         if (respuesta.isPresent()) {
@@ -89,6 +89,13 @@ public class RecetaServicio {
     }
     
     @Transactional(readOnly = true)
+    public ArrayList<String>  listarPasos() throws ErrorServicio {
+        
+        ArrayList<String> pasos = recetaRepositorio.listarPasos();
+        return pasos;
+    }
+    
+    @Transactional(readOnly = true)
     public Receta buscarRecetaPorId(String id) throws ErrorServicio {
         
         if (id == null) {
@@ -99,16 +106,16 @@ public class RecetaServicio {
             throw new ErrorServicio("El id no puede estar vacio.");
         }
         
-        Optional<Receta> respuesta = recetaRepositorio.findById(id);
-        if(respuesta.isPresent()) {
-            return respuesta.get();
+        Receta receta = recetaRepositorio.buscarPorId(id);
+        if(receta != null) {
+            return receta;
         } else {
             throw new ErrorServicio("No se ah encontrado la receta solicitada.");
         }
         
     }
     
-    private void validar(String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
+    private void validar(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
         
         if (nombre == null) {
             throw new ErrorServicio("El nombre de la receta no puede ser nulo.");
@@ -124,14 +131,6 @@ public class RecetaServicio {
         
         if (calificaciones < 0) {
             throw new ErrorServicio("Las calificaciones no pueden ser menor a 0 (cero).");
-        }
-        
-        if (cantidadIngredientes == null) {
-            throw new ErrorServicio("La cantidad de ingredientes no pueden ser nulo.");
-        }
-        
-        if (cantidadIngredientes < 0) {
-            throw new ErrorServicio("La caantidad de ingredientes no pueden ser menor a 0 (cero).");
         }
         
         if (usuario == null) {
