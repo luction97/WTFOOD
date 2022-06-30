@@ -14,6 +14,9 @@ public interface RecetaRepositorio extends JpaRepository<Receta, String> {
     @Query("SELECT r FROM Receta r")
     public ArrayList<Receta> listarRecetas();
     
+    @Query("SELECT r FROM Receta r WHERE r.id LIKE :id")
+    public Receta buscarPorId(@Param("id") String id);
+    
     @Query("SELECT r FROM Receta r WHERE r.usuario.nombre LIKE :nombre")
     public ArrayList<Receta> buscarRecetaPorNombreUsuario(@Param("nombre") String nombre);
     
@@ -22,5 +25,8 @@ public interface RecetaRepositorio extends JpaRepository<Receta, String> {
     
     @Query("SELECT r FROM Receta r WHERE r.cantidadIngredientes = :cantidadIngredientes")
     public ArrayList<Receta> buscarRecetaPorCantidadIngredientes(@Param("cantidadIngredientes") Integer cantidadIngredientes);
+    
+    @Query("SELECT r.pasoAPaso FROM Receta r")
+    public ArrayList<String> listarPasos();
     
 }

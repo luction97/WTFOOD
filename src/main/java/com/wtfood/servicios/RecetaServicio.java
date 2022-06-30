@@ -89,6 +89,13 @@ public class RecetaServicio {
     }
     
     @Transactional(readOnly = true)
+    public ArrayList<String>  listarPasos() throws ErrorServicio {
+        
+        ArrayList<String> pasos = recetaRepositorio.listarPasos();
+        return pasos;
+    }
+    
+    @Transactional(readOnly = true)
     public Receta buscarRecetaPorId(String id) throws ErrorServicio {
         
         if (id == null) {
@@ -99,9 +106,9 @@ public class RecetaServicio {
             throw new ErrorServicio("El id no puede estar vacio.");
         }
         
-        Optional<Receta> respuesta = recetaRepositorio.findById(id);
-        if(respuesta.isPresent()) {
-            return respuesta.get();
+        Receta receta = recetaRepositorio.buscarPorId(id);
+        if(receta != null) {
+            return receta;
         } else {
             throw new ErrorServicio("No se ah encontrado la receta solicitada.");
         }
