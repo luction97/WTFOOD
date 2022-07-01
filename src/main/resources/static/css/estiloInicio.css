@@ -1,4 +1,10 @@
 body{
+    background:url("/img/fondo-alternativo.jpeg");
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     height: 100%;
     overflow: hidden
 }
@@ -7,7 +13,7 @@ navbar{
 }
 button:hover {
 
-    background: #ffcc33;
+    background: linear-gradient(90deg, rgba(251, 182, 24, 1) 0%, rgba(255, 205, 19, 1) 37%, rgba(255, 173, 19, 1) 100%);
     color: white;
 
 }
