@@ -2,7 +2,7 @@
 
 body{
     height: 100%;
-    /*overflow: hidden*/
+/*    overflow: hidden;*/
 }
 .titulo_ppal{
   text-align: center;
@@ -66,7 +66,7 @@ carousel-inner{
     max-height: 100%;
   }
 .card-team{
-  min-height: 100;
+  min-height: 100px;
 }
 carousel-control-prev,
 carousel-control-next{
