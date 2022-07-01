@@ -29,4 +29,7 @@ public interface RecetaRepositorio extends JpaRepository<Receta, String> {
     @Query("SELECT r.pasoAPaso FROM Receta r")
     public ArrayList<String> listarPasos();
     
+    @Query("DELETE FROM Receta WHERE id LIKE :id")
+    public void eliminarRecetaPorId(@Param("id") String id);
+    
 }
