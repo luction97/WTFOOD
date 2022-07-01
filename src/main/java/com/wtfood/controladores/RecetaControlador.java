@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/receta")
 public class RecetaControlador {
     
+
+    
     @Autowired
     private RecetaServicio recetaServicio;
     
@@ -34,18 +36,20 @@ public class RecetaControlador {
     }
     
     @PostMapping("")
-    public String registrarReceta(ModelMap modelo, @RequestParam String nombre, @RequestParam Integer calificaciones,
-            HttpSession sesion, @RequestParam Usuario usuario,
-            @RequestParam Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
+    public String registrarReceta(ModelMap modelo, @RequestParam String nombre,
+            HttpSession sesion,
+            @RequestParam(required=false) Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
             List<Ingrediente> ingredientes = (List<Ingrediente>) sesion.getAttribute("ingredientes");
-            recetaServicio.registrarReceta(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
+            Usuario usuario = (Usuario) sesion.getAttribute("usuariosession");
+            System.out.println(usuario);
+            recetaServicio.registrarReceta(nombre, 4, ingredientes, usuario, foto, pasoAPaso);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
-            modelo.put("calificaciones", calificaciones);
+         //   modelo.put("calificaciones", calificaciones);
 //            modelo.addAttribute("ingredientes", ingredientes);
-            modelo.put("usuario", usuario);
+        //    modelo.put("usuario", usuario);
             modelo.put("foto", foto);
             modelo.put("pasoAPaso", pasoAPaso);
             

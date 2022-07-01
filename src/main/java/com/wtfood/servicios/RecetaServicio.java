@@ -141,9 +141,9 @@ public class RecetaServicio {
             throw new ErrorServicio("Los ingredientes no pueden ser nulo.");
         }
         
-        if (foto == null) {
-            throw new ErrorServicio("La foto no puede ser nula.");
-        }
+//        if (foto == null) {
+//            throw new ErrorServicio("La foto no puede ser nula.");
+//        }
         
          if (pasoAPaso == null) {
             throw new ErrorServicio("Hay que indicar el paso a paso de la receta.");
