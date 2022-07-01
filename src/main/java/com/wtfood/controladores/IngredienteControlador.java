@@ -56,7 +56,7 @@ public class IngredienteControlador {
         return "ingrediente";
     }
 
-    @GetMapping("/seleccionarIngrediente/{idIngrediente}")
+    @GetMapping("/seleccionarIngrediente/{id}")
     public String seleccionarIngrediente(ModelMap modelo, @PathVariable String id, HttpSession sesion) {
 
         Ingrediente ingrediente = ingredienteRepositorio.buscarPorId(id);
