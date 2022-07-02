@@ -68,10 +68,20 @@ carousel-inner{
 .card-team{
   min-height: 100px;
 }
+.carousel-control-prev span,
+.carousel-control-next span{
+width: 1.5rem;
+height : 1.5rem;
+}
 carousel-control-prev,
 carousel-control-next{
-width: 15%;
-height: 15%;
+  background-color: goldenrod !important;
+width: 10vh;
+height: 10vh;
+border-radius: 60%;
+top: 40%;
+transform: translateY(-75);
+
 }
 .image-wrapper {
     height: 22vw;
