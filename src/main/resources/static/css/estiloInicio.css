@@ -1,5 +1,5 @@
 body{
-    background:url("/img/fondo-alternativo.jpeg");
+    background:url("/img/fondo-alternativo-con-color.jpg");
     background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,6 +11,7 @@ body{
 navbar{
     background-color: #ffcc99;
 }
+
 button:hover {
 
     background: linear-gradient(90deg, rgba(251, 182, 24, 1) 0%, rgba(255, 205, 19, 1) 37%, rgba(255, 173, 19, 1) 100%);
