@@ -156,8 +156,8 @@ main {
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #219EBC;
-    color: white;
+    background: red;
+    color: yellow;
     cursor: pointer;
     outline: none;
     border-radius: 20px;
