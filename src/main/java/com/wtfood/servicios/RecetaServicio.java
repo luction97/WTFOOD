@@ -76,21 +76,22 @@ public class RecetaServicio {
     }
 
     @Transactional(readOnly = true)
-    public ArrayList<Receta> listarRecetas() throws ErrorServicio {
+    public List<Receta> listarRecetas() throws ErrorServicio {
 
-        ArrayList<Receta> recetas = recetaRepositorio.listarRecetas();
+        List<Receta> recetas = recetaRepositorio.listarRecetas();
 //        if (!recetas.isEmpty()) {
 //            return recetas;
 //        } else {
 //            throw new ErrorServicio("No se ha encontrado ninguna receta.");
 //        }
+
         return recetas;
     }
 
     @Transactional(readOnly = true)
-    public ArrayList<String> listarPasos() throws ErrorServicio {
+    public List<String> listarPasos() throws ErrorServicio {
 
-        ArrayList<String> pasos = recetaRepositorio.listarPasos();
+        List<String> pasos = recetaRepositorio.listarPasos();
         return pasos;
     }
 
@@ -121,6 +122,17 @@ public class RecetaServicio {
 
         try {
             return recetaRepositorio.buscarRecetaPorNombre(nombre);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+     @Transactional(readOnly = true)
+    public List<Receta> consultarTodas() {
+
+        try {
+            return recetaRepositorio.listarRecetas();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
