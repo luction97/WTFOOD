@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/receta")
@@ -40,7 +39,7 @@ public class RecetaControlador {
     @PostMapping("")
     public String registrarReceta(ModelMap modelo, @RequestParam String nombre,
             HttpSession sesion,
-            @RequestParam(required=false) MultipartFile foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
+            @RequestParam(required=false) Foto foto, @RequestParam ArrayList<String> pasoAPaso) throws ErrorServicio {
         try {
             List<Ingrediente> ingredientes = (List<Ingrediente>) sesion.getAttribute("ingredientes");
             Usuario usuario = (Usuario) sesion.getAttribute("usuariosession");
