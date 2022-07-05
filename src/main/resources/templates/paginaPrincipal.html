@@ -106,16 +106,19 @@
     <!--Este es el item activo del carousel o primer item-->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="cards-wrapper">
+          
+        <div class="cards-wrapper" th:each="receta: ${receta}">
+            
           <div class="card bg-warning  mb-3  justify-content-center
                     align-items-center rounded-lg ">
-            <img src="/img/img1.jpg" class="card-img-top" alt="...">
+            <img th:src="@{${'/foto/receta/{id}' + ${receta.id}}" class="card-img-top" alt="...">
             <div class="card-body text-white" style="text-align: center">
-              <h6 class="card-title text-danger">Hamburguesas</h6>
-              <p class="card-text text-danger">De Celsius.</p>
+              <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
               <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
             </div>
           </div>
+            
+            
           <div class="card bg-warning  mb-3  justify-content-center
                     align-items-center rounded-lg">
             <img src="/img/img2.jpg" alt="...">
