@@ -28,7 +28,7 @@ public class UsuarioControlador {
     private String guardar(ModelMap modelo, @RequestParam String nombre, @RequestParam String apellido, @RequestParam String email, @RequestParam String nickname, @RequestParam String clave){
         try{
             usuarioServicio.guardar(nombre, apellido, email, nickname, clave, true);
-            modelo.put("Exito", "Usuario guardado con éxito");
+            modelo.put("Exito", "Usuario guardado satisfactoriamente");
         }catch(Exception e){
             modelo.put("Error", e.getMessage());
            
