@@ -3,6 +3,7 @@ package com.wtfood.repositorios;
 
 import com.wtfood.entidades.Receta;
 import java.util.ArrayList;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
 public interface RecetaRepositorio extends JpaRepository<Receta, String> {
 
     @Query("SELECT r FROM Receta r")
-    public ArrayList<Receta> listarRecetas();
+    public List<Receta> listarRecetas();
     
     @Query("SELECT r FROM Receta r WHERE r.id LIKE :id")
     public Receta buscarPorId(@Param("id") String id);
