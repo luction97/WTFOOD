@@ -193,4 +193,12 @@
         cursor: pointer;
         color:rgb(92, 92, 92);
     }
+
+    .busqueda{
+        width: 25%;
+       flex-direction: row;
+
+    }
+
+    
     
