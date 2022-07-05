@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -77,6 +78,23 @@ public class RecetaControlador {
         }
         
         return "modificarReceta";
+    }
+    
+    @GetMapping("/seleccionarPaso/{paso}")
+    public String seleccionarPaso(ModelMap modelo, @PathVariable String paso, HttpSession sesion) {
+        
+        if ((List<String>) sesion.getAttribute("pasoAPaso") == null) {
+            List<String> pasoAPaso = new ArrayList();
+
+            pasoAPaso.add(paso);
+            sesion.setAttribute("pasoAPaso", pasoAPaso);
+
+        } else {
+            List<String> pasoAPaso = (List<String>) sesion.getAttribute("pasoAPaso");
+            pasoAPaso.add(paso);
+            sesion.setAttribute("pasoAPaso", pasoAPaso);
+        }
+        return  "redirect:/receta";
     }
     
 }
