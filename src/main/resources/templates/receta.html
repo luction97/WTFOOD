@@ -12,7 +12,7 @@
     <body style="background-color: Lavender;">
         <h1>Administacion de Recetas</h1>
         <nav id="navbar-example2" class="navbar bg-light px-3">
-            <a class="navbar-brand" href="#">Registar Receta</a>
+            <a class="navbar-brand" href="#">Registrar Receta</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="/receta/modificarReceta">Modificar Receta</a>
@@ -80,7 +80,21 @@
                     <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" placeholder="Nombre" th:value="${nombre}"><br/>
                 </div>
 
-                <input type="text" name="pasoAPaso">
+                <div class="mb-3">
+                    <section class="marg">
+                    
+                            <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
+                            <div class="container">
+                                <input type="text" id="paso" class="form1" name="pasoAPaso"
+                                       placeholder="Escriba el paso a seguir">
+
+                                <a th:href= "@{'/receta/seleccionarPaso' + pasoAPaso}" >+paso</a>
+                            </div>
+                    
+
+
+                    </section>
+                </div>
 
                 <div>
                     <button type="submit" class="btn btn-primary">Cargar</button>
