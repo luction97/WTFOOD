@@ -21,6 +21,16 @@ body {
     
 }
 
+.alert{
+    width: 25%;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+
+}
+
+
 
 main {
 
@@ -191,7 +201,7 @@ main {
 
     /* display: block; aparece formulario de registrarse
     display: none; formulario de iniciar sesión
-*/
+    */
     display: none;
 
 }
@@ -211,8 +221,8 @@ main {
         height: 300px;
         flex-direction: column;
         margin: auto;
-        
-        
+
+
     }
 
     .caja__trasera div {
@@ -225,46 +235,47 @@ main {
         top: -50px;
         left: -0px;
         margin: auto;
-        
+
     }
 
     .contenedor__login-registro form {
         position: relative;
         right: 10px;
-        
+
     }
 
-/* Caja trasera */
+    /* Caja trasera */
 
-.caja__trasera {
-
-
-}
-
-.caja__trasera div {
-
-   
+    .caja__trasera {
 
 
-}
+    }
 
-.caja__trasera div p,
-.caja__trasera div button {
-
-
-}
-
-.caja__trasera div h3 {
+    .caja__trasera div {
 
 
 
-}
 
-.caja__trasera button {
+    }
+
+    .caja__trasera div p,
+    .caja__trasera div button {
+
+
+    }
+
+    .caja__trasera div h3 {
 
 
 
-}
+    }
+
+    .caja__trasera button {
+
+
+
+    }
+
 
 
 

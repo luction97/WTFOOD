@@ -40,9 +40,9 @@
         <section class="col-xl-3">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2 " type="search" placeholder="Buscar recetas" aria-label="Search">
-                <button class="btn btn-outline-dark bg-danger text-warning" type="submit">Buscar</button>
+              <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search" name="query" id="query" th:value="${query}">
+                <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
               </form>
             </ul>
           </div>

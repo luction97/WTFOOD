@@ -9,6 +9,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,7 +61,7 @@ public class IngredienteControlador {
     public String seleccionarIngrediente(ModelMap modelo, @PathVariable String id, HttpSession sesion) {
 
         Ingrediente ingrediente = ingredienteRepositorio.buscarPorId(id);
-        
+
         if ((List<Ingrediente>) sesion.getAttribute("ingredientes") == null) {
             List<Ingrediente> ingredientes = new ArrayList();
 
@@ -73,5 +74,21 @@ public class IngredienteControlador {
             sesion.setAttribute("ingredientes", ingredientes);
         }
         return "ingrediente";
+    }
+    @GetMapping("/busquedaIngrediente")
+    public String busquedaIngrediente(ModelMap modelo, @RequestParam(value = "query", required = false) String nombre) {
+        try {
+            List<Ingrediente> ingredientes = this.ingredienteServicio.consultarPorNombre(nombre);
+            modelo.addAttribute("ingredientes", ingredientes);
+            modelo.put("mensajenombre", "Nombre");
+            modelo.put("mensajeseleccionar", "Seleccionar");
+            
+            return "ingrediente";
+
+        } catch (Exception e) {
+            e.getMessage();
+            modelo.addAttribute(e);
+        }
+        return null;
     }
 }
