@@ -29,7 +29,7 @@ public class Receta {
     
     private String pasoAPaso;
     
-    @OneToMany
+    @ManyToMany
     private List<Ingrediente> ingredientes;
 
 }
