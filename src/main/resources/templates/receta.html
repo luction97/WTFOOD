@@ -120,13 +120,13 @@
         </div>
         <h2>Cargar Receta:</h2>
         <div>
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
 
                 <p th:if="${error != null}" th:text="${error}" style="color: red;"></p>
 
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Foto</label><br/>
-                    <input type="file" class="form-control" id="formGroupExampleInput" name="foto" placeholder="Foto" th:value="${foto}"><br/>
+                    <input type="file" class="form-control" id="formGroupExampleInput" name="archivo" placeholder="Foto" th:value="${foto}"><br/>
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Nombre</label><br/>
