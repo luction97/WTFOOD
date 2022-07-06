@@ -81,11 +81,29 @@ top: 40%;
 transform: translateY(-55);
 
 }
+
 .carousel-control-prev span,
 .carousel-control-next span{
 width: 1.5rem;
 height : 1.5rem;
 }
+
+.carousel-control-prev-1 span,
+.carousel-control-next-1 span{
+width: 1.5rem;
+height : 1.5rem;
+}
+
+.carousel-control-prev-1 , .carousel-control-next-1{
+  background-color: goldenrod;
+width: 7vh;
+height: 7vh;
+border-radius: 60%;
+top: 40%;
+transform: translateY(-55);
+
+}
+
 .image-wrapper {
     height: 22vw;
     margin: 0 auto;

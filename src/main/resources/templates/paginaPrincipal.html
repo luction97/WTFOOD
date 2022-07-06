@@ -63,10 +63,10 @@
                 <a class="nav-link active text-danger" href="#"> Mis recetas </a>
               </li>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-danger" href="#"> Crear receta </a>
-            </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-danger" href="#"> Crear receta </a>
+              </li>
 
               <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -96,19 +96,21 @@
 
   </header>
 
+ 
   <div class="recetas_favs" style="margin-top: 90px;">
     <h1>Tus recetas favoritas</h1>
   </div>
 
   <!--Este es el carousel donde aparecen las recetas favoritas -->
-  <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
+  <section>
+  <div id="carouselExampleControls-1" class="carousel slide d-sm-block" data-ride="carousel">
 
     <!--Este es el item activo del carousel o primer item-->
     <div class="carousel-inner">
       <div class="carousel-item active">
-          
+
         <div class="cards-wrapper" th:each="receta: ${receta}">
-            
+
           <div class="card bg-warning  mb-3  justify-content-center
                     align-items-center rounded-lg ">
             <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
@@ -117,8 +119,8 @@
               <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
             </div>
           </div>
-            
-            
+
+
           <div class="card bg-warning  mb-3  justify-content-center
                     align-items-center rounded-lg">
             <img src="/img/img2.jpg" alt="...">
@@ -159,7 +161,7 @@
           </div>
         </div>
       </div>
-<!--      Segundo item del carousel-->
+      <!--      Segundo item del carousel-->
       <div class="carousel-item">
         <div class="cards-wrapper">
           <div class="card bg-warning  mb-3  justify-content-center
@@ -209,7 +211,7 @@
           </div>
         </div>
       </div>
-<!--      Tercer item del carousel-->
+      <!--      Tercer item del carousel-->
       <div class="carousel-item">
         <div class="cards-wrapper">
           <div class="card bg-warning  mb-3  justify-content-center
@@ -270,23 +272,23 @@
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls-1" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleControls-1" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden"></span>
     </button>
   </div>
 
+
+  <!--  Carousel de recetas compartidas por la comunidad -->
   <h2>Recetas que compartiste con la comunidad</h2>
 
-
-<!--  Este es el carousel donde aparecen las recetas favoritas -->
   <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
 
-<!--    Este es el item activo del carousel o primer item-->
+    <!--    Este es el item activo del carousel o primer item-->
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="cards-wrapper">
@@ -340,7 +342,7 @@
           </div>
         </div>
       </div>
-<!--      Segundo item del carousel-->
+      <!--      Segundo item del carousel-->
       <div class="carousel-item">
         <div class="cards-wrapper">
           <div class="card bg-warning  mb-3  justify-content-center
@@ -390,7 +392,7 @@
           </div>
         </div>
       </div>
-<!--      Tercer item del carousel-->
+      <!--      Tercer item del carousel-->
       <div class="carousel-item">
         <div class="cards-wrapper">
           <div class="card bg-warning  mb-3  justify-content-center
