@@ -45,7 +45,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
 
-                <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO </strong> </a>
+                <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal"> <strong>INICIO </strong> </a>
 
 
               </li>
@@ -55,7 +55,7 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-danger" href="receta"> Crear receta </a>
+                <a class="nav-link active text-danger" href="ingrediente"> Crear receta </a>
               </li>
 
               <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
@@ -84,7 +84,7 @@
     </nav>
 </header>
 
-        <h1>Administacion de Recetas</h1>
+<!--        <h1>Administacion de Recetas</h1>
         <nav id="navbar-example2" class="navbar bg-light px-3">
             <a class="navbar-brand" href="#">Registrar Receta</a>
             <ul class="nav nav-pills">
@@ -96,7 +96,7 @@
                 </li>
 
             </ul>
-        </nav>
+        </nav>-->
         <h2>Listar Recetas:</h2>
         <div th:if="${recetas} != null">
             <table class="table table-hover" action="/receta" method="GET">
