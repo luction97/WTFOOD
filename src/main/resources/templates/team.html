@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
   <title>WTFood - Nuestro equipo</title>
   <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
 
@@ -23,65 +25,86 @@
 
     <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
    
-<nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
-  <div class="container-fluid">
-    <div class="col-xl-2">
-    <a class="navbar-brand" href="#">
-      
-    </a>
-  </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red;">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-<section class="col-xl-3">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 " type="search" placeholder="Buscar recetas" aria-label="Search">
-          <button class="btn btn-outline-dark bg-danger text-warning" type="submit">Buscar</button>
-        </form>
-      </ul>
-      </div>
-      </section>
-     <!-- <div class="listas">-->
-      <div class="col-xl-7">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active text-danger" aria-current="page" href="index">Ir a inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active text-danger" href="#">Mis recetas</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="true">
-            Mi perfil
+    <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
+      <div class="container-fluid">
+        <div class="col-xl-2">
+          <a class="navbar-brand" href="#">
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
-            <li><a class="dropdown-item" href="#">Mis recetas</a></li>
-            <li><a class="dropdown-item" href="#">Recetas Favoritas</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-          </ul>
-        </li>
-      </ul>
-      </div>
-    </div>
-</nav>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          style="background-color: goldenrod;">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="col-xl-3">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                  name="query" id="query" th:value="${query}">
+                <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
+              </form>
+            </ul>
+          </div>
+        </section>
+        <!-- <div class="listas">-->
+        <div class="col-xl-7">
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+
+                <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO </strong> </a>
+
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-danger" href="#"> Mis recetas </a>
+              </li>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-danger" href="receta"> Crear receta </a>
+              </li>
+
+              <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Mi perfil
+            </a> -->
+
+              <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Mi Perfil
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
 </header>
-    <title>Este es nuestro equipo</title>
+    <br>
+    <br>
+    <br>
+    <br>
+    
     <section class="container px-2">
         <div class="team-cards">
             <div class="row g-4">
                 <div class="col-md-12">
-                    <h2>Este es nuestro equipo WTFood!</h2>
+                    <h1 class="text-danger"><center>Este es nuestro equipo WTFood!</center></h1>
                 </div>
-
+                <br>
+                <br>
                 <div class="col-lg-3 col-md-4 col-sm-3">
 
                     <div class="
@@ -132,7 +155,7 @@
                             <h6 class="text-danger">Backend</h6>
                         </div>
                         <div class="social-icons my-2">
-                            <a href="#" class="text-danger"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
+    
                             <a href="https://www.instagram.com/gregolujan/" class="text-danger" target="_blank" rel="noopener noreferrer"><i
                                     class="fa fa-instagram p-2" aria-hidden="true"></i></a>
                         </div>
@@ -178,7 +201,7 @@
                     text-dark rounded-lg
                     flex-column">
                         <div class="person-img">
-                            <img src="#" class="img-fluid rounded-circle" alt="Esteban Yemes">
+                            <img src="/img/Esteban-Yemes.jpeg" class="img-fluid rounded-circle" alt="Esteban Yemes">
                         </div>
                         <div class="person-name my-2">
                             <h5 class="text-danger">Esteban Yemes</h5>
@@ -187,7 +210,7 @@
                             <h6 class="text-danger">Backend</h6>
                         </div>
                         <div class="social-icons my-2">
-                            <a href="#" class="text-danger"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/esteban-yemes-024987234" class="text-danger" target="_blank"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
                             <a href="#" class="text-danger"><i class="fa fa-instagram p-2" aria-hidden="true"></i></a>
                         </div>
                         <button type="button" class="btn btn-danger text-warning btn-lg btn-block">Ver perfil</button>
@@ -199,32 +222,8 @@
     </section>
     <br>
     <section class="container px-2">
-        <div class="row g-4 ">
-            <div class="col-lg-3 col-md-4 col-sm-3">
-                <div class="
-                    shadow d-flex
-                    justify-content-center
-                    align-items-center
-                    p-3
-                    bg-warning bg-gradient
-                    text-dark rounded-lg
-                    flex-column">
-                    <div class="person-img">
-                        <img src="#" class="img-fluid rounded-circle" alt="Pablo Balcar">
-                    </div>
-                    <div class="person-name my-2">
-                        <h5 class="text-danger">Pablo Balcar</h5>
-                    </div>
-                    <div class="info">
-                        <h6 class="text-danger">Frontend</h6>
-                    </div>
-                    <div class="social-icons my-2">
-                        <a href="#" class="text-danger"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
-                        <a href="#" class="text-danger"><i class="fa fa-instagram p-2" aria-hidden="true"></i></a>
-                    </div>
-                    <button type="button" class="btn btn-danger text-warning btn-lg btn-block">Ver perfil</button>
-                </div>
-            </div>
+        <div class="row g-3 ">
+
 
             <div class="col-lg-3 col-md-4 col-sm-3">
                 <div class="
@@ -246,7 +245,7 @@
                         <h6 class="text-danger">Frontend</h6>
                     </div>
                     <div class="social-icons my-2">
-                        <a href="https://www.linkedin.com/in/nahuel-gerez-haded/" class="text-danger"target="_blank" rel="noopener noreferrer" ><i
+                        <a href="https://www.linkedin.com/in/nahuel-gerez-haded/" class="text-danger" target="_blank" rel="noopener noreferrer" ><i
                                 class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/nahuelgh83/" class="text-danger" target="_blank" rel="noopener noreferrer"><i
                                 class="fa fa-instagram p-2" aria-hidden="true"></i></a>
@@ -265,7 +264,7 @@
                     text-dark rounded-lg
                     flex-column">
                     <div class="person-img">
-                        <img src="#" class="img-fluid rounded-circle" alt="Gianfranco Siccardi">
+                        <img src="img/Gianfranco-Siccardi.jpeg" class="img-fluid rounded-circle" alt="Gianfranco Siccardi">
                     </div>
                     <div class="person-name my-2">
                         <h5 class="text-danger">Gianfranco Siccardi</h5>
@@ -274,8 +273,7 @@
                         <h6 class="text-danger">Frontend</h6>
                     </div>
                     <div class="social-icons my-2">
-                        <a href="#" class="text-danger"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
-                        <a href="#" class="text-danger"><i class="fa fa-instagram p-2" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/gian_siccardi/" class="text-danger"><i class="fa fa-instagram p-2" aria-hidden="true"></i></a>
                     </div>
                     <button type="button" class="btn btn-danger text-warning btn-lg btn-block">Ver perfil</button>
                 </div>
@@ -301,8 +299,7 @@
                         <h6 class="text-danger">Frontend</h6>
                     </div>
                     <div class="social-icons my-2">
-                        <a href="#" class="text-danger"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
-                        <a href="#" class="text-danger"><i class="fa fa-instagram p-2" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/lucas-siano/" class="text-danger" target="_blank"><i class="fa fa-linkedin p-2" aria-hidden="true"></i></a>
                     </div>
                     <button type="button" class="btn btn-danger text-warning btn-lg btn-block">Ver perfil</button>
                 </div>
@@ -312,7 +309,6 @@
         </div>
     </section>
     <br>
-</body>
 <footer>
     <div class="container-fluid ">
         <div class="row p-5 bg-warning text-sucess">
@@ -349,3 +345,7 @@
             </div>
         </div>
 </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

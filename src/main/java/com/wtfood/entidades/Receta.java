@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -28,8 +29,9 @@ public class Receta {
     private Foto foto;
     
     private String pasoAPaso;
-    
-    @OneToMany
+   
+    @ManyToMany
+    @JoinColumn(name = "id")
     private List<Ingrediente> ingredientes;
 
 }
