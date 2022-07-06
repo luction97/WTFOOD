@@ -73,7 +73,7 @@ public class IngredienteControlador {
             ingredientes.add(ingrediente);
             sesion.setAttribute("ingredientes", ingredientes);
         }
-        return "ingrediente";
+        return "mostrarIngrediente";
     }
     @GetMapping("/busquedaIngrediente")
     public String busquedaIngrediente(ModelMap modelo, @RequestParam(value = "query", required = false) String nombre) {
