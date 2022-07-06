@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class RecetaServicio {
@@ -27,11 +28,17 @@ public class RecetaServicio {
 
     @Autowired
     private FotoRepositorio fotoRepositorio;
+    
+     @Autowired
+    private FotoServicio fotoServicio;
+
+    
+    
 
     @Transactional(propagation = Propagation.NESTED)
-    public void registrarReceta(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
+    public void registrarReceta(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, MultipartFile foto, String pasoAPaso) throws ErrorServicio {
 
-        validar(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
+        validar(nombre, calificaciones, ingredientes, usuario, pasoAPaso);
 
         Receta receta = new Receta();
 
@@ -39,7 +46,8 @@ public class RecetaServicio {
         receta.setCalificaciones(calificaciones);
         receta.setCantidadIngredientes(ingredientes.size());
         receta.setUsuario(usuario);
-        receta.setFoto(foto);
+        Foto foto2 = fotoServicio.guardar(foto); 
+        receta.setFoto(foto2);
         receta.setIngredientes(ingredientes);
         receta.setPasoAPaso(pasoAPaso);
 
@@ -48,12 +56,12 @@ public class RecetaServicio {
     }
 
     @Transactional(propagation = Propagation.NESTED)
-    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, String idUsuario, String idFoto, ArrayList<String> pasoAPaso) throws ErrorServicio {
+    public void modificarReceta(String id, String nombre, Integer calificaciones, Integer cantidadIngredientes, List<Ingrediente> ingredientes, String idUsuario, String idFoto, String pasoAPaso) throws ErrorServicio {
 
         Usuario usuario = usuarioRepositorio.buscarPorId(idUsuario);
         Foto foto = fotoRepositorio.buscarPorId(idFoto);
 
-        validar(nombre, calificaciones, ingredientes, usuario, foto, pasoAPaso);
+        validar(nombre, calificaciones, ingredientes, usuario, pasoAPaso);
 
         Optional<Receta> respuesta = recetaRepositorio.findById(id);
         if (respuesta.isPresent()) {
@@ -76,21 +84,22 @@ public class RecetaServicio {
     }
 
     @Transactional(readOnly = true)
-    public ArrayList<Receta> listarRecetas() throws ErrorServicio {
+    public List<Receta> listarRecetas() throws ErrorServicio {
 
-        ArrayList<Receta> recetas = recetaRepositorio.listarRecetas();
+        List<Receta> recetas = recetaRepositorio.listarRecetas();
 //        if (!recetas.isEmpty()) {
 //            return recetas;
 //        } else {
 //            throw new ErrorServicio("No se ha encontrado ninguna receta.");
 //        }
+
         return recetas;
     }
 
     @Transactional(readOnly = true)
-    public ArrayList<String> listarPasos() throws ErrorServicio {
+    public List<String> listarPasos() throws ErrorServicio {
 
-        ArrayList<String> pasos = recetaRepositorio.listarPasos();
+        List<String> pasos = recetaRepositorio.listarPasos();
         return pasos;
     }
 
@@ -126,8 +135,19 @@ public class RecetaServicio {
             return null;
         }
     }
+    
+     @Transactional(readOnly = true)
+    public List<Receta> consultarTodas() {
 
-    private void validar(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, Foto foto, ArrayList<String> pasoAPaso) throws ErrorServicio {
+        try {
+            return recetaRepositorio.listarRecetas();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    private void validar(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, String pasoAPaso) throws ErrorServicio {
 
         if (nombre == null) {
             throw new ErrorServicio("El nombre de la receta no puede ser nulo.");
