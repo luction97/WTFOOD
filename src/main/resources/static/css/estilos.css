@@ -15,17 +15,16 @@
 
 
 .header {
-<<<<<<< HEAD
+
   background: url(/paginaPrincipal/img/fondo-login2.png) no-repeat center;
   background-size: cover;
   min-height: 100vh;
-}
-=======
+
     background: url(/img/fondo-login2.png) no-repeat center;
     background-size: cover;
     min-height: 100vh;
   }
->>>>>>> develop
+
 
 nav {
   justify-content: space-between;
@@ -99,63 +98,35 @@ carousel-inner {
 .carousel-control-prev,
 .carousel-control-next {
   background-color: goldenrod;
-<<<<<<< HEAD
   width: 7vh;
   height: 7vh;
   border-radius: 60%;
   top: 40%;
   transform: translateY(-55);
-=======
-width: 6vh;
-height: 6vh;
-border-radius: 60%;
-top: 40%;
-transform: translateY(-55);
->>>>>>> develop
 
 }
 
 .carousel-control-prev span,
-<<<<<<< HEAD
 .carousel-control-next span {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.carousel-control-prev-1 span,
-.carousel-control-next-1 span {
-  width: 1.5rem;
-  height: 1.5rem;
-=======
-.carousel-control-next span{
-width:  1rem;
-height :  1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .carousel-control-prev-1 span,
 .carousel-control-next-1 span{
 width: 1rem;
 height : 1rem;
->>>>>>> develop
+
 }
 
 .carousel-control-prev-1,
 .carousel-control-next-1 {
   background-color: goldenrod;
-<<<<<<< HEAD
   width: 7vh;
   height: 7vh;
   border-radius: 60%;
   top: 40%;
   transform: translateY(-55);
-=======
-width: 5vh;
-height: 5vh;
-border-radius: 60%;
-top: 40%;
-transform: translateY(-55);
->>>>>>> develop
-
 }
 
 .image-wrapper {
@@ -172,14 +143,6 @@ transform: translateY(-55);
 }
 
 body {
-<<<<<<< HEAD
-  font-family: 'Poppins', sans-serif;
-  background-size: contain;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-=======
 font-family: 'Poppins', sans-serif;
 background-size: contain;
 background-size: cover;
@@ -187,9 +150,6 @@ background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
 background:url("/img/fondo-alternativo-con-color.jpg");
->>>>>>> develop
-
-
 }
 
 @media screen and (min-width: 568px) {
