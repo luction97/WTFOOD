@@ -9,12 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
   <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
   <title>WTFood - Inicio</title>
   <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="">
 
+       
 
 </head>
 
@@ -116,29 +118,35 @@
             <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
             <div class="card-body text-white" style="text-align: center">
               <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
 
 
-          <div class="card bg-warning  mb-3  justify-content-center
-                    align-items-center rounded-lg">
+          <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
             <img src="/img/img2.jpg" alt="...">
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
-          <div class="card bg-warning  mb-3  justify-content-center
-                    align-items-center rounded-lg">
+
+          <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
             <img src="/img/img3.jpg" class="card-img-top" alt="...">
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
+
           <div class="card bg-warning  mb-3  justify-content-center
                     align-items-center rounded-lg">
             <img class="card-img-top" src="/img/img4.jpg" alt="...">
@@ -146,7 +154,9 @@
 
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -156,7 +166,9 @@
 
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -170,7 +182,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -179,7 +193,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -188,7 +204,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -197,7 +215,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -206,7 +226,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -222,7 +244,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -233,7 +257,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -244,7 +270,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -255,7 +283,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -266,7 +296,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -293,13 +325,14 @@
       <div class="carousel-item active">
         <div class="cards-wrapper">
 
-          <div class="card bg-warning  mb-3  justify-content-center
-                    align-items-center rounded-lg ">
+          <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
             <img src="/img/img1.jpg" class="card-img-top" alt="...">
             <div class="card-body text-white" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -308,7 +341,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -317,7 +352,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -327,7 +364,9 @@
 
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -337,7 +376,9 @@
 
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -351,7 +392,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -360,7 +403,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -369,7 +414,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -378,7 +425,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -387,7 +436,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -403,7 +454,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -414,7 +467,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -425,7 +480,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -436,7 +493,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
           <div class="card bg-warning  mb-3  justify-content-center
@@ -447,7 +506,9 @@
             <div class="card-body" style="text-align: center">
               <h6 class="card-title text-danger">Hamburguesas</h6>
               <p class="card-text text-danger">De Celsius.</p>
-              <a href="#" class="btn btn-danger bg-gradient text-warning ">Ver receta</a>
+              <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                Ver receta
+              </div>
             </div>
           </div>
         </div>
@@ -464,7 +525,27 @@
     </button>
   </div>
 
-</body>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <footer>
   <div class="container-fluid">
@@ -500,20 +581,8 @@
       </div>
     </div>
 </footer>
-<script src="./js/bootstrap.bundle.min.js"></script>
-<!--Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-<!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
-
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-  integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
 </html>
