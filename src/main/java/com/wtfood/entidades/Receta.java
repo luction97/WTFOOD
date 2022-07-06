@@ -27,9 +27,9 @@ public class Receta {
     @OneToOne
     private Foto foto;
     
-    private String pasoAPaso;
+    private ArrayList<String> pasoAPaso;
     
-    @OneToMany
+    @ManyToMany
     private List<Ingrediente> ingredientes;
 
 }
