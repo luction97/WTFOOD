@@ -54,7 +54,7 @@ public class IngredienteControlador {
         modelo.put("mensajeseleccionar", "Seleccionar");
         modelo.addAttribute("ingredientes", ingredienteServicio.consultarTodos());
 
-        return "ingrediente";
+        return "mostrarIngrediente";
     }
 
     @GetMapping("/seleccionarIngrediente/{id}")
@@ -83,7 +83,7 @@ public class IngredienteControlador {
             modelo.put("mensajenombre", "Nombre");
             modelo.put("mensajeseleccionar", "Seleccionar");
             
-            return "ingrediente";
+            return "mostrarIngrediente";
 
         } catch (Exception e) {
             e.getMessage();
