@@ -36,7 +36,7 @@ public class RecetaServicio {
     
 
     @Transactional(propagation = Propagation.NESTED)
-    public void registrarReceta(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, MultipartFile foto, String pasoAPaso) throws ErrorServicio {
+    public void registrarReceta(String nombre, Integer calificaciones, List<Ingrediente> ingredientes, Usuario usuario, MultipartFile archivo, String pasoAPaso) throws ErrorServicio {
 
         validar(nombre, calificaciones, ingredientes, usuario, pasoAPaso);
 
@@ -46,8 +46,10 @@ public class RecetaServicio {
         receta.setCalificaciones(calificaciones);
         receta.setCantidadIngredientes(ingredientes.size());
         receta.setUsuario(usuario);
-        Foto foto2 = fotoServicio.guardar(foto); 
-        receta.setFoto(foto2);
+        
+        Foto foto = fotoServicio.guardar(archivo); 
+        receta.setFoto(foto);
+        
         receta.setIngredientes(ingredientes);
         receta.setPasoAPaso(pasoAPaso);
 

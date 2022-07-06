@@ -37,19 +37,19 @@ public class RecetaControlador {
     @PostMapping("")
     public String registrarReceta(ModelMap modelo, @RequestParam String nombre,
             HttpSession sesion,
-            @RequestParam(required = false) MultipartFile foto, @RequestParam String pasoAPaso) throws ErrorServicio {
+            @RequestParam(required = false) MultipartFile archivo, @RequestParam String pasoAPaso) throws ErrorServicio {
         try {
             List<Ingrediente> ingredientes = (List<Ingrediente>) sesion.getAttribute("ingredientes");
             Usuario usuario = (Usuario) sesion.getAttribute("usuariosession");
             System.out.println(usuario);
-            recetaServicio.registrarReceta(nombre, 4, ingredientes, usuario, foto, pasoAPaso);
+            recetaServicio.registrarReceta(nombre, 4, ingredientes, usuario, archivo, pasoAPaso);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
             //   modelo.put("calificaciones", calificaciones);
 //            modelo.addAttribute("ingredientes", ingredientes);
             //    modelo.put("usuario", usuario);
-            modelo.put("foto", foto);
+            modelo.put("foto", archivo);
             modelo.put("pasoAPaso", pasoAPaso);
 
             return "receta";
