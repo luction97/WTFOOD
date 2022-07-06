@@ -30,10 +30,16 @@
                 <h2 class="h2">Listado de Ingredientes:</h2>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 d-flex">
                     <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-outline-warning">Lista
                         de Ingredientes</a>
                     <a href="/ingrediente" type="button" class="btn btn-outline-warning">Cerrar lista</a>
+
+                    <form class= "d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" id="query" th:value="${query}">
+                        <input class="btn btn-outline-warning" type="submit" value="Buscar">
+                    </form>
+
                 </div>
                 <table class="table" action="mostrarIngredientes" method="GET">
                     <tr>
@@ -82,13 +88,13 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
             let typed = new Typed("#auto-input", {
-                strings: [
-                    "llegó la hora de cocinar! 🔪",
-                    "selecciona tus ingredientes",
-                ],
-                typeSpeed: 80,
-                backSpeed: 80,
-                loop: true,
+            strings: [
+            "llegó la hora de cocinar! 🔪",
+            "selecciona tus ingredientes",
+            ],
+            typeSpeed: 80,
+            backSpeed: 80,
+            loop: true,
             });
         </script>
     </body>
