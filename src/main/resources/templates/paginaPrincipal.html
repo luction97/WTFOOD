@@ -62,7 +62,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active text-danger" href="#"> Mis recetas </a>
+                                    <a class="nav-link active text-danger" href="misRecetas"> Mis recetas </a>
                                 </li>
 
                                 </li>
@@ -111,10 +111,10 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
 
-                        <div class="cards-wrapper" th:each="receta: ${receta}">
+                        <div class="cards-wrapper">
 
                             <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg ">
+                                 align-items-center rounded-lg " th:each="receta: ${receta}">
                                 <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
                                     <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
