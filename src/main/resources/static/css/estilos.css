@@ -146,13 +146,14 @@ height : 1rem;
 }
 
 body {
+  background:url("/img/fondo-alternativo-con-color.jpg");
 font-family: 'Poppins', sans-serif;
 background-size: contain;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
-background:url("/img/fondo-alternativo-con-color.jpg");
+
 }
 
 @media screen and (min-width: 568px) {
