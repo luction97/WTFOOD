@@ -43,7 +43,8 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search" name="query" id="query" th:value="${query}">
+                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                           name="query" id="query" th:value="${query}">
                                     <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
                                 </form>
                             </ul>
@@ -76,7 +77,8 @@
 
                                 <li class="nav-item dropdown">
 
-                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Mi Perfil
                                     </a>
 
@@ -124,21 +126,12 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
+
                                                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
                                             </div>
                                             <div class="modal-body">
-                                                <h5>Ingredientes:</h5>
-                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                    <ul>
-                                                        <li th:text="${ingrediente.getNombre}"></li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Pasos a seguir:</h5>
-                                                <ol>
-                                                  <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                </ol>
-
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></h5>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
@@ -147,44 +140,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg " th:each="receta: ${receta}">
-                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
-                                <div class="card-body text-white" style="text-align: center">
-                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
-                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>Ingredientes:</h5>
-                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                    <ul>
-                                                        <li th:text="${ingrediente.getNombre}"></li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Pasos a seguir:</h5>
-                                                <ol>
-                                                  <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                </ol>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
 
 
                             <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
@@ -209,7 +164,8 @@
                                 </div>
                             </div>
 
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -220,7 +176,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -236,7 +193,8 @@
                     <!--      Segundo item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -246,7 +204,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img src="/img/img1.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -256,7 +215,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -266,7 +226,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -276,7 +237,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
                                 <img src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -291,7 +253,8 @@
                     <!--      Tercer item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
                                 <img src="/img/img3.jpg" alt="...">
 
@@ -303,7 +266,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
                                 <img src="/img/img2.jpg" alt="...">
 
@@ -315,7 +279,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
                                 <img src="/img/img1.jpg" alt="...">
 
@@ -327,7 +292,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
                                 <img src="/img/img4.jpg" alt="...">
 
@@ -339,7 +305,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
                                 <img src="/img/img5.jpg" alt="...">
 
@@ -384,66 +351,15 @@
                                         Ver receta
                                     </div>
                                 </div>
-
-
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             </div>
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
                                     <p class="card-text text-danger">De Celsius.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                                <img src="/img/img3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                                <img class="card-img-top" src="/img/img4.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
-                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>Ingredientes:</h5>
-                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                    <ul>
-                                                        <li th:text="${ingrediente.getNombre}"></li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Pasos a seguir:</h5>
-                                                <ol>
-                                                    <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                </ol>
-
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                            </div>
-                                        </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -463,13 +379,6 @@
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                                <img class="card-img-top" src="/img/img5.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-
-
-
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
                                     <p class="card-text text-danger">De Celsius.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
@@ -481,7 +390,6 @@
                                  align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-
 
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
                                     <p class="card-text text-danger">De Celsius.</p>
@@ -492,19 +400,11 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!--      Segundo item del carousel-->
-                    <div class="carousel-item">
-                        <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-
                     <!--      Segundo item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -514,12 +414,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img1.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -529,12 +425,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img3.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -544,12 +436,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -559,12 +447,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
                                 <img src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -579,12 +463,8 @@
                     <!--      Tercer item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
 
                                 <img src="/img/img3.jpg" alt="...">
 
@@ -596,12 +476,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
 
                                 <img src="/img/img2.jpg" alt="...">
 
@@ -613,12 +489,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
-
 
                                 <img src="/img/img1.jpg" alt="...">
 
@@ -630,9 +502,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
 
@@ -646,9 +515,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
 
