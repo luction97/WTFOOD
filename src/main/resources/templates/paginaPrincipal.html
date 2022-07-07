@@ -113,43 +113,6 @@
 
                         <div class="cards-wrapper">
 
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg " th:each="receta: ${receta}">
-                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
-                                <div class="card-body text-white" style="text-align: center">
-                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
-                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>Ingredientes:</h5>
-                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                    <ul>
-                                                        <li th:text="${ingrediente.getNombre}"></li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Pasos a seguir:</h5>
-                                                <ol>
-                                                  <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                </ol>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
 
                             <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
@@ -351,204 +314,57 @@
                     <div class="carousel-item active">
                         <div class="cards-wrapper">
 
-                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
-                                <img src="/img/img1.jpg" class="card-img-top" alt="...">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg " th:each="receta: ${receta}">
+                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img2.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img class="card-img-top" src="/img/img4.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
+                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                    <ul>
+                                                        <li th:text="${ingrediente.getNombre}"></li>
+                                                    </ul>
+                                                </div>
+                                                <h5>Pasos a seguir:</h5>
+                                                <ol>
+                                                    <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                </ol>
 
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img class="card-img-top" src="/img/img5.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
 
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
+
+
+
                         </div>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                            <span class="visually-hidden"></span>
+                        </button>
                     </div>
-                    <!--      Segundo item del carousel-->
-                    <div class="carousel-item">
-                        <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img2.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img1.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img3.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img5.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img4.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--      Tercer item del carousel-->
-                    <div class="carousel-item">
-                        <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-
-                                <img src="/img/img3.jpg" alt="...">
-
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-
-                                <img src="/img/img2.jpg" alt="...">
-
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-
-                                <img src="/img/img1.jpg" alt="...">
-
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-
-                                <img src="/img/img4.jpg" alt="...">
-
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-
-                                <img src="/img/img5.jpg" alt="...">
-
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-                    <span class="visually-hidden"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
-                    <span class="visually-hidden"></span>
-                </button>
             </div>
 
             <!-- Modal -->
