@@ -98,8 +98,8 @@ carousel-inner {
 .carousel-control-prev,
 .carousel-control-next {
   background-color: goldenrod;
-  width: 7vh;
-  height: 7vh;
+  max-width: 7vh;
+  max-height: 7vh;
   border-radius: 60%;
   top: 40%;
   transform: translateY(-55);
@@ -122,8 +122,8 @@ height : 1rem;
 .carousel-control-prev-1,
 .carousel-control-next-1 {
   background-color: goldenrod;
-  width: 7vh;
-  height: 7vh;
+  max-width: 7vh;
+  max-height: 7vh;
   border-radius: 60%;
   top: 40%;
   transform: translateY(-55);
@@ -143,14 +143,13 @@ height : 1rem;
 }
 
 body {
-  background:url("/img/fondo-alternativo-con-color.jpg");
 font-family: 'Poppins', sans-serif;
 background-size: contain;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
-
+background:url("/img/fondo-alternativo-con-color.jpg");
 }
 
 @media screen and (min-width: 568px) {
