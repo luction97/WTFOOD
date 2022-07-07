@@ -101,8 +101,8 @@ carousel-inner {
 .carousel-control-prev,
 .carousel-control-next {
   background-color: goldenrod;
-  max-width: 7vh;
-  max-height: 7vh;
+  width: 7vh;
+  height: 7vh;
   border-radius: 60%;
   top: 40%;
   transform: translateY(-55);
