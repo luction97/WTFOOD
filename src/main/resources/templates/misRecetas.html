@@ -114,35 +114,32 @@
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
-                                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
+                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                    <ul>
+                                                        <li th:text="${ingrediente.getNombre}"></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <h5>Ingredientes:</h5>
-                                                    <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                        <ul>
-                                                            <li th:text="${ingrediente.getNombre}"></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h5>Pasos a seguir:</h5>
-                                                    <ol>
-                                                        <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                    </ol>
+                                                <h5>Pasos a seguir:</h5>
+                                                <ol>
+                                                  <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                </ol>
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
                                             </div>
                                         </div>
-                                    </div>                                  
-                            </div>
+                                    </div>
+                                </div>
                                 </div>
                                 
                             </div>
