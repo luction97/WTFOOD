@@ -92,12 +92,18 @@
                 <div class="col"></div>
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Foto</label><br/>
-                <input type="file" class="form1 ingrediente" id="formGroupExampleInput" name="archivo"
+                <label for="formGroupExampleInput" class="form-label"><strong>Foto</strong></label><br/>
+                <input type="file" class="form1 ingrediente" id="file" name="archivo" onchange="vista_preliminar(event)"
                  placeholder="Foto" th:value="${foto}"><br/>
+                 <div class="contenedorimg card img">
+                    <img src="" alt="" id="img-foto">
+                 </div>
+                 <button type="button" value="Subir Archivo" class="btn btn-warning cargar"
+                  onclick="document.getElementById('file').click()">Subir</button>
+
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Nombre</label><br/>
+                <label for="formGroupExampleInput" class="form-label"> <strong>Nombre</strong></label><br/>
                 <input type="text" class="form1 ingrediente" id="formGroupExampleInput" name="nombre" placeholder="Nombre de la receta" 
                 th:value="${nombre}"><br/>
             </div>
@@ -144,6 +150,21 @@
             backSpeed: 80,
             loop: true,
         });
+    </script>
+    <script>
+        let vista_preliminar = (event)=>{
+            let leer_img = new FileReader();
+            let id_img = document.getElementById('img-foto');
+
+            leer_img.onload = ()=>{
+               if(leer_img.readyState == 2){
+                id_img.src = leer_img.result
+               }
+            }
+
+            leer_img.readAsDataURL(event.target.files[0])
+
+        }
     </script>
 </body>
 
