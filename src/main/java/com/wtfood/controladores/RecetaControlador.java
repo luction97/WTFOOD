@@ -78,14 +78,6 @@ public class RecetaControlador {
 
         return "modificarReceta";
     }
-    
-    @GetMapping("/misRecetas")
-    public String misRecetas(ModelMap modelo) throws ErrorServicio {
-        List<Receta> recetas = recetaServicio.listarRecetas();
-        // if(recetas.isEmpty()) throw new ErrorServicio("No se ha encontrado ninguna receta.");
-        modelo.addAttribute("recetas", recetas);
-        return "misRecetas";
-    }
 
 
 //    @GetMapping("/seleccionarPaso/{paso}")
