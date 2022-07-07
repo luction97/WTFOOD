@@ -43,8 +43,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
-                                           name="query" id="query" th:value="${query}">
+                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search" name="query" id="query" th:value="${query}">
                                     <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
                                 </form>
                             </ul>
@@ -77,8 +76,7 @@
 
                                 <li class="nav-item dropdown">
 
-                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Mi Perfil
                                     </a>
 
@@ -113,8 +111,7 @@
 
                         <div class="cards-wrapper">
 
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg " th:each="receta: ${receta}">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg " th:each="receta: ${receta}">
                                 <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
                                     <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
@@ -164,8 +161,7 @@
                                 </div>
                             </div>
 
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -176,8 +172,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -193,8 +188,7 @@
                     <!--      Segundo item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -204,8 +198,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img src="/img/img1.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -215,8 +208,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -226,8 +218,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -237,8 +228,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -253,8 +243,7 @@
                     <!--      Tercer item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img3.jpg" alt="...">
 
@@ -266,8 +255,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img2.jpg" alt="...">
 
@@ -279,8 +267,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img1.jpg" alt="...">
 
@@ -292,8 +279,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img4.jpg" alt="...">
 
@@ -305,8 +291,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img5.jpg" alt="...">
 
@@ -352,8 +337,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -363,8 +347,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" class="card-img-top" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -374,8 +357,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -386,8 +368,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
@@ -403,8 +384,7 @@
                     <!--      Segundo item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -414,8 +394,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img src="/img/img1.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -425,8 +404,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -436,8 +414,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -447,8 +424,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
                                 <img src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -463,8 +439,7 @@
                     <!--      Tercer item del carousel-->
                     <div class="carousel-item">
                         <div class="cards-wrapper">
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img3.jpg" alt="...">
 
@@ -476,8 +451,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img2.jpg" alt="...">
 
@@ -489,8 +463,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img1.jpg" alt="...">
 
@@ -502,8 +475,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
 
                                 <img src="/img/img4.jpg" alt="...">
 
@@ -515,8 +487,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
 
                                 <img src="/img/img5.jpg" alt="...">
 
