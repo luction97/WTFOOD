@@ -1,106 +1,110 @@
-*{margin:0;
-    padding:0;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    }
-    
-    body{
-        background:url("/img/fondo-alternativo-con-color.jpg");  
-        background-size: contain;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed; 
-    }
-    .ingrediente{
-         font-family: 'Outfit', sans-serif;
-    }
-    
-    .medio{
-        text-align: center;
-        font-size:40px ;
-        font-family: 'Outfit', sans-serif;
-    }
-    
-    .contenedor .form{
-    background: rgba(0, 0,0, 0);
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/img/fondo-alternativo-con-color.jpg");
+    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.ingrediente {
+    font-family: 'Outfit', sans-serif;
+}
+
+.medio {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.contenedor .form {
+    background: rgba(0, 0, 0, 0);
     width: 90%;
     max-width: 650px;
-    margin:auto;
-    padding:5px 35px;
-    margin-top:30px;
-    padding-bottom:30px;
-    
-    
-    }
-    
-     h1{
-        color:rgb(38, 140, 180);
-        font-size: 50px;
-          font-family: 'Outfit', sans-serif;
-    }
-    .h2{
-        --tw-text-opacity: 1;
-        font-feature-settings: "liga" on;
-        color: black;
-         border: 0 solid;
-        box-sizing: border-box;
-        margin: 5px;
-        margin-bottom: .5rem;
-        font-size: 1.5rem;
-        letter-spacing: -.0125em;
-        line-height: 2rem;
-        font-weight: 600;
-        padding-bottom:5px;
-        font-family: 'Outfit', sans-serif;
-    }
-    
-    .form1{
-        --tw-text-opacity: 1;
-       font-feature-settings: "liga" on;
-        color: rgba(74,74,74,var(--tw-text-opacity));
-        font-family: noto-sans,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,arial,sans-serif;
-        list-style: none;
-        font-size: 1rem;
-        letter-spacing: -.025em;
-        line-height: 1.25;
-        border: 0 solid;
-        border-color: currentColor;
-        min-height: 1.2em;
-        outline: 2px solid transparent;
-        outline-offset: 2px;
-        --tw-bg-opacity: 1;
-        /* fondo de los contenedores de texto */
-        background-color: rgba(248,246,242,var(--tw-bg-opacity));
-        border-radius: 10px;
-        padding: .5rem;
-        box-sizing: content-box;
-        padding-right: 1.5rem;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+
+}
+
+h1 {
+    color: rgb(38, 140, 180);
+    font-size: 50px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.h2 {
+    --tw-text-opacity: 1;
+    font-feature-settings: "liga" on;
+    color: black;
+    border: 0 solid;
+    box-sizing: border-box;
+    margin: 5px;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    letter-spacing: -.0125em;
+    line-height: 2rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.form1 {
+    --tw-text-opacity: 1;
+    font-feature-settings: "liga" on;
+    color: rgba(74, 74, 74, var(--tw-text-opacity));
+    font-family: noto-sans, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, arial, sans-serif;
+    list-style: none;
+    font-size: 1rem;
+    letter-spacing: -.025em;
+    line-height: 1.25;
+    border: 0 solid;
+    border-color: currentColor;
+    min-height: 1.2em;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-bg-opacity: 1;
+    /* fondo de los contenedores de texto */
+    background-color: rgba(248, 246, 242, var(--tw-bg-opacity));
+    border-radius: 10px;
+    padding: .5rem;
+    box-sizing: content-box;
+    padding-right: 1.5rem;
     margin-right: 30px;
-        cursor: pointer;
-        
-        
-    
-        
-    }
-    section{
-        --tw-text-opacity: 1;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        font-feature-settings: "liga" on;
-        color: rgba(74,74,74,var(--tw-text-opacity));
-        font-family: 'Outfit', sans-serif;
-        border: 0 solid;
-        box-sizing: border-box;
-        border-color: currentColor;
-        margin-top: .5rem;
-        --tw-bg-opacity: 1;
-        background-color: rgb(236, 227, 198);
-        padding: 1rem;
-        border-radius: 20px;
-    }
-    
+    cursor: pointer;
+
+
+
+
+}
+
+section {
+    --tw-text-opacity: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga" on;
+    color: rgba(74, 74, 74, var(--tw-text-opacity));
+    font-family: 'Outfit', sans-serif;
+    border: 0 solid;
+    box-sizing: border-box;
+    border-color: currentColor;
+    margin-top: .5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(236, 227, 198);
+    padding: 1rem;
+    border-radius: 20px;
+}
+
 /*    .container {
       background: rgb(236, 227, 198);
       margin:5px;
@@ -112,89 +116,125 @@
        align-items por defecto tiene el valor `stretch` 
       align-items: start;
     }*/
-    
-.contenedor{
+
+.contenedor {
     background-color: rgba(245, 238, 226, 0.9);
-/*    border: 0.5px solid black;*/
+    /*    border: 0.5px solid black;*/
     border-radius: 30px;
     padding: 20px;
     margin: 30px 0 35px 0;
-    
+
 }
-    .marg{
+
+.marg {
     margin-bottom: 40px;
-    }
-    
-    .form2 {
+}
+
+.form2 {
     position: relative;
-   
+
     bottom: 110px;
     right: 145px;
-    
-    }
-    
-    .seleccionar{
+
+}
+
+.seleccionar {
     position: relative;
-   /*  bottom: 130px;
+    /*  bottom: 130px;
     right: 95px; */
     text-align: center;
     background-color: white;
     border-radius: 10px;
     padding: 10px 20px;
-    
+
     text-decoration: none;
     margin-right: 30px;
     cursor: pointer;
-    color:rgb(92, 92, 92);
-    }
-    .seleccionar2{
-        text-align: center;
-        background-color: white;
-        border-radius: 10px;
-        padding: 10px 20px;
-        
-        text-decoration: none;
-        margin-right: 30px;
-        cursor: pointer;
-        color:rgb(92, 92, 92);
-        position: relative;
-        left: 450px;
-        top: 35px;
+    color: rgb(92, 92, 92);
+}
 
-    }
-    .lista{
-    
-        text-align: center;
-        background-color: rgba(248,246,242,var(--tw-bg-opacity));
-        border-radius: 10px;
-      padding: 15px 25px;
-        box-sizing: content-box;
-        text-decoration: none;
+.seleccionar2 {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    text-decoration: none;
     margin-right: 30px;
-        cursor: pointer;
-        color:rgb(92, 92, 92);
-    
-    }
-    .lista2{
-        padding: 15px 30px;
-        
-        margin-left: 15px;
-        text-align: center;
-        background-color: rgba(248,246,242,var(--tw-bg-opacity));
-        border-radius: 10px;
-      
-        box-sizing: content-box;
-        text-decoration: none;
+    cursor: pointer;
+    color: rgb(92, 92, 92);
+    position: relative;
+    left: 450px;
+    top: 35px;
+
+}
+
+.lista {
+
+    text-align: center;
+    background-color: rgba(248, 246, 242, var(--tw-bg-opacity));
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: content-box;
+    text-decoration: none;
     margin-right: 30px;
-        cursor: pointer;
-        color:rgb(92, 92, 92);
-    }
+    cursor: pointer;
+    color: rgb(92, 92, 92);
 
-    .busqueda{
-        width: 25%;
-       flex-direction: row;
+}
 
-    }
+.lista2 {
+    padding: 15px 30px;
 
-    
-    
+    margin-left: 15px;
+    text-align: center;
+    background-color: rgba(248, 246, 242, var(--tw-bg-opacity));
+    border-radius: 10px;
+
+    box-sizing: content-box;
+    text-decoration: none;
+    margin-right: 30px;
+    cursor: pointer;
+    color: rgb(92, 92, 92);
+}
+
+.busqueda {
+    width: 25%;
+    flex-direction: row;
+
+}
+
+.cargar {
+    width: 15%;
+    margin-right: 10px;
+}
+
+#file {
+    display: none;
+}
+
+.contenedorimg {
+    display: block;
+    position: relative;
+    aspect-ratio: 4/3;
+    width: 25%;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+
+
+@media screen and (max-width: 567px) {
+  .card:not(:first-child) {
+    display: none;
+  }
+
+  .card img {
+    height: 11em;
+  }
+}
+
+

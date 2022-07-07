@@ -79,6 +79,7 @@ public class RecetaControlador {
         return "modificarReceta";
     }
 
+
 //    @GetMapping("/seleccionarPaso/{paso}")
 //    public String seleccionarPaso(ModelMap modelo, @PathVariable String paso, HttpSession sesion) {
 //

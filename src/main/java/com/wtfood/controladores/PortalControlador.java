@@ -44,4 +44,13 @@ public class PortalControlador {
 
         return "paginaPrincipal";
     }
+    
+      @GetMapping("/misRecetas")
+    public String misRecetas(ModelMap modelo) {
+
+        modelo.addAttribute("receta", recetaServicio.consultarTodas());
+
+        return "misRecetas";
+    }
+    
 }
