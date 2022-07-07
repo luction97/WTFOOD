@@ -126,12 +126,16 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
+                                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="modal-title" id="exampleModalLabel">
                                                 <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
+                                                
+                                                
 
                                                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
                                             </div>
                                             <div class="modal-body">
                                                 <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></h5>
+                                                <h5 class="modal-title" id="exampleModalLabel" th:each="ingredientes : ${ingredientes}"></h5>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
