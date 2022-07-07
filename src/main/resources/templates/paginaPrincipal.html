@@ -1,621 +1,596 @@
 <!doctype html>
 <html lang="es">
 
-<head>
-    <!--Script de saludo bienvenida-->
+    <head>
+        <!--Script de saludo bienvenida-->
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
-    <title>WTFood - Inicio</title>
-    <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-
-
-
-</head>
-
-<body>
-
-    <!--Este es el navbar. Lo dejamos o no? Porque si ponemos el NavBar como fijo, quedaria bueno y este, le estuve buscando la vuelta y no queda tan lindo-->
-    <header>
-
-        <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
+        <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
+        <title>WTFood - Inicio</title>
+        <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
 
 
-        <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
-            <div class="container-fluid">
-                <div class="col-xl-2">
-                    <a class="navbar-brand" href="#">
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation" style="background-color: goldenrod;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <section class="col-xl-3">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                                <input class="form-control me-2 " type="text" placeholder="Buscar recetas"
-                                    aria-label="Search" name="query" id="query" th:value="${query}">
-                                <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
-                            </form>
-                        </ul>
+
+    </head>
+
+    <body>
+
+        <!--Este es el navbar. Lo dejamos o no? Porque si ponemos el NavBar como fijo, quedaria bueno y este, le estuve buscando la vuelta y no queda tan lindo-->
+        <header>
+
+            <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
+
+
+            <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
+                <div class="container-fluid">
+                    <div class="col-xl-2">
+                        <a class="navbar-brand" href="#">
+                        </a>
                     </div>
-                </section>
-                <!-- <div class="listas">-->
-                <div class="col-xl-7">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                            style="background-color: goldenrod;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <section class="col-xl-3">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                           name="query" id="query" th:value="${query}">
+                                    <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
+                                </form>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- <div class="listas">-->
+                    <div class="col-xl-7">
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
 
-                                <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO
-                                    </strong> </a>
+                                    <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal"> <strong>INICIO </strong> </a>
 
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text-danger" href="misRecetas"> Mis recetas </a>
-                            </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-danger" href="misRecetas"> Mis recetas </a>
+                                </li>
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active text-danger" href="receta"> Crear receta </a>
-                            </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-danger" href="receta"> Crear receta </a>
+                                </li>
 
-                            <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                                <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 Mi perfil
                               </a> -->
 
-                            <li class="nav-item dropdown">
+                                <li class="nav-item dropdown">
 
-                                <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Mi Perfil
-                                </a>
+                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi Perfil
+                                    </a>
 
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-        </nav>
+            </nav>
 
 
-    </header>
+        </header>
 
 
-    <div class="recetas_favs" style="margin-top: 90px;">
-        <h1>Tus recetas favoritas</h1>
-    </div>
+        <div class="recetas_favs" style="margin-top: 90px;">
+            <h1>Tus recetas favoritas</h1>
+        </div>
 
-    <!--Este es el carousel donde aparecen las recetas favoritas -->
-    <section>
-        <div id="carouselExampleControls-1" class="carousel slide d-sm-block" data-ride="carousel">
+        <!--Este es el carousel donde aparecen las recetas favoritas -->
+        <section>
+            <div id="carouselExampleControls-1" class="carousel slide d-sm-block" data-ride="carousel">
 
-            <!--Este es el item activo del carousel o primer item-->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+                <!--Este es el item activo del carousel o primer item-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
 
-                    <div class="cards-wrapper">
+                        <div class="cards-wrapper">
 
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg "
-                            th:each="receta: ${receta}">
-                            <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
-                            <div class="card-body text-white" style="text-align: center">
-                                <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
+                         
+
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                                <img src="/img/img2.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
                                 </div>
                             </div>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel"
-                                                th:text="${receta.getNombre}"></h5>
 
-                                            <button type="button" class="btn-close" data-dismiss="modal"
-                                                aria-label="Close">x</button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <h5 class="modal-title" id="exampleModalLabel"
-                                                th:text="${receta.getPasoAPaso}"></h5>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                        </div>
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
+                                <img src="/img/img3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <button type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img class="card-img-top" src="/img/img4.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img class="card-img-top" src="/img/img5.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img src="/img/img2.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
+                    </div>
+                    <!--      Segundo item del carousel-->
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img2.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img1.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img3.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img5.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img4.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!--      Tercer item del carousel-->
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img src="/img/img3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <button type="button" class="btn btn-danger bg-gradient text-warning"
-                                    data-toggle="modal" data-target="#exampleModal">
-                                    Ver receta
-                                </button>
-                            </div>
-                        </div>
+                                <img src="/img/img3.jpg" alt="...">
 
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img class="card-img-top" src="/img/img4.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                            <img class="card-img-top" src="/img/img5.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
+                                <img src="/img/img2.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img1.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img4.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img5.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--      Segundo item del carousel-->
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-                        <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                            <img src="/img/img2.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                            <img src="/img/img1.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img src="/img/img3.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img src="/img/img5.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                            <img src="/img/img4.jpg" alt="...">
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--      Tercer item del carousel-->
-                <div class="carousel-item">
-                    <div class="cards-wrapper">
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                            <img src="/img/img3.jpg" alt="...">
-
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                            <img src="/img/img2.jpg" alt="...">
-
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                            <img src="/img/img1.jpg" alt="...">
-
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                            <img src="/img/img4.jpg" alt="...">
-
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                            <img src="/img/img5.jpg" alt="...">
-
-                            <div class="card-body" style="text-align: center">
-                                <h6 class="card-title text-danger">Hamburguesas</h6>
-                                <p class="card-text text-danger">De Celsius.</p>
-                                <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Ver receta
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls-1" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleControls-1" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls-1" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls-1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
 
-    <!--  Carousel de recetas compartidas por la comunidad -->
-    <h2>Recetas que compartiste con la comunidad</h2>
-<section>
-    <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
 
-        <!--    Este es el item activo del carousel o primer item-->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="cards-wrapper">
+            <!--  Carousel de recetas compartidas por la comunidad -->
+            <h2>Recetas que compartiste con la comunidad</h2>
 
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
-                        <img src="/img/img1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body text-white" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
+            <div id="carouselExampleControls" class="carousel slide d-sm-block" data-ride="carousel">
+
+                <!--    Este es el item activo del carousel o primer item-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper">
+
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg " th:each="receta: ${receta}">
+                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
+                                <div class="card-body text-white" style="text-align: center">
+                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>                                             
+                                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">x</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                    <ul>
+                                                        <li th:text="${ingrediente.getNombre}"></li>
+                                                    </ul>
+                                                </div>
+                                                <h5>Pasos a seguir:</h5>
+                                                <ol>
+                                                  <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                </ol>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img class="card-img-top" src="/img/img4.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img class="card-img-top" src="/img/img5.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img src="/img/img2.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
+                    <!--      Segundo item del carousel-->
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img2.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img1.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img3.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img5.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+                                <img src="/img/img4.jpg" alt="...">
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img src="/img/img3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img class="card-img-top" src="/img/img4.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
+                    <!--      Tercer item del carousel-->
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
 
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img class="card-img-top" src="/img/img5.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
+                                <img src="/img/img3.jpg" alt="...">
 
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img2.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img1.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img4.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-warning  mb-3  justify-content-center
+                                 align-items-center rounded-lg">
+
+                                <img src="/img/img5.jpg" alt="...">
+
+                                <div class="card-body" style="text-align: center">
+                                    <h6 class="card-title text-danger">Hamburguesas</h6>
+                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                    <span class="visually-hidden"></span>
+                </button>
             </div>
-            <!--      Segundo item del carousel-->
-            <div class="carousel-item">
-                <div class="cards-wrapper">
-                    <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                        <img src="/img/img2.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                        <img src="/img/img1.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
+                        <div class="modal-body">
+                            ...
                         </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-                        <img src="/img/img3.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img src="/img/img5.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-                        <img src="/img/img4.jpg" alt="...">
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--      Tercer item del carousel-->
-            <div class="carousel-item">
-                <div class="cards-wrapper">
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                        <img src="/img/img3.jpg" alt="...">
-
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                        <img src="/img/img2.jpg" alt="...">
-
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                        <img src="/img/img1.jpg" alt="...">
-
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center  align-items-center rounded-lg">
-
-                        <img src="/img/img4.jpg" alt="...">
-
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg">
-
-                        <img src="/img/img5.jpg" alt="...">
-
-                        <div class="card-body" style="text-align: center">
-                            <h6 class="card-title text-danger">Hamburguesas</h6>
-                            <p class="card-text text-danger">De Celsius.</p>
-                            <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Ver receta
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Remove the container if you want to extend the Footer to full width. -->
-    <footer>
-        <div class="container-fluid">
-            <div class="row p-5 bg-warning text-sucess">
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p class="h3"> WTFood! </p>
-                </div>
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p class="h5 mb-2"> Sobre nosotros </p>
-                    <div class="mb-2">
-                        <!--Aca armamos una paginita con nuestro perfil-->
-                        <a class="text-decoration-none text-dark" href="team">Conocé a nuestro equipo</a>
+            <!-- Remove the container if you want to extend the Footer to full width. -->
+            <footer>
+                <div class="container-fluid">
+                    <div class="row p-5 bg-warning text-sucess">
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <p class="h3"> WTFood! </p>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <p class="h5 mb-2"> Sobre nosotros </p>
+                            <div class="mb-2">
+                                <!--Aca armamos una paginita con nuestro perfil-->
+                                <a class="text-decoration-none text-dark" href="team">Conocé a nuestro equipo</a>
+                            </div>
+                        </div>
+                        <!--Creamos unas recetas y las subimos a estas paginas? veo si llego-->
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <p class="h5 mb-3"> Nuestras redes </p>
+                            <div class="mb-2">
+                                <img src="/img/ig.png">
+                                <img src="/img/fb.png">
+                                <img src="/img/tw.png">
+                            </div>
+                        </div>
+                        <!--Buscar algún copy & paste de politica de privacidad-->
+                        <div class="col-xs-12 col-md-4 col-lg-3">
+                            <p class="h5 mb-3"> Politica de privacidad </p>
+                            <div class="mb-2">
+                                <a class="text-decoration-none text-dark" href="/tyc.html">Terminos y condiciones</a>
+                            </div>
+                            <div class="mb-2">
+                                <a class="text-decoration-none text-dark" href="#">Ayuda</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Creamos unas recetas y las subimos a estas paginas? veo si llego-->
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p class="h5 mb-3"> Nuestras redes </p>
-                    <div class="mb-2">
-                        <img src="/img/ig.png">
-                        <img src="/img/fb.png">
-                        <img src="/img/tw.png">
-                    </div>
-                </div>
-                <!--Buscar algún copy & paste de politica de privacidad-->
-                <div class="col-xs-12 col-md-4 col-lg-3">
-                    <p class="h5 mb-3"> Politica de privacidad </p>
-                    <div class="mb-2">
-                        <a class="text-decoration-none text-dark" href="/tyc.html">Terminos y condiciones</a>
-                    </div>
-                    <div class="mb-2">
-                        <a class="text-decoration-none text-dark" href="#">Ayuda</a>
-                    </div>
-                </div>
-            </div>
-    </footer>
+            </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-</body>
-
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
 </html>
