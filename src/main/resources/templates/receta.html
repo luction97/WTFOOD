@@ -18,36 +18,29 @@
 
 <body>
 
+
     <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
-
-                <div class="container-fluid">
-                    <div class="col-xl-2">
-                        <a class="navbar-brand" href="#">
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                            style="background-color: goldenrod;">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="col-xl-3">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
-                                           name="query" id="query" th:value="${query}">
-                                    <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
-                                </form>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <!-- <div class="listas">-->
-                    <div class="col-xl-7">
-
-
+        <div class="container-fluid">
+            <div class="col-xl-2">
+                <a class="navbar-brand" href="#">
+                </a>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    style="background-color: goldenrod;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+                <div class="collapse navbar-collapse listadoIngredientes" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                            <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                   name="query" id="query" th:value="${query}">
+                            <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
+                        </form>
+                    </ul>
+                </div>
+           
             <!-- <div class="listas">-->
             <div class="col-xl-7">
 
@@ -55,8 +48,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
 
-                            <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal">
-                                <strong>INICIO </strong> </a>
+                            <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO </strong> </a>
 
 
                         </li>
@@ -70,14 +62,14 @@
                         </li>
 
                         <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Mi perfil
-                              </a> -->
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Mi perfil
+                      </a> -->
 
                         <li class="nav-item dropdown">
 
                             <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Mi Perfil
                             </a>
 
@@ -85,7 +77,7 @@
                                 <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
-                                </li>
+                                </li >
                                 <li><a th:href="@{/logout}" class="dropdown-item"><span>Cerrar sesión</span></a></li>
                             </ul>
                         </li>
