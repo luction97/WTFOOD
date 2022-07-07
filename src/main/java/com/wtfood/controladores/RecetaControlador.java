@@ -1,16 +1,18 @@
 package com.wtfood.controladores;
 
-import com.wtfood.entidades.Foto;
 import com.wtfood.entidades.Ingrediente;
 import com.wtfood.entidades.Receta;
 import com.wtfood.entidades.Usuario;
 import com.wtfood.errores.ErrorServicio;
+import com.wtfood.repositorios.IngredienteRepositorio;
+import com.wtfood.servicios.IngredienteServicio;
 import com.wtfood.servicios.RecetaServicio;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -80,6 +82,22 @@ public class RecetaControlador {
         return "modificarReceta";
     }
 
+    @GetMapping("/busquedaReceta")
+    public String busquedaReceta(ModelMap modelo, @RequestParam(value = "query", required = false) String nombre) {
+        try {
+           List<Receta> recetas = this.recetaServicio.consultarPorNombre(nombre);
+            modelo.addAttribute("recetas", recetas);
+            
+            return "busquedaReceta";
+            
+        } catch (Exception e) {
+            e.getMessage();
+            modelo.addAttribute(e);
+        }
+           return null;
+    }
+
+
 
 //    @GetMapping("/seleccionarPaso/{paso}")
 //    public String seleccionarPaso(ModelMap modelo, @PathVariable String paso, HttpSession sesion) {
@@ -97,5 +115,4 @@ public class RecetaControlador {
 //        }
 //        return "redirect:/receta";
 //    }
-
 }

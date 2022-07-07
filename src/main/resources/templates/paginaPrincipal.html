@@ -43,7 +43,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                    <input class="form-control me-2 busqueda" type="text" placeholder="Buscar recetas" aria-label="Search"
                                            name="query" id="query" th:value="${query}">
                                     <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
                                 </form>
@@ -113,7 +113,7 @@
 
                         <div class="cards-wrapper">
 
-                             <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
                                 <img src="/img/img1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -136,7 +136,7 @@
                             </div>
 
 
-                    
+
 
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
@@ -326,36 +326,36 @@
                                     </div>
                                 </div>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                    <ul>
+                                                        <li th:text="${ingrediente.getNombre}"></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <h5>Ingredientes:</h5>
-                                                    <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                        <ul>
-                                                            <li th:text="${ingrediente.getNombre}"></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h5>Pasos a seguir:</h5>
-                                                    <ol>
-                                                        <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                    </ol>
+                                                <h5>Pasos a seguir:</h5>
+                                                <ol>
+                                                    <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                </ol>
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
                                             </div>
                                         </div>
-                                    </div>    
+                                    </div>
+                                </div>    
                             </div>
-                            
-                           <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
+
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
                                 <img src="/img/img1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
@@ -376,7 +376,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" class="card-img-top" alt="...">
