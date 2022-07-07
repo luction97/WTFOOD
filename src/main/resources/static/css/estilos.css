@@ -14,7 +14,7 @@
 
 
 .header {
-    background: url(/paginaPrincipal/img/fondo-login2.png) no-repeat center;
+    background: url(/img/fondo-login2.png) no-repeat center;
     background-size: cover;
     min-height: 100vh;
   }
@@ -74,8 +74,8 @@ carousel-inner{
 }
 .carousel-control-prev , .carousel-control-next{
   background-color: goldenrod;
-width: 7vh;
-height: 7vh;
+width: 6vh;
+height: 6vh;
 border-radius: 60%;
 top: 40%;
 transform: translateY(-55);
@@ -84,20 +84,20 @@ transform: translateY(-55);
 
 .carousel-control-prev span,
 .carousel-control-next span{
-width: 1.5rem;
-height : 1.5rem;
+width:  1rem;
+height :  1rem;
 }
 
 .carousel-control-prev-1 span,
 .carousel-control-next-1 span{
-width: 1.5rem;
-height : 1.5rem;
+width: 1rem;
+height : 1rem;
 }
 
 .carousel-control-prev-1 , .carousel-control-next-1{
   background-color: goldenrod;
-width: 7vh;
-height: 7vh;
+width: 5vh;
+height: 5vh;
 border-radius: 60%;
 top: 40%;
 transform: translateY(-55);
@@ -124,6 +124,7 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
+background:url("/img/fondo-alternativo-con-color.jpg");
 
 
 }

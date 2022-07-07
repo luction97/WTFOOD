@@ -6,9 +6,7 @@
     }
     
     body{
-        background:url("/img/fondo-alternativo.jpeg");
-        
-    
+        background:url("/img/fondo-alternativo-con-color.jpg");  
         background-size: contain;
         background-size: cover;
         background-repeat: no-repeat;
