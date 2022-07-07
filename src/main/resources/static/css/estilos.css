@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.titulo_ppal{
+.titulo_ppal {
   text-align: center;
   font-family: sans-serif;
   margin: 0;
 }
-.recetas_favs{
+
+.recetas_favs {
   text-align: center;
   font-family: sans-serif;
   margin: 0;
@@ -14,107 +15,131 @@
 
 
 .header {
+
+  background: url(/paginaPrincipal/img/fondo-login2.png) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+
     background: url(/img/fondo-login2.png) no-repeat center;
     background-size: cover;
     min-height: 100vh;
   }
 
-nav{
+
+nav {
   justify-content: space-between;
   margin: 0;
   background: linear-gradient(90deg, rgba(251, 182, 24, 1) 0%, rgba(255, 205, 19, 1) 37%, rgba(255, 173, 19, 1) 100%);
 
 }
-​.team-cards{
+
+​.team-cards {
   outline-color: aqua;
 }
 
 
-.navbar-search{
+.navbar-search {
   position: absolute;
-left:50%;
+  left: 50%;
 }
 
 .header .navbar {
-    /*background-color: transparent !important;*/
-  }
-  .header img{
-    height: 10px;
-  }
-.btn-outline-success{
-  color:white;
+  /*background-color: transparent !important;*/
 }
-.nav-link{
-  color:white
+
+.header img {
+  height: 10px;
 }
+
+.btn-outline-success {
+  color: white;
+}
+
+.nav-link {
+  color: white
+}
+
 .cards-wrapper {
-        display: flex;
+  display: flex;
 }
-.listas{
+
+.listas {
   list-style: none;
 }
-.card {
-    margin: 0 .5em;
-    width: calc(100%/3);
-    border:none;
-    border-radius: 0;
-    box-shadow: 2px 6px 8px rgba(22, 22, 26, .18);
 
-  }
-carousel-inner{
-    padding: 1em;
+.card {
+  margin: 0 .5em;
+  width: calc(100%/3);
+  border: none;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px rgba(22, 22, 26, .18);
+
+}
+
+carousel-inner {
+  padding: 1em;
 }
 
 .card img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-.card-team{
+  display: block;
+  position: relative;
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-team {
   min-height: 100;
 }
-.carousel-control-prev , .carousel-control-next{
+
+
+.carousel-control-prev,
+.carousel-control-next {
   background-color: goldenrod;
-width: 6vh;
-height: 6vh;
-border-radius: 60%;
-top: 40%;
-transform: translateY(-55);
+  width: 7vh;
+  height: 7vh;
+  border-radius: 60%;
+  top: 40%;
+  transform: translateY(-55);
 
 }
 
 .carousel-control-prev span,
-.carousel-control-next span{
-width:  1rem;
-height :  1rem;
+.carousel-control-next span {
+  width: 1rem;
+  height: 1rem;
 }
 
 .carousel-control-prev-1 span,
 .carousel-control-next-1 span{
 width: 1rem;
 height : 1rem;
+
 }
 
-.carousel-control-prev-1 , .carousel-control-next-1{
+.carousel-control-prev-1,
+.carousel-control-next-1 {
   background-color: goldenrod;
-width: 5vh;
-height: 5vh;
-border-radius: 60%;
-top: 40%;
-transform: translateY(-55);
-
+  width: 7vh;
+  height: 7vh;
+  border-radius: 60%;
+  top: 40%;
+  transform: translateY(-55);
 }
 
 .image-wrapper {
-    height: 22vw;
-    margin: 0 auto;
-   /* display: flex;
+  height: 22vw;
+  margin: 0 auto;
+  /* display: flex;
     align-items: center;
     justify-content: center;*/
 }
 
 .image-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 body {
@@ -125,26 +150,27 @@ background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
 background:url("/img/fondo-alternativo-con-color.jpg");
-
-
 }
 
 @media screen and (min-width: 568px) {
-  .cards-wrapper{
+  .cards-wrapper {
     display: flex;
   }
-  
+
 }
-@media screen and  (max-width: 567px) {
-  .card:not(:first-child){
+
+@media screen and (max-width: 567px) {
+  .card:not(:first-child) {
     display: none;
   }
-    .card img {
-      height: 11em;
-    }
+
+  .card img {
+    height: 11em;
+  }
 }
-footer{
-    
-padding-bottom: 10px !important;
-padding-top: 5px !important;
+
+footer {
+
+  padding-bottom: 10px !important;
+  padding-top: 5px !important;
 }
