@@ -318,13 +318,6 @@
 
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg " th:each="receta: ${receta}">
-                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
-                                <div class="card-body text-white" style="text-align: center">
-                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -351,6 +344,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <img th:src="@{'/foto/receta/' + ${receta.id}}" class="card-img-top" alt="...">
+                                <div class="card-body text-white" style="text-align: center">
+                                    <h6 class="card-title text-danger" th:text="${receta.getNombre}"></h6>
+                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
+                                        Ver receta
+                                    </div>
+                                </div>
+                                
                             </div>
                             
                             <div class="card bg-warning  mb-3  justify-content-center
