@@ -4,99 +4,99 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+              integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/estilos.css" media="screen">
         <title>WTFood - Crear Receta</title>
-  <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
-    
+        <link rel="icon" type="image/x-icon" href="/img/tallarines.png">
+
     </head>
     <body style="background-color: Lavender;">
         <header>
 
-    <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
-   
-<nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
-      <div class="container-fluid">
-        <div class="col-xl-2">
-          <a class="navbar-brand" href="#">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-          style="background-color: goldenrod;">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <section class="col-xl-3">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
-                <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
-                  name="query" id="query" th:value="${query}">
-                <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
-              </form>
-            </ul>
-          </div>
-        </section>
-        <!-- <div class="listas">-->
-        <div class="col-xl-7">
+            <!--- /*<h2> 🍜 Bienvenido"ThymeLeaf_nombre_de_Usuario" a WTFood!</h2>*/-->
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+            <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
+                <div class="container-fluid">
+                    <div class="col-xl-2">
+                        <a class="navbar-brand" href="#">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                            style="background-color: goldenrod;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <section class="col-xl-3">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                                    <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                           name="query" id="query" th:value="${query}">
+                                    <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
+                                </form>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- <div class="listas">-->
+                    <div class="col-xl-7">
 
-                <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal"> <strong>INICIO </strong> </a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+
+                                    <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal"> <strong>INICIO </strong> </a>
 
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-danger" href="#"> Mis recetas </a>
-              </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-danger" href="#"> Mis recetas </a>
+                                </li>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active text-danger" href="ingrediente"> Crear receta </a>
-              </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active text-danger" href="ingrediente"> Crear receta </a>
+                                </li>
 
-              <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Mi perfil
-            </a> -->
+                                <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Mi perfil
+                              </a> -->
 
-              <li class="nav-item dropdown">
+                                <li class="nav-item dropdown">
 
-                <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Mi Perfil
-                </a>
+                                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi Perfil
+                                    </a>
 
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-</header>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+        </header>
 
-<!--        <h1>Administacion de Recetas</h1>
-        <nav id="navbar-example2" class="navbar bg-light px-3">
-            <a class="navbar-brand" href="#">Registrar Receta</a>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="/receta/modificarReceta">Modificar Receta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/ingrediente">Ingrediente</a>
-                </li>
-
-            </ul>
-        </nav>-->
+        <!--        <h1>Administacion de Recetas</h1>
+                <nav id="navbar-example2" class="navbar bg-light px-3">
+                    <a class="navbar-brand" href="#">Registrar Receta</a>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/receta/modificarReceta">Modificar Receta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ingrediente">Ingrediente</a>
+                        </li>
+        
+                    </ul>
+                </nav>-->
         <h2>Listar Recetas:</h2>
         <div th:if="${recetas} != null">
             <table class="table table-hover" action="/receta" method="GET">
@@ -151,15 +151,14 @@
 
                 <div class="mb-3">
                     <section class="marg">
-                    
-                            <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
-                            <div class="container">
-                                <input type="text" id="paso" class="form1" name="pasoAPaso"
-                                       placeholder="Escriba el paso a seguir">
 
-                                
-                            </div>
-                    
+                        <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
+                        <div class="container">
+                            <textarea type="text" name="pasoAPaso" rows="10" cols="40" class="form1" id="paso" placeholder="Escriba los pasos a seguir"></textarea>
+
+
+                        </div>
+
 
 
                     </section>
@@ -172,45 +171,45 @@
         </div>
     </body>
     <footer>
-    <div class="container-fluid ">
-        <div class="row p-5 bg-warning text-sucess">
-            <div class="col-xs-12 col-md-4 col-lg-3">
-                <p class="h3"> WTFood! </p>
-            </div>
-            <div class="col-xs-12 col-md-4 col-lg-3">
-                <p class="h5 mb-2"> Sobre nosotros </p>
-                <div class="mb-2">
-                    <!--Aca armamos una paginita con nuestro perfil-->
-                    <a class="text-decoration-none text-dark" href="team">Conocé a nuestro equipo</a>
+        <div class="container-fluid ">
+            <div class="row p-5 bg-warning text-sucess">
+                <div class="col-xs-12 col-md-4 col-lg-3">
+                    <p class="h3"> WTFood! </p>
                 </div>
-            </div>
-            <!--Creamos unas recetas y las subimos a estas paginas? veo si llego-->
-            <div class="col-xs-12 col-md-4 col-lg-3">
-                <p class="h5 mb-3"> Nuestras redes </p>
-                <div class="mb-2">
+                <div class="col-xs-12 col-md-4 col-lg-3">
+                    <p class="h5 mb-2"> Sobre nosotros </p>
+                    <div class="mb-2">
+                        <!--Aca armamos una paginita con nuestro perfil-->
+                        <a class="text-decoration-none text-dark" href="team">Conocé a nuestro equipo</a>
+                    </div>
+                </div>
+                <!--Creamos unas recetas y las subimos a estas paginas? veo si llego-->
+                <div class="col-xs-12 col-md-4 col-lg-3">
+                    <p class="h5 mb-3"> Nuestras redes </p>
+                    <div class="mb-2">
 
-                    <img src="/img/ig.png">
-                    <img src="/img/fb.png">
-                    <img src="/img/tw.png">
+                        <img src="/img/ig.png">
+                        <img src="/img/fb.png">
+                        <img src="/img/tw.png">
+                    </div>
+                </div>
+
+                <!--Buscar algún copy & paste de politica de privacidad-->
+                <div class="col-xs-12 col-md-4 col-lg-3">
+                    <p class="h5 mb-3"> Politica de privacidad </p>
+                    <div class="mb-2">
+                        <a class="text-decoration-none text-dark" href="/tyc.html">Terminos y condiciones</a>
+                    </div>
+                    <div class="mb-2">
+                        <a class="text-decoration-none text-dark" href="#">Ayuda</a>
+                    </div>
                 </div>
             </div>
-            
-            <!--Buscar algún copy & paste de politica de privacidad-->
-            <div class="col-xs-12 col-md-4 col-lg-3">
-                <p class="h5 mb-3"> Politica de privacidad </p>
-                <div class="mb-2">
-                    <a class="text-decoration-none text-dark" href="/tyc.html">Terminos y condiciones</a>
-                </div>
-                <div class="mb-2">
-                    <a class="text-decoration-none text-dark" href="#">Ayuda</a>
-                </div>
-            </div>
-        </div>
-</footer>
- <script src="./js/bootstrap.bundle.min.js"></script>
-<!--Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </html>
