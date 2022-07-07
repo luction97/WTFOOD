@@ -83,21 +83,18 @@ public class RecetaControlador {
     }
 
     @GetMapping("/busquedaReceta")
-    public String busquedaReceta(ModelMap modelo, @RequestParam(value = "query", required = false) String nombre) {
+    public String busquedaReceta(ModelMap modelo, @RequestParam(value = "query", required = false) String nombre) throws Exception{
         try {
-           List<Receta> recetas = this.recetaServicio.consultarPorNombre(nombre);
+            List<Receta> recetas = this.recetaServicio.consultarPorNombre(nombre);
             modelo.addAttribute("recetas", recetas);
-            
+
             return "busquedaReceta";
-            
         } catch (Exception e) {
             e.getMessage();
             modelo.addAttribute(e);
         }
-           return null;
+        return null;
     }
-
-
 
 //    @GetMapping("/seleccionarPaso/{paso}")
 //    public String seleccionarPaso(ModelMap modelo, @PathVariable String paso, HttpSession sesion) {
