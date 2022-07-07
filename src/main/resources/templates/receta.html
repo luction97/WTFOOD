@@ -26,7 +26,12 @@
         </div>
     </div>
 
-    <div class="container-sm contenedor">
+
+
+
+    <!-- Listado de ingredientes -->
+
+    <div class="container-sm contenedor ">
         <div class="row">
             <h2 class="h2">Listado de Ingredientes:</h2>
         </div>
@@ -35,12 +40,13 @@
                 <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-outline-warning">Lista
                     de Ingredientes</a>
                 <a href="/ingrediente" type="button" class="btn btn-outline-warning">Cerrar lista</a>
-                
-                <form class= "d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
-                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" id="query" th:value="${query}">
+
+                <form class="d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query"
+                        id="query" th:value="${query}">
                     <input class="btn btn-outline-warning" type="submit" value="Buscar">
                 </form>
-                
+
             </div>
             <table class="table" action="mostrarIngredientes" method="GET">
                 <tr>
@@ -53,81 +59,88 @@
                             class="seleccionar">Seleccionar</a></td>
                 </tr>
             </table>
-            
+
         </div>
 
-    </div>
 
-    <div class="container-sm contenedor">
-        <form action="/ingrediente" method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col">
-                    <h2 class="ingrediente">Agregá más ingredientes:</h2>
-                </div>
-                <div class="col"></div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form1 ingrediente" name="ingrediente"
-                        placeholder="Escriba el ingrediente">
 
-                    <input type="submit" class="form1" value="+ingrediente">
-                </div>
-                <div class="col">
-                    <a href="/receta" style="text-decoration: none" class="btn btn-danger">Continuar receta</a>
-                </div>
-            </div>
-        </form>
+        <!-- Agregar más ingredientes -->
+        <div class="container-sm contenedor agregarIngrediente">
+
+            <section class="marg">
+                <form action="/ingrediente" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="ingrediente">Agregá más ingredientes:</h2>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form1 ingrediente" name="ingrediente"
+                                placeholder="Escriba el ingrediente">
+
+                            <input type="submit" class="form1" value="+ingrediente">
+                        </div>
+                        <div class="col">
+                            <a href="/receta" style="text-decoration: none" class="btn btn-danger">Continuar receta</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+
     </div>
 
     <div class="container-sm contenedor">
         <form action="" method="POST" enctype="multipart/form-data">
 
             <p th:if="${error != null}" th:text="${error}" style="color: red;"></p>
-            
-             <div class="row">
+
+            <div class="row">
                 <div class="col">
                     <h2 class="ingrediente">Cargar receta:</h2>
                 </div>
                 <div class="col"></div>
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label"><strong>Foto</strong></label><br/>
+                <label for="formGroupExampleInput" class="form-label"><strong>Foto</strong></label><br />
                 <input type="file" class="form1 ingrediente" id="file" name="archivo" onchange="vista_preliminar(event)"
-                 placeholder="Foto" th:value="${foto}"><br/>
-                 <div class="contenedorimg card img">
+                    placeholder="Foto" th:value="${foto}"><br />
+                <div class="contenedorimg card img">
                     <img src="" alt="" id="img-foto">
-                 </div>
-                 <button type="button" value="Subir Archivo" class="btn btn-warning cargar"
-                  onclick="document.getElementById('file').click()">Subir</button>
+                </div>
+                <button type="button" value="Subir Archivo" class="btn btn-warning cargar"
+                    onclick="document.getElementById('file').click()">Subir</button>
 
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label"> <strong>Nombre</strong></label><br/>
-                <input type="text" class="form1 ingrediente" id="formGroupExampleInput" name="nombre" placeholder="Nombre de la receta" 
-                th:value="${nombre}"><br/>
+                <label for="formGroupExampleInput" class="form-label"> <strong>Nombre</strong></label><br />
+                <input type="text" class="form1 ingrediente" id="formGroupExampleInput" name="nombre"
+                    placeholder="Nombre de la receta" th:value="${nombre}"><br />
             </div>
 
             <div class="mb-3">
                 <section class="marg">
-                
-                        <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
-                        <div class="container">
-                            <input type="text" id="paso" class="form1" name="pasoAPaso"
-                                   placeholder="Escriba el paso a seguir">
-                        </div>
+
+                    <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
+                    <div class="container">
+                        <input type="text" id="paso" class="form1" name="pasoAPaso"
+                            placeholder="Escriba el paso a seguir">
+                    </div>
                 </section>
             </div>
-            
-             <div>
 
-                    <button type="submit" class="btn btn-warning cargar">Cargar</button>
-                    
-                    <a class="btn btn-danger" href="paginaPrincipal" role="button">Volver a Inicio</a>
+            <div>
+
+                <button type="submit" class="btn btn-warning cargar">Cargar</button>
+
+                <a class="btn btn-danger" href="paginaPrincipal" role="button">Volver a Inicio</a>
 
 
-                </div>
-            
+            </div>
+
         </form>
     </div>
 
@@ -152,14 +165,14 @@
         });
     </script>
     <script>
-        let vista_preliminar = (event)=>{
+        let vista_preliminar = (event) => {
             let leer_img = new FileReader();
             let id_img = document.getElementById('img-foto');
 
-            leer_img.onload = ()=>{
-               if(leer_img.readyState == 2){
-                id_img.src = leer_img.result
-               }
+            leer_img.onload = () => {
+                if (leer_img.readyState == 2) {
+                    id_img.src = leer_img.result
+                }
             }
 
             leer_img.readAsDataURL(event.target.files[0])
