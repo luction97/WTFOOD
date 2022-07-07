@@ -44,8 +44,9 @@ public class RecetaControlador {
             System.out.println(usuario);
             recetaServicio.registrarReceta(nombre, 4, ingredientes, usuario, archivo, pasoAPaso);
             sesion.setAttribute("ingredientes", null);
+            modelo.put("exito", "Receta guardada con exito!");
         } catch (ErrorServicio ex) {
-            modelo.put("error", ex.getMessage());
+            modelo.put("error", "No se pudo persistir la receta.");
             modelo.put("nombre", nombre);
             //   modelo.put("calificaciones", calificaciones);
 //            modelo.addAttribute("ingredientes", ingredientes);
