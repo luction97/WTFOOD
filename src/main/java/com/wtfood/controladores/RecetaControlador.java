@@ -43,6 +43,7 @@ public class RecetaControlador {
             Usuario usuario = (Usuario) sesion.getAttribute("usuariosession");
             System.out.println(usuario);
             recetaServicio.registrarReceta(nombre, 4, ingredientes, usuario, archivo, pasoAPaso);
+            sesion.setAttribute("ingredientes", null);
         } catch (ErrorServicio ex) {
             modelo.put("error", ex.getMessage());
             modelo.put("nombre", nombre);
