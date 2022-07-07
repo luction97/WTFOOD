@@ -195,6 +195,11 @@
        flex-direction: row;
 
     }
+    
+    .cargar{
+        width: 15%;
+        margin-right: 10px;
+    }
 
     
     
