@@ -24,6 +24,7 @@
           <a class="navbar-brand" href="#">
           </a>
         </div>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
           style="background-color: goldenrod;">
@@ -39,6 +40,61 @@
               </form>
             </ul>
           </div>
+
+        <div class="container-sm contenedor">
+            <div class="row">
+                <h2 class="h2">Listado de Ingredientes:</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 d-flex">
+                    <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-outline-warning">Lista
+                        de Ingredientes</a>
+                    <a href="/ingrediente" type="button" class="btn btn-outline-warning">Cerrar lista</a>
+
+                    <form class= "d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" id="query" th:value="${query}">
+                        <input class="btn btn-outline-warning" type="submit" value="Buscar">
+                    </form>
+
+                </div>
+                <table class="table" action="mostrarIngredientes" method="GET">
+                    <tr>
+                        <th th:text="${mensajenombre}"></th>
+                        <th th:text="${mensajeseleccionar}"></th>
+                    </tr>
+                    <tr th:each="ingrediente : ${ingredientes}">
+                        <td th:text="${ingrediente.getNombre}"></td>
+                        <td><a th:href="@{'/ingrediente/seleccionarIngrediente/' + ${ingrediente.id}}" type="button"
+                               class="seleccionar">Seleccionar</a></td>
+                    </tr>
+                </table>
+
+            </div>
+
+        
+
+        <div class="container-sm contenedor agregarIngrediente">
+            <section class="marg">
+            <form action="/ingrediente" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="ingrediente">Agregá más ingredientes:</h2>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form1 ingrediente" name="ingrediente"
+                               placeholder="Escriba el ingrediente">
+
+                        <input type="submit" class="form1" value="+ingrediente">
+                    </div>
+                    <div class="col">
+                        <a href="/receta" class="btn btn-danger">Continua con tu receta!</a>
+                    </div>
+                </div>
+            </form>
+
         </section>
     <div class="container">
         <div class="medio">

@@ -49,7 +49,7 @@
                     <tr th:each="ingrediente : ${ingredientes}">
                         <td th:text="${ingrediente.getNombre}"></td>
                         <td><a th:href="@{'/ingrediente/seleccionarIngrediente/' + ${ingrediente.id}}" type="button"
-                               class="seleccionar">Seleccionar</a></td>
+                               class="btn btn-danger">Seleccionar</a></td>
                     </tr>
                 </table>
             </div>
@@ -72,7 +72,7 @@
                         <input type="submit" class="form1" value="+ingrediente">
                     </div>
                     <div class="col">
-                        <a href="/receta" class="btn btn-danger">Continuar con tu receta</a>
+                        <a href="/receta" class="btn btn-danger">Continua con tu receta!</a>
                     </div>
                 </div>
             </form>
