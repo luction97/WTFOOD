@@ -86,8 +86,8 @@
                                         <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                                        </li >
+                                        <li><a th:href="@{/logout}" class="dropdown-item"><span>Cerrar sesión</span></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -113,40 +113,131 @@
 
                         <div class="cards-wrapper">
 
-                             <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
+                            <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
                                 <img src="/img/img1.jpg" class="card-img-top" alt="...">
                                 <div class="card-body text-white" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <p class="card-text text-danger">mejores que las de MC.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
                                 </div>
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Hamburguesas mejores que las de MC.</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <ul>
+                                                    <li>Pan</li>
+                                                    <li>Carne</li>
+                                                    <li>Verduras</li>
+                                                    <li>Queso</li>
+                                                    <li>Panceta</li>
+                                                </ul>
+                                            </div>
+                                            <h5>Pasos a seguir:</h5>
+                                            <ol>
+                                                <li class="modal-title" id="exampleModalLabel">Comprar la carne y darle forma de hamburguesas, tirarlas a la parrilla y dejarlas hasta que tomen lindo colorcito. Despues armar la hamburguesa y listo!</li>  
+                                            </ol>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Pizza</h6>
+                                    <p class="card-text text-danger">con laureles :D.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
                                 </div>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Pizza con Laureles :D.</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <ul>
+                                                    <li>Masa</li>
+                                                    <li>Tomate</li>
+                                                    <li>Queso</li>
+                                                    <li>Jamon</li>
+                                                    <li>Laureles</li>
+                                                </ul>
+                                            </div>
+                                            <h5>Pasos a seguir:</h5>
+                                            <ol>
+                                                <li class="modal-title" id="exampleModalLabel">Hacer la masa con agua y harina, y amasar hasta que tenga linda consistencia. Poner la salsa en la masa, jamon, queso y al horno!</li>  
+                                            </ol>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-
-                    
 
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Una degustacion</h6>
+                                    <p class="card-text text-danger">de todo un poco.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
+                                    </div>
+                                </div>
+                                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Una degustacion de todo un poco.</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <ul>
+                                                    <li>Mariscos</li>
+                                                    <li>Verduras</li>
+                                                    <li>Pollo</li>
+                                                    <li>Jamon</li>
+                                                    <li>Calabaza</li>
+                                                </ul>
+                                            </div>
+                                            <h5>Pasos a seguir:</h5>
+                                            <ol>
+                                                <li class="modal-title" id="exampleModalLabel">Con esta quedas re crack. Te agarras unos platitos hondos que tengas en tu casa, y te haces una mezcla de todo un poco!</li>  
+                                            </ol>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -155,10 +246,38 @@
                                 <img class="card-img-top" src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
 
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Panchitos</h6>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
+                                    </div>
+                                </div>
+                                           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Pizza con Laureles :D.</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <ul>
+                                                    <li>Salchichas</li>
+                                                    <li>Papas</li>
+                                                    <li>Adherezos</li>
+                                                    <li>Pan</li>
+                                                </ul>
+                                            </div>
+                                            <h5>Pasos a seguir:</h5>
+                                            <ol>
+                                                <li class="modal-title" id="exampleModalLabel">La mas facil de todas. Ponete agua a hervir, le mandas las salchichas y despues preparate los panchos como vos quieras!</li>  
+                                            </ol>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -171,8 +290,8 @@
                                  align-items-center rounded-lg">
                                 <img src="/img/img2.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Pizzas</h6>
+                                    <p class="card-text text-danger">con laureles:D.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -183,7 +302,7 @@
                                 <img src="/img/img1.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <p class="card-text text-danger">mejores que las de MC.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -193,8 +312,8 @@
                                  align-items-center rounded-lg">
                                 <img src="/img/img3.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Salteado</h6>
+                                    <p class="card-text text-danger">de pescadito.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -204,8 +323,8 @@
                                  align-items-center rounded-lg">
                                 <img src="/img/img5.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Panchitos</h6>
+
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -215,8 +334,8 @@
                                  align-items-center rounded-lg">
                                 <img src="/img/img4.jpg" alt="...">
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Una degustacion</h6>
+                                    <p class="card-text text-danger">de todo un poco.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -233,8 +352,8 @@
                                 <img src="/img/img3.jpg" alt="...">
 
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Salteado</h6>
+                                    <p class="card-text text-danger">de pescadito.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -246,8 +365,8 @@
                                 <img src="/img/img2.jpg" alt="...">
 
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Pizza</h6>
+                                    <p class="card-text text-danger">con laureles.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -260,7 +379,7 @@
 
                                 <div class="card-body" style="text-align: center">
                                     <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <p class="card-text text-danger">mejores que las de MC.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -272,8 +391,8 @@
                                 <img src="/img/img4.jpg" alt="...">
 
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Una degustacion</h6>
+                                    <p class="card-text text-danger">de todo un poco.</p>
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -285,8 +404,8 @@
                                 <img src="/img/img5.jpg" alt="...">
 
                                 <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
+                                    <h6 class="card-title text-danger">Panchitos</h6>
+ 
                                     <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
                                         Ver receta
                                     </div>
@@ -326,68 +445,36 @@
                                     </div>
                                 </div>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>Ingredientes:</h5>
+                                                <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                    <ul>
+                                                        <li th:text="${ingrediente.getNombre}"></li>
+                                                    </ul>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <h5>Ingredientes:</h5>
-                                                    <div th:each ="ingrediente: ${receta.getIngredientes}">
-                                                        <ul>
-                                                            <li th:text="${ingrediente.getNombre}"></li>
-                                                        </ul>
-                                                    </div>
-                                                    <h5>Pasos a seguir:</h5>
-                                                    <ol>
-                                                        <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
-                                                    </ol>
+                                                <h5>Pasos a seguir:</h5>
+                                                <ol>
+                                                    <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                </ol>
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
                                             </div>
                                         </div>
-                                    </div>    
-                            </div>
-                            
-                           <div class="card bg-warning  mb-3  justify-content-center align-items-center rounded-lg ">
-                                <img src="/img/img1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body text-white" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
                                     </div>
-                                </div>
+                                </div>    
                             </div>
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img2.jpg" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="card bg-warning  mb-3  justify-content-center
-                                 align-items-center rounded-lg">
-                                <img src="/img/img3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body" style="text-align: center">
-                                    <h6 class="card-title text-danger">Hamburguesas</h6>
-                                    <p class="card-text text-danger">De Celsius.</p>
-                                    <div type="button" class="btn btn-danger bg-gradient text-warning" data-toggle="modal" data-target="#exampleModal">
-                                        Ver receta
-                                    </div>
-                                </div>
-                            </div>
+
+                                                    
                             <div class="card bg-warning  mb-3  justify-content-center
                                  align-items-center rounded-lg">
                                 <img class="card-img-top" src="/img/img4.jpg" alt="...">
