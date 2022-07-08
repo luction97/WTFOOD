@@ -1,6 +1,7 @@
 
 package com.wtfood.repositorios;
 
+import com.wtfood.entidades.Ingrediente;
 import com.wtfood.entidades.Receta;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -32,7 +33,7 @@ public interface RecetaRepositorio extends JpaRepository<Receta, String> {
     @Query("DELETE FROM Receta WHERE id LIKE :id")
     public void eliminarRecetaPorId(@Param("id") String id);
     
-     @Query("SELECT r FROM Receta r WHERE r.nombre LIKE :nombre")
+     @Query("SELECT r FROM Receta r WHERE r.nombre LIKE %:nombre%")
     public List<Receta> buscarRecetaPorNombre(@Param("nombre") String nombre);
     
 }
