@@ -52,5 +52,8 @@ public class PortalControlador {
 
         return "misRecetas";
     }
-    
+    @GetMapping("/ayuda")
+    public String ayuda() {
+        return "ayuda";
+    }
 }
