@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingredientes</title>
-    <link rel="stylesheet" href="css/estiloingrediente.css">
+    <title>Crear receta</title>
+   <link rel="stylesheet" href="css/estiloingrediente.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +19,74 @@
 
 <body>
 
+
+    <nav class="fixed-top navbar  navbar-expand-lg  navbar-light bg-warning bg-gradient shadow">
+        <div class="container-fluid">
+            <div class="col-xl-2">
+                <a class="navbar-brand" href="#">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    style="background-color: goldenrod;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+                <div class="collapse navbar-collapse listadoIngredientes" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="d-flex" th:action="@{/paginaPrincipal/busquedaReceta}">
+                            <input class="form-control me-2 " type="text" placeholder="Buscar recetas" aria-label="Search"
+                                   name="query" id="query" th:value="${query}">
+                            <input class="btn btn-outline-dark bg-danger text-warning" type="submit" value="Buscar">
+                        </form>
+                    </ul>
+                </div>
+           
+            <!-- <div class="listas">-->
+            <div class="col-xl-7">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+
+                            <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO </strong> </a>
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger" href="misRecetas"> Mis recetas </a>
+                        </li>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-danger" href="receta"> Crear receta </a>
+                        </li>
+
+                        <!-- <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Mi perfil
+                      </a> -->
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle text-danger" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mi Perfil
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="modificarUsuario">Editar perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li >
+                                <li><a th:href="@{/logout}" class="dropdown-item"><span>Cerrar sesión</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+
     <div class="container">
         <div class="medio">
             <p> <span id="auto-input"></span>
@@ -26,21 +95,38 @@
         </div>
     </div>
 
-    <div class="container-sm contenedor">
+
+
+    <div th:if="${exito}!=null" class="card text-white bg-success mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Exito</h5>
+            <p class="card-text" th:text="${exito}"></p>
+        </div>
+    </div>
+    <div th:if="${error}!=null" class="card text-white bg-danger mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Exito</h5>
+            <p class="card-text" th:text="${exito}"></p>
+        </div>
+    </div>
+    <!-- Listado de ingredientes -->
+
+    <div class="container-sm contenedor ">
         <div class="row">
             <h2 class="h2">Listado de Ingredientes:</h2>
         </div>
         <div class="row">
-            <div class="col-xs-12 d-flex">
+            <div class="col-xs-12 d-flex listaIngrediente">
                 <a href="/ingrediente/mostrarIngredientes" type="button" class="btn btn-outline-warning">Lista
                     de Ingredientes</a>
                 <a href="/ingrediente" type="button" class="btn btn-outline-warning">Cerrar lista</a>
-                
-                <form class= "d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
-                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query" id="query" th:value="${query}">
+
+                <form class="d-flex busqueda" th:action="@{/ingrediente/busquedaIngrediente}">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="query"
+                        id="query" th:value="${query}">
                     <input class="btn btn-outline-warning" type="submit" value="Buscar">
                 </form>
-                
+
             </div>
             <table class="table" action="mostrarIngredientes" method="GET">
                 <tr>
@@ -53,81 +139,88 @@
                             class="seleccionar">Seleccionar</a></td>
                 </tr>
             </table>
-            
+
         </div>
 
-    </div>
 
-    <div class="container-sm contenedor">
-        <form action="/ingrediente" method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col">
-                    <h2 class="ingrediente">Agregá más ingredientes:</h2>
-                </div>
-                <div class="col"></div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form1 ingrediente" name="ingrediente"
-                        placeholder="Escriba el ingrediente">
 
-                    <input type="submit" class="form1" value="+ingrediente">
-                </div>
-                <div class="col">
-                    <a href="/receta">Continuar con tu receta</a>
-                </div>
-            </div>
-        </form>
+        <!-- Agregar más ingredientes -->
+        <div class="container-sm contenedor agregarIngrediente">
+
+            <section class="marg">
+                <form action="/ingrediente" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="ingrediente">Agregá más ingredientes:</h2>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form1 ingrediente" name="ingrediente"
+                                placeholder="Escriba el ingrediente">
+
+                            <input type="submit" class="form1" value="+ingrediente">
+                        </div>
+                        <div class="col">
+                            <a href="/receta" class="btn btn-danger">Continua con tu receta!</a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+
     </div>
 
     <div class="container-sm contenedor">
         <form action="" method="POST" enctype="multipart/form-data">
 
             <p th:if="${error != null}" th:text="${error}" style="color: red;"></p>
-            
-             <div class="row">
+
+            <div class="row">
                 <div class="col">
                     <h2 class="ingrediente">Cargar receta:</h2>
                 </div>
                 <div class="col"></div>
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label"><strong>Foto</strong></label><br/>
+                <label for="formGroupExampleInput" class="form-label"><strong>Foto</strong></label><br />
                 <input type="file" class="form1 ingrediente" id="file" name="archivo" onchange="vista_preliminar(event)"
-                 placeholder="Foto" th:value="${foto}"><br/>
-                 <div class="contenedorimg card img">
+                    placeholder="Foto" th:value="${foto}"><br />
+                <div class="contenedorimg card img">
                     <img src="" alt="" id="img-foto">
-                 </div>
-                 <button type="button" value="Subir Archivo" class="btn btn-warning cargar"
-                  onclick="document.getElementById('file').click()">Subir</button>
+                </div>
+                <button type="button" value="Subir Archivo" class="btn btn-warning cargar"
+                    onclick="document.getElementById('file').click()">Subir</button>
 
             </div>
             <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label"> <strong>Nombre</strong></label><br/>
-                <input type="text" class="form1 ingrediente" id="formGroupExampleInput" name="nombre" placeholder="Nombre de la receta" 
-                th:value="${nombre}"><br/>
+                <label for="formGroupExampleInput" class="form-label"> <strong>Nombre</strong></label><br />
+                <input type="text" class="form1 ingrediente" id="formGroupExampleInput" name="nombre"
+                    placeholder="Nombre de la receta" th:value="${nombre}"><br />
             </div>
 
             <div class="mb-3">
                 <section class="marg">
-                
-                        <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
-                        <div class="container">
-                            <input type="text" id="paso" class="form1" name="pasoAPaso"
-                                   placeholder="Escriba el paso a seguir">
-                        </div>
+
+                    <label for="paso" class="h2" id="paso">Agregar pasos a seguir:</label>
+                    <div class="container">
+                        <textarea id="paso" class="form1" name="pasoAPaso" rows="7" cols="50"
+                            placeholder="Ingrese los pasos a seguir"></textarea>
+                    </div>
                 </section>
             </div>
-            
-             <div>
 
-                    <button type="submit" class="btn btn-warning cargar">Cargar</button>
-                    
-                    <a class="btn btn-danger" href="paginaPrincipal" role="button">Volver a Inicio</a>
+            <div>
+
+                <button type="submit" class="btn btn-warning cargar">Cargar</button>
+
+                <a class="btn btn-danger" href="paginaPrincipal" role="button">Volver a Inicio</a>
 
 
-                </div>
-            
+            </div>
+
         </form>
     </div>
 
@@ -152,20 +245,29 @@
         });
     </script>
     <script>
-        let vista_preliminar = (event)=>{
+        let vista_preliminar = (event) => {
             let leer_img = new FileReader();
             let id_img = document.getElementById('img-foto');
 
-            leer_img.onload = ()=>{
-               if(leer_img.readyState == 2){
-                id_img.src = leer_img.result
-               }
+            leer_img.onload = () => {
+                if (leer_img.readyState == 2) {
+                    id_img.src = leer_img.result
+                }
             }
 
             leer_img.readAsDataURL(event.target.files[0])
 
         }
     </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

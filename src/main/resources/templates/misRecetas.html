@@ -57,7 +57,7 @@
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
 
-                                    <a class="nav-link active text-danger" aria-current="page" href="index"> <strong>INICIO </strong> </a>
+                                    <a class="nav-link active text-danger" aria-current="page" href="paginaPrincipal"> <strong>INICIO </strong> </a>
 
 
                                 </li>
@@ -116,6 +116,34 @@
                             Ver receta
                         </div>
                     </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel" th:text="${receta.getNombre}"></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h5>Ingredientes:</h5>
+                                                    <div th:each ="ingrediente: ${receta.getIngredientes}">
+                                                        <ul>
+                                                            <li th:text="${ingrediente.getNombre}"></li>
+                                                        </ul>
+                                                    </div>
+                                                    <h5>Pasos a seguir:</h5>
+                                                    <ol>
+                                                        <li class="modal-title" id="exampleModalLabel" th:text="${receta.getPasoAPaso}"></li>  
+                                                    </ol>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
                 </div>  
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -141,26 +169,7 @@
 
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
 
         <!-- Remove the container if you want to extend the Footer to full width. -->
         <footer>

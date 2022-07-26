@@ -42,6 +42,7 @@ public class UsuarioControlador {
     } 
     
     @RequestMapping("/logout")
+
 public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
     Authentication auth = SecurityContextHolder.getContext().getAuthentication();
     if (auth != null){    
@@ -49,5 +50,15 @@ public String logoutPage (HttpServletRequest request, HttpServletResponse respon
     }
     return "index.html";
 }
+
+
+    public String logoutPage (HttpServletRequest request, HttpServletResponse response){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if(auth != null){
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
+        return "index.html";
+    }
+    
 
 }

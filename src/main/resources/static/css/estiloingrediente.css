@@ -59,6 +59,7 @@ h1 {
     font-family: 'Outfit', sans-serif;
 }
 
+
 .form1 {
     --tw-text-opacity: 1;
     font-feature-settings: "liga" on;
@@ -224,7 +225,16 @@ section {
 
 }
 
+.listaIngrediente{
 
+
+
+}
+
+.agregarIngrediente{
+
+
+}
 
 
 @media screen and (max-width: 567px) {
